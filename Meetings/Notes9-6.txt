@@ -1,0 +1,40 @@
+Meeting #1: Thursday, September 6
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+
+We discussed the planning document and in particular the components of our application: 
+    - GUI
+        * a screen for each feature
+    - Database
+        * inventory table
+        * transaction table
+    - Transaction logic
+    - Inventory logic
+    - Price comparison logic
+
+We discussed using Visual Studio for development, and either C# or C++.
+    - Nick is going to look into which language is better suited to our application, in particular interfacing with a database.
+    - Dan is going to look into whether we can get a full version of Visual Studio with a Microsoft Developers account.
+
+We decided that the next step is writing the planning document, and we split the work between the three of us at the meeting:
+    1. Intro
+    2. Project organization
+    3. Risk analysis
+    4. Hardware and software resource requirements
+    5. Work breakdown
+    6. Project schedule
+    7. Monitoring and reporting mechanisms
+    - Lucy will do sections 1, 6, and 7
+    - Dan will do sections 2 and 5
+    - Nick will do sections 3 and 4
+
+We put off deciding on more solid plans for a work breakdown until we have a chance to meet as a whole group.  We also decided to wait to begin sketching the database structure and screen interfaces until we visit the store.
+
+We plan to have regular group meetings on Thursdays at 1:30.
+
+Next Tuesday (9-11) we will meet at the regular time outside the classroom before our group meeting with Siy.
+
+Next Thursday (9-13) we plan to visit the store to get an idea of the current state of the business.
