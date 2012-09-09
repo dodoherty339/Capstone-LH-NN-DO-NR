@@ -1,0 +1,50 @@
+Project Planning document
+
+Introduction
+	This document will set out a tentative plan for the development of a point-of-sale system. We will discuss the components needed for the application, some of the risks that we need to be aware of when developing the application, the hardware and software required for the finished product, a breakdown of the work that will be done by each member of the team, a tentative schedule for the iterations of the project, and information about our project tracking system.
+	
+================================================
+Project Organization
+	Currently, the project organization is not very detailed and will have to be discussed at a very basic level. We will have a front-end graphical user interface (GUI) that will be user-friendly and have multiple functions. The GUI will have the following functionalities: a transaction screen for processing the customer’s transaction and displaying each item with a number of attributes, e.g., an ID number for the item, a barcode number (if there is one), an item name, a price; an item screen that will be able to search for and display items as well as enter new items, delete existing items, and update existing items in the store’s inventory; and a screen to access pricing data from Amazon to compare the store’s prices for specific items.
+
+	We will also have a database for storing the necessary information. The database will have a few tables. The first table will store all the items with descriptions, cost information, price information, ID number, barcode number (if there is one), etc.  Another table will store all the transactions that the store has made. Another table we may have is a customer table, which would store customer information for anyone who wants to sign up.
+
+	Another important component is the logic. There will be three main types of logic needed. The first is the transaction logic: it will be used to handle customers’ purchases. The next is inventory logic: this will be called in the transaction logic during transactions to remove items from the database, and it will also be used in conjunction with the item screen to add, remove, and update items. The last is the price comparison logic: this logic will access pricing data from Amazon and compare the prices of items sold in store to the prices of the same items on Amazon. We discussed the possibility of updating the pricing list once a day or once a week automatically, depending on the client’s preference.
+	
+================================================
+Risk Analysis
+	Since this program will be handling consumer transactions, there are several things we must ensure before the release. Two of the biggest factors we have to be aware of are price and tax calculations. When it comes to the price calculating, we need to make sure that the price the customer expects to pay is exactly that: no more, no less. If our program fails to keep the prices in line (and the mistakes are not from human error), then we risk endangering the business’ reputation. This could lead to loss of future clientele, which means loss of money. Our other risk factor is that our system needs to calculate sales tax correctly on any item that requires it; basically, if the product is not a food product, it must be taxed. We will need to implement a check in our database that states whether or not the product is taxable. If we fail to have the sales tax calculated correctly, this will risk the business being shut down or fined by the government for not adhering to all of the business laws and regulations. There may be other risk factors involved, so we must work to ensure our system follows all practices required by law and accurately calculates all transactions.   
+
+================================================
+Hardware and Software Resource Requirements
+	A POS system is not too resource intensive to the computer running it as it mainly involves calculations and accessing a database. However, as with any business, the store must have all the other hardware necessary to have everything running smoothly and accurately. The hardware that we have taken into account are the following:
+		- A PC running the point of sale software and containing the inventory database
+		- A barcode scanner
+		- A credit card device
+		- A receipt printer
+
+	We already know that the barcode scanner simply reads the numbers from the barcode, enters them into the currently selected field, and automatically sends the “return” command. We will need to do a little investigating on how the credit card device and printer work so we can accurately incorporate them into our system. Once we figure everything out and how all the devices communicate with one another, we can ensure that the system will be successful.
+
+================================================
+Work Breakdown
+	We have tentatively discussed assigning Lucy to be the designated GUI designer and scribe during meetings. Nick will be team leader and will most likely work on the some of the logic along with Nathan. This would leave the database design to be mostly handled by Dan. No aspect of the development will be left entirely to a single person; the whole team will contribute to the design of the application. Before we finalize the work breakdown, we plan to have another group meeting to discuss the programming language selection as well as to evaluate the strengths of each team member.
+
+================================================
+Project Schedule 
+	As our project has not been fully mapped out yet, our schedule will be very tentative.  Since our application can be somewhat broken down by the functionality of the different screens, we will most likely define our iterations by the separate screens.  But before we begin on the functionality of the screens, we will need to define the needed functionality, sketch out a rough architecture, set up a database and design some tentative interfaces for each screen.  The database and GUI sketches will be crucial in defining each other: the fields needed on the interface will influence what is needed in the database and vice versa.  The first iteration will probably be the necessary documentation as well as a rough version of the database and GUI.  These components will also be reevaluated at each point in the development in order to incorporate any new information that we discover.
+
+	The most important functionality of the application is keeping track of the inventory and transactions, so our next tasks will be to work on the functionality of those two screens.  Since the transaction screen will draw from the inventory table in the database, we will probably set up the item item screen so that items can be inserted into the database and then be used on the transaction screen.  After the item screen is finished, we will work on the transaction screen including integrating it with the item screen and verifying that the screen’s functionality is not affected by the transaction screen.  Finally, when the rest of the system is working, we will start work on the price comparison screen, following the same steps for integrating it with the previous two screens and verifying the functionality of all screens when the entire application is merged.
+
+	This is still a very tentative schedule, and the following dates are subject to changes due to unexpected difficulties or changes in the client’s needs:
+		  	  Deliverables								  	  Date
+		| 1	| Requirements, architecture, GUI, database		| Week of September 24
+		| 2	| Item lookup screen							| Week of October 8
+		| 3	| Transaction screen							| Week of October 29
+		| 4	| Price comparison screen						| Week of November 19
+		| 5	| Completed application, final documentation	| Week of December 10
+
+	Testing for functionality and usability will be conducted throughout the development process.  Our motivation in setting the goal for the completion of iteration 4 to the middle of November is to give us time to write our final report as well as deal with any bugs that come up during the final testing of the system.  It also gives us a buffer in order to deal with any unexpected problems that may cause milestones to be pushed back.
+
+================================================
+Monitoring and Reporting Mechanisms
+	For our project tracking system we are using GitHub.  We have set up a repository which is at https://github.com/lucyh/Capstone-LH-NN-DO-NR.  We will keep track of all code changes made by each member of the group, as well as sharing copies of all documentation required for the project and notes from our team meetings.  Everyone will have a GitHub account in order to have access to all of the files in the repository.
