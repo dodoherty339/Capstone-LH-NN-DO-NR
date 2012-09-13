@@ -1,0 +1,34 @@
+Meeting #2: Thursday, September 13
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+For this meeting, we visited Digital Attitude to get an idea of how the business is currently operating.  There is currently a database with a single table containing all of the other 7000 items in the store's inventory.  Our implementation needs to contain at least the following fields:
+    - Barcode
+    - Description for the receipt
+    - Department
+    - Cost
+    - Inventory of the item
+    - Retail price
+    - Tax (yes or no)
+The store sells used items as well, and the barcodes for used items are appended with the digits '69'.  Since these barcodes cannot be used to search for an item online, there might be use in having a separate field for the used barcode and the "original" barcode, so that the original barcode could be used to search for items.
+
+The store also currently has a customer database, which we will also implement as another function.  The customer database consists of a phone number and a name for pre-orders.  There may be other fields in the database, such as address or other contact information.
+
+We found out that the barcode scanner only inserts the numbers; it does not return as we had originally thought.
+
+The client mentioned that he would like for his receipts to be printed with a graphic logo.  He also mentioned that he has to pull the month's data at the end of the month for the mall; this information is delivered as just numbers.
+
+We decided that the four items for our first milestone will be split up in the following way:
+    - Nick: High level requirements
+    - Nathan: Rough architecture
+    - Lucy: GUI design
+    - Dan: Database design
+These will be added as tasks on github.
+
+We have also finalized our decision to use C++ and Visual Studio.
+
+Next Thursday (9-20) we plan to meet and discuss our progress.
