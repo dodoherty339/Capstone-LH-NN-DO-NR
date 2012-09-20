@@ -1,0 +1,31 @@
+Meeting #3: Thursday, September 20
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+At this meeting we started out by discussing our original plan for the entire point-of-sale system, but after discussion we decided to try to narrow the scope of the project to only dealing with comparing the store's prices with Amazon's prices.
+
+We are assuming that the current point-of-sale system performs the requisite actions of adding new items, modifying the inventory manually, and modifying the inventory based on transactions.
+
+We need to find out if the database that is used by the point-of-sale system can be read from and written to by an outside application.  If it can, we can design an application that displays an item's current price in the store's database and the price on Amazon.
+
+This application will also have a feature for modifying the store's price to be based on the current Amazon price; e.g., the store's price could always be $5 more than Amazon's price.
+
+We discussed other features for the new "Price Comparison" application:
+    - Highlighting extreme differences between the two prices
+        * Color-coding for prices that are higher versus lower
+    - Storing a price history that could be displayed graphically to show trends in Amazon's prices
+    - Having a number of different ways to filter the records:
+        * Items in a specific department
+        * Items where the price difference is greater than x
+        * Items where the Amazon price is higher than the store's
+        * Items where the Amazon price is lower than the store's
+       
+Our next step is to find out if the client approves of changing the scope of the application to only cover the price comparison.
+
+If he does, we will need to revise some of our documentation to address the narrowed scope.  We will also need to find out about the current database that the client is using, as well as how we can access prices from Amazon.
+
+Assuming the new application is okay with the client, next Thursday (9-27) we will be meeting at the store again to get answers to the questions mentioned above.
