@@ -1,0 +1,69 @@
+High Level Requirements
+
+Software:
+	The software generally will light to run, as there are no fancy graphics or high-end processing required to run this program.
+This will be ideal for the general small business as this means that they will not have to spend extra money to get a better computer.
+The main component of the software is the handling of the business transaction. Every time a customer comes in to purchase a product,
+this software must be able to perform as expected in every situtation to ensure an accurate transaction that will please the customer.
+Here is a rough idea of a step-by-step situation the software (and hardware) must go through when a consumer makes a purchase:
+
+	- Scan barcode with scanner, this will scan the numbers into the area of focus and automatically press enter
+	- The database is searched for an item matching the bar code. If found, return the price and the product type, and deduct the number of the product by one. Otherwise return error message
+	- Continue to scan the rest of the products being purchased. With each product adding to the subtotal that will be displayed. Tax will also be generated as the products are scanned, assuming they are taxable.
+	- Once all products are scanned, user must select which form of payment will be accepted for this purchase;
+		- If CASH, user will type in the total paid in cash, then select the CASH option. The software will calculate the change needed to be returned to the customer, as well as the following:
+			- Send a message to the cash tray to unlock and open up for the user so that they can exchange the money.
+			- Send the transaction summary to the receipt printer, including all presets of the receipt including the store information and return policy.
+			- Keep the summary of the transaction on file to be included in monthly and daily summaries.
+		- If CREDIT, user will type in the total that will be paid by credit, then select the CREDIT option. The user will finish up by using the credit card machine while the software does the following:
+			- Send the transaction summary to the receipt printer, including all presets of the receipt including the store information and return policy.
+			- Keep the summary of the transaction on file to be included in monthly and daily summaries.
+		- (Not confirmed) If STORE CREDIT will be used, the user must pull up the customer's information in through the customer database. In here, the user will see the credit the customer has available. Then the user can type in how much credit will be used, and the software will do the following:
+			- Assuming the store credit typed in is less than or equal to what the customer currently has, their credit will be deducted from their account. Otherwise and error message should appear, pausing the transaction until the credit used is changed.
+			- Also assuming the credit will not pay for the entire purchase, the user then must finish the transaction using the cash or credit options.
+			- Assuming the transaction is finalized, send the transaction summary to the receipt printer, including all presets of the receipt including the store information and return policy.
+			- Keep the summary of the transaction on file to be included in monthly and daily summaries.
+
+After the transaction, the inventory database should reflect the products sold, while the customer database should reflect the credit used if applicable.
+
+
+Another large feature of the software is the ability to edit the inventory database.
+What this means, is that the user will be able to add, remove, and edit a piece of inventory in their selection.
+As well, the user will be able to edit/customize the attributes to the inventory, including name, description, cost of goods, selling price, category, and so on.
+The category of an item in the inventory will also be used to allow for easy sorting filters when the user is looking for products that fit the matching category.
+
+The customer database will hold the following information:
+	- Preorders being held for the customer
+	- Store credit currently available for the customer
+	- Basic information, including First Name, Last Name, and Phone Number
+
+The user will be able to add, edit, and remove customers as they see fit.
+
+Some other possible options and features for the software could include the following:
+	- Sales Summary print outs for a specific day or a whole month
+	- Inventory Print outs
+	- Price Look ups
+
+
+Hardware
+
+Bar Code Scanner
+	The scanner is a very basic tool that does nothing more than read the UPC bar codes on the product, translates it into a series of numbers, types it out in the current
+	field of focus, and sends out the "return" command. This will be used during the sales procedure or when managing the inventory database. When the return command is received, the program will
+	search the database for the product matching the bar code.
+
+Receipt Printer
+	From current knowledge, we will need to figure out the exact commands to get the printer to print out the receipt. As well, we will need to figure out the correct formatting for
+	the printer so that the purchase summary, as well as the receipt standards (store information and return policy), will fit properly. We will need to research more into how this works.
+
+Credit Card Machine
+	From what we were told by Justin Richardson, the credit card machine handles everything completely separately from the whole POS system itself. This way is more secure for the consumer. As such,
+	our program will not need to communicate directly with the machine. The software will only need to record if the customer used a credit card during the transaction.
+
+Change Drawer
+	A different piece of hardware that will need to be taken account for. All we need to figure out is how to open it, and then set it to open after the transaction, or when the user specifies so.
+
+
+
+This by no means is a final draft on the requirements. As more ideas and thoughts are formed, this will change along with them. This is just a rough/general idea of what we will need to consider when
+designing the software.
