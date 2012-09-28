@@ -1,0 +1,28 @@
+Meeting #4: Thursday, September 27
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+We visited Digital Attitude this week in order to get some questions answered:
+
+1. Database
+    - What application? 
+        * Microsoft SQL Server Management Studio Express
+        * Decided to possibly switch to C# in order to communicate with database more easily
+    - Can it be accessed from outside application? 
+        * Yes
+2. Amazon prices
+   - How to get them? 
+      * Amazon Web Services http://aws.amazon.com/
+
+We found out that the client uses Amazon to look up prices of the used items he sells.  He usually checks the prices again if he has had an item for 2 weeks and changes the price if necessary.
+
+We assigned tasks for the week:
+    - Dan and Nick are going to do some research on the Amazon Web Services website
+    - Nathan is going to look into the Microsoft SQL Server application and see what he can find out about the client's database
+    - Lucy is going to update the current documentation to reflect our new plans
+
+Our next meeting will be Thursday, October 4 at 1:30 at PKI.
