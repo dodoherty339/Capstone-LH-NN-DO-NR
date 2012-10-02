@@ -1,0 +1,21 @@
+Lucy Horpedahl
+Dan O'Doherty
+Nathan Noonan
+Nick Richardson
+
+High Level Requirements
+=======================
+
+The software will be light to run with no fancy graphics or high-end processing required.
+
+No special hardware will be needed for the application.
+
+The application will require read and write access to the database of the current point-of-sale system as well as internet access in order to obtain prices from Amazon.com.
+
+The basic steps that the application will perform are as follows:
+    1. The point-of-sale database will be read from to obtain a list of all used items.
+    2. The application will use information from the records obtained from the database (most likely the barcode) to search Amazon.com for prices.
+    3. The price information will be processed and displayed for a user to review.
+    4. The user will decide which prices to modify.
+    5. The new prices will be written to the database.
+	** Alternatively, there may be no user review; prices may be modified automatically based on the prices obtained from Amazon.com.

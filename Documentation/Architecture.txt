@@ -1,0 +1,28 @@
+Lucy Horpedahl
+Dan O'Doherty
+Nathan Noonan
+Nick Richardson
+
+Our application will be a standalone price comparison application.  It will need to communicate with both Amazon.com and a database that communicates with the client's current point-of-sale system.
+
+---------------               ---------------
+|             |               |             |
+|  point-of-  |<------6-------|  database   |
+| sale system |               |             |
+---------------               ---------------
+                                 ^   |   ^
+                                 |   |   |
+                                 1   2   5
+                                 |   |   |
+                                 |   v   |
+                              ---------------               ---------------
+                              |    price    |-------3------>|             |
+                              | comparison  |               | Amazon.com  |
+                              | application |<------4-------|             |
+                              ---------------               ---------------
+                              
+- The price comparison application will get inventory information from the database
+- Then the application will send a message to Amazon.com requesting prices on the items in the inventory
+- The application will receive the information from Amazon.com and process it
+- Then the application will pass the new pricing information back to the database
+- The changes in the database will be reflected in the point-of-sale system

@@ -1,0 +1,15 @@
+Lucy Horpedahl
+Dan O'Doherty
+Nathan Noonan
+Nick Richardson
+September 29, 2012
+
+Proposal
+
+After doing research and discussing our client's business and the current state of his system, we have decided to narrow the scope of our project.
+
+Originally it was our intention to create an entire point-of-sale system, but we have decided that that is probably too much to accomplish in just 3 months.
+
+We have decided to focus on the price comparison part of the original project.  We want to create an application that will allow the client to compare the prices of his used merchandise to prices on Amazon.com.
+
+The new application will be a standalone application that will interface with the client's database as well as Amazon.com.
