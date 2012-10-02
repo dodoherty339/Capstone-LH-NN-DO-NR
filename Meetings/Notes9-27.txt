@@ -6,6 +6,8 @@ Present at the meeting were:
     - Nick
     - Nathan
 
+**Note: the project has been changed to focus on the price comparison aspect of the application instead of the entire point-of-sale system.
+
 We visited Digital Attitude this week in order to get some questions answered:
 
 1. Database
