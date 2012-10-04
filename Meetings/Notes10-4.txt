@@ -1,0 +1,21 @@
+Meeting #5: Thursday, October 4
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+everyone was present
+
+We had a short meeting this week
+Dan and Nick looked at the Amazon Web Service (AWS) which turns out to be more complicated than what we need, and also has fees
+We decided that we will probably just ping Amazon with the barcodes that we need because we are not likely to exceed the limit
+Our next steps are to try to figure out the SQL Server database and whether the files we obtained from the client's computer will be usable for development
+We also plan to look into what the information we get from Amazon will look like and how to use regular expressions to read the data
+
+Nick: Set up a Microsoft Studio C# project that we can all obtain from Github
+Dan: Look into the full version of SQL Server and check files from the client's computer
+Nathan and Lucy: Try to ping Amazon in C# and work with running regular expressions on the results
+
+Our next meeting will be Thursday, October 11
