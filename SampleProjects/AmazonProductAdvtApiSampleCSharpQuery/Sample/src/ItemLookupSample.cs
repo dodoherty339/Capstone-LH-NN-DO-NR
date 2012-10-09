@@ -31,8 +31,8 @@ namespace AmazonProductAdvtApi
 {
     class ItemLookupSample
     {
-        private const string MY_AWS_ACCESS_KEY_ID = "YOUR_AWS_ACCESS_KEY_ID";
-        private const string MY_AWS_SECRET_KEY    = "YOUR_AWS_SECRET_KEY";
+        private const string MY_AWS_ACCESS_KEY_ID = "AKIAIZFYONMON7O5DRNA";
+        private const string MY_AWS_SECRET_KEY = "aoVq9s5R6UWdgqeUha2higq1l41MtzzJpgPZK3uP";
         private const string DESTINATION          = "ecs.amazonaws.com";
         
         private const string NAMESPACE = "http://webservices.amazon.com/AWSECommerceService/2009-03-31";
