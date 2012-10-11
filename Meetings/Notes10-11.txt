@@ -1,0 +1,21 @@
+Meeting #6: Thursday, October 11
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+Dan and Nathan found that the files copied from the database on the client's computer were not usable, so we will need to get a schema of the database and set one up manually.
+
+Nick got a project set up and committed to Github so that we can all work on a single set of code.
+
+Lucy learned a little about the Amazon Web Service and attempted to get some code working that would search the Amazon product database.
+
+Our next steps will be:
+Lucy: put code from attempts to use Amazon Web Service into the shared project code, and try to get a search to work
+Nick: get schema for database and look at Amazon Web Service code after Lucy uploads it
+Dan: try to get Visual C# to communicate with a database in Microsoft SQL Server; set up actual database when Nick gets schema
+Nathan: start work on a web scraper that can be used to search Amazon if the AWS code does not pan out
+
+Next meeting: 10/18/2012

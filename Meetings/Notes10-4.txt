@@ -6,8 +6,6 @@ Present at the meeting were:
     - Nick
     - Nathan
 
-everyone was present
-
 We had a short meeting this week
 Dan and Nick looked at the Amazon Web Service (AWS) which turns out to be more complicated than what we need, and also has fees
 We decided that we will probably just ping Amazon with the barcodes that we need because we are not likely to exceed the limit
