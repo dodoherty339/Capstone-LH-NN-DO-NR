@@ -1,0 +1,35 @@
+Meeting #7: Thursday, October 18
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+This week we decided to make sure that everyone runs the same version of the development applications.  We are using the 2008 version of MS SQL Server for the database (at least for now), and Microsoft Visual C# 2010 Express for the code.
+
+Nick is going to find out what used items are sold by the client.  We believe the only used items he sells are DVDs, but we want to be sure.
+
+The basic architecture of the application at this point looks like this:
+
+---------------
+|   Database  |
+---------------
+      ^  |
+      |  v
+---------------
+| Application |
+---------------
+      ^  |
+      |  v
+---------------
+|    Amazon   |
+---------------
+
+The database needs to be read from and written to by the application, and the application in turn needs to be able to send requests to and receive responses from Amazon.  The communication between the application and Amazon will take place in one of two ways: either through a web scraper (less desirable) or using Amazon Web Services.
+
+Dan and Nick will work on getting the database to communicate with the application.
+Nathan will continue to work on a web scraper.
+Lucy will work on the Amazon Web Services code.
+
+Next meeting: 10/25/2012
