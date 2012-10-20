@@ -85,7 +85,6 @@
             this.lblSort.Size = new System.Drawing.Size(40, 13);
             this.lblSort.TabIndex = 2;
             this.lblSort.Text = "Sort by";
-            this.lblSort.Click += new System.EventHandler(this.label1_Click);
             // 
             // grpBoxFilter
             // 

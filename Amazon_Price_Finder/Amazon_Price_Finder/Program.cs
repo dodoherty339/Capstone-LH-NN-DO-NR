@@ -76,7 +76,7 @@ class Program
             // http://www.webdesigncompany.co.uk/blog/2011/10/5/using-the-new-amazon-product-api-wsdl-with-microsoftwebservices3/
             // Err: The remote server returned an unexpected response: (400) Bad Request.
         }
-        //Console.WriteLine("Press any key to quit...");
+        Console.WriteLine("Press any key to quit...");
         //Console.ReadKey();
     }
 }

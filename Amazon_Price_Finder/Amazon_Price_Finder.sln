@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C# Express 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon_Price_Finder", "Amazon_Price_Finder\Amazon_Price_Finder.csproj", "{4EA38B17-2093-4D1D-9E5B-17B9FC3FC464}"
 EndProject
 Global
