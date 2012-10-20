@@ -74,7 +74,30 @@ class Program
             Console.WriteLine("Inner Exception: " + e.InnerException.Message);
             Console.ForegroundColor = ConsoleColor.White;
             // http://www.webdesigncompany.co.uk/blog/2011/10/5/using-the-new-amazon-product-api-wsdl-with-microsoftwebservices3/
-            // Err: The remote server returned an unexpected response: (400) Bad Request.
+    // Err: The remote server returned an unexpected response: (400) Bad Request.
+    /*
+     * ==Error==    	            ==Description==
+     * IncompleteSignature 	        The request signature does not conform to AWS standards. 
+     * 
+     * InvalidAction 	            The action or operation requested is invalid. 
+     * 
+     * InvalidParameterCombination  Parameters that must not be used together were used together. 
+     *                              
+     * InvalidParameterValue 	    A bad or out-of-range value was supplied for the input parameter.
+     *                              
+     * InvalidQueryParameter 	    AWS query string is malformed, does not adhere to AWS standards.
+     *                              
+     * MissingAction 	            The request is missing an action or operation parameter.
+     * 
+     * MissingParameter 	        An input parameter that is mandatory for processing the 
+     *                              request is not supplied.
+     *                              
+     * RequestExpired 	            Request is past expires date or the request date 
+     *                              (either with 15 minute padding), or the request date 
+     *                              occurs more than 15 minutes in the future.
+     *                              
+     * Throttling 	                Request was denied due to request throttling.
+     */
         }
         Console.WriteLine("Press any key to quit...");
         //Console.ReadKey();
