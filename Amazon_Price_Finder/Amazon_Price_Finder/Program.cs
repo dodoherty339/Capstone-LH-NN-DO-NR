@@ -10,13 +10,10 @@ class Program
 {
     private const string accessKeyId = "AKIAIZFYONMON7O5DRNA";
     private const string secret = "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";
-    private const string assocTag = "Lucyh";
+    private const string assocTag = "";
 
     static void Main(String[] args)
     {
-        // Write to console
-        Console.WriteLine("Welcome to the C# Station Tutorial!");
-
         // Set default args if two are not supplied
         if (args.Length != 2)
         {
@@ -32,7 +29,7 @@ class Program
          * could not be loaded because more than one endpoint configuration for that contract was 
          * found. Please indicate the preferred endpoint configuration section by name.
          */
-
+        
         // Create ItemSearch wrapper
         ItemSearch search = new ItemSearch();
         //search.AssociateTag = assocTag;
@@ -51,6 +48,16 @@ class Program
         {
             //Send the request and store the response in response
             Console.WriteLine("try...");
+
+            //ItemLookup itemLookup = new ItemLookup();
+            //ItemLookupRequest itemLookupRequest = new ItemLookupRequest();
+            //itemLookupRequest.SearchIndex = "DVD";
+            //itemLookupRequest.ItemId = new string[] { "B005OCFGTO" };
+            //itemLookupRequest.ResponseGroup = new string[] { "ItemAttributes" };
+            //itemLookup.Request = new ItemLookupRequest[] { itemLookupRequest };
+            //itemLookup.AWSAccessKeyId = accessKeyId;
+            //ItemLookupResponse response = ecs.ItemLookup(itemLookup);
+
             ItemSearchResponse response = ecs.ItemSearch(search);
             //Check for null response
             if (response == null)
@@ -74,30 +81,30 @@ class Program
             Console.WriteLine("Inner Exception: " + e.InnerException.Message);
             Console.ForegroundColor = ConsoleColor.White;
             // http://www.webdesigncompany.co.uk/blog/2011/10/5/using-the-new-amazon-product-api-wsdl-with-microsoftwebservices3/
-    // Err: The remote server returned an unexpected response: (400) Bad Request.
-    /*
-     * ==Error==    	            ==Description==
-     * IncompleteSignature 	        The request signature does not conform to AWS standards. 
-     * 
-     * InvalidAction 	            The action or operation requested is invalid. 
-     * 
-     * InvalidParameterCombination  Parameters that must not be used together were used together. 
-     *                              
-     * InvalidParameterValue 	    A bad or out-of-range value was supplied for the input parameter.
-     *                              
-     * InvalidQueryParameter 	    AWS query string is malformed, does not adhere to AWS standards.
-     *                              
-     * MissingAction 	            The request is missing an action or operation parameter.
-     * 
-     * MissingParameter 	        An input parameter that is mandatory for processing the 
-     *                              request is not supplied.
-     *                              
-     * RequestExpired 	            Request is past expires date or the request date 
-     *                              (either with 15 minute padding), or the request date 
-     *                              occurs more than 15 minutes in the future.
-     *                              
-     * Throttling 	                Request was denied due to request throttling.
-     */
+            // Err: The remote server returned an unexpected response: (400) Bad Request.
+            /*
+             * ==Error==    	            ==Description==
+             * IncompleteSignature 	        The request signature does not conform to AWS standards. 
+             * 
+             * InvalidAction 	            The action or operation requested is invalid. 
+             * 
+             * InvalidParameterCombination  Parameters that must not be used together were used together. 
+             *                              
+             * InvalidParameterValue 	    A bad or out-of-range value was supplied for the input parameter.
+             *                              
+             * InvalidQueryParameter 	    AWS query string is malformed, does not adhere to AWS standards.
+             *                              
+             * MissingAction 	            The request is missing an action or operation parameter.
+             * 
+             * MissingParameter 	        An input parameter that is mandatory for processing the 
+             *                              request is not supplied.
+             *                              
+             * RequestExpired 	            Request is past expires date or the request date 
+             *                              (either with 15 minute padding), or the request date 
+             *                              occurs more than 15 minutes in the future.
+             *                              
+             * Throttling 	                Request was denied due to request throttling.
+             */
         }
         Console.WriteLine("Press any key to quit...");
         //Console.ReadKey();
