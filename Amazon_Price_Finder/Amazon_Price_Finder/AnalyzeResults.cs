@@ -5,14 +5,25 @@ using System.Text;
 
 namespace Amazon_Price_Finder
 {
+    //! This is the class for analyzing the results obtained from Amazon
+    /**
+     * It contains methods involved in calculating the average of the prices
+     * as well as an adjusted average by identifying outliers with the use of
+     * the standard deviation.
+     */
     class AnalyzeResults
     {
+        //! This is the first method invoked in the AnalyzeResults class
+        /**
+         * It defines the array of prices and calls the other methods to 
+         * calculate the standard deviation and adjusted average.
+         */
         public static void StartAnalyze()
         {
             double[] totals = new Double[10];
             double stdDev = 0;
             double sum = 0;
-            double average = 0;
+            double average = 0; /*!< average */
             double adjAvg1 = 0;
             double adjAvg2 = 0;
             double adjAvg3 = 0;
@@ -53,7 +64,15 @@ namespace Amazon_Price_Finder
             //Console.ReadKey();
         }
 
-        public static double calculateStandardDeviation(double[] totals)
+        //! This method calculates the standard deviation of the array
+        /**
+         * It contains methods involved in calculating the average of the prices
+         * as well as an adjusted average by identifying outliers with the use of
+         * the standard deviation.
+         */
+        public static double calculateStandardDeviation(
+          double[] totals /*!< a list of prices */
+        )
         {
             double stdDev = 0;
             if (totals.Length > 1)
@@ -79,7 +98,25 @@ namespace Amazon_Price_Finder
             return stdDev;
         }
 
-        public static double adjustAverage(double stdDev, double avg, double[] totals, int numDev)
+        //! This method calculates an adjusted average for the prices
+        /**
+         * It takes the standard deviation calculated in the previous method
+         * and an integer representing the number of standard deviations to use
+         * and determines a range of acceptable values.  Any values outside of
+         * that range are considered "outliers" and are ignored in the 
+         * calculation of a new average.
+         * 
+         * <b>Note:</b> The "numDev" parameter is included to allow for a
+         * smaller range of numbers to be determined acceptable.  Standard
+         * practice says that outliers must be at least 3 standard deviations
+         * from the mean.
+         */
+        public static double adjustAverage(
+          double stdDev     /*!< the standard deviation of the values */
+        , double avg        /*!< the raw average of the values */
+        , double[] totals   /*!< a list of prices */
+        , int numDev        /*!< the number of standard deviations to use */
+        )
         {
             double adjAvg = 0;
             double highOut = avg + numDev * stdDev;

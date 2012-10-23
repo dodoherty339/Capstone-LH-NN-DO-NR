@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace AmazonPriceFinderForm
 {
-    public partial class formAmazonPrice : Form
+    public partial class FormAmazonPrice : Form
     {
-        public formAmazonPrice()
+        public FormAmazonPrice()
         {
             InitializeComponent();
         }

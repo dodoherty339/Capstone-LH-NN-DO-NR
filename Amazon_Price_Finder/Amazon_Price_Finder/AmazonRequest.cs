@@ -8,13 +8,24 @@ using Amazon_Price_Finder.amazon.ecs;
 
 namespace Amazon_Price_Finder
 {
-    
+    //! This is the class representing the request sent to Amazon
+    /**
+     * It contains code obtained from the "Product Advertising API Getting 
+     * Started Guide API Version 2011-08-01" found at 
+     * http://aws.amazon.com/archives/Product-Advertising-API/.
+     */
     public class AmazonRequest
     {
         private const string accessKeyId = "AKIAIZFYONMON7O5DRNA";
         private const string secret = "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";
         private const string assocTag = "";
 
+        //! This is the method that defines a search and sends a request to Amazon
+        /**
+         * It contains code obtained from the "Product Advertising API Getting 
+         * Started Guide API Version 2011-08-01" found at 
+         * http://aws.amazon.com/archives/Product-Advertising-API/.
+         */
         public static void SendRequest()
         {
             // Get searchIndex and keywords from the command line

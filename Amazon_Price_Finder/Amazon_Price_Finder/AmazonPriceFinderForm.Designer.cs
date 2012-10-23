@@ -1,6 +1,14 @@
-﻿namespace WindowsFormsApplication1
+﻿//! This is the namespace for the form used in the application
+/**
+ * It contains the class relating to the actions of the form.
+ */
+namespace AmazonPriceFinderForm
 {
-    partial class formAmazonPrice
+    //! This is the form used in the application
+    /**
+     * It contains the methods relating to the actions of the form.
+     */
+    partial class FormAmazonPrice
     {
         /// <summary>
         /// Required designer variable.

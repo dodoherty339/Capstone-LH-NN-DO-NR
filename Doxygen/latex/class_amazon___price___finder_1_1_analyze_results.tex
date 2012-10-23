@@ -1,0 +1,84 @@
+\hypertarget{class_amazon___price___finder_1_1_analyze_results}{\section{Amazon\-\_\-\-Price\-\_\-\-Finder.\-Analyze\-Results Class Reference}
+\label{class_amazon___price___finder_1_1_analyze_results}\index{Amazon\-\_\-\-Price\-\_\-\-Finder.\-Analyze\-Results@{Amazon\-\_\-\-Price\-\_\-\-Finder.\-Analyze\-Results}}
+}
+
+
+This is the class for analyzing the results obtained from Amazon.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_amazon___price___finder_1_1_analyze_results_a9f06eafd05cf665670bf6acc88e5a1ca}{Start\-Analyze} ()
+\begin{DoxyCompactList}\small\item\em This is the first method invoked in the \hyperlink{class_amazon___price___finder_1_1_analyze_results}{Analyze\-Results} class. \end{DoxyCompactList}\item 
+static double \hyperlink{class_amazon___price___finder_1_1_analyze_results_a3849c1953175489f3291237f18709b41}{calculate\-Standard\-Deviation} (double\mbox{[}$\,$\mbox{]} totals)
+\begin{DoxyCompactList}\small\item\em This method calculates the standard deviation of the array. \end{DoxyCompactList}\item 
+static double \hyperlink{class_amazon___price___finder_1_1_analyze_results_ac3cd30780c90de34909ab164646ee3da}{adjust\-Average} (double std\-Dev, double avg, double\mbox{[}$\,$\mbox{]} totals, int num\-Dev)
+\begin{DoxyCompactList}\small\item\em This method calculates an adjusted average for the prices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the class for analyzing the results obtained from Amazon. 
+
+It contains methods involved in calculating the average of the prices as well as an adjusted average by identifying outliers with the use of the standard deviation. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_amazon___price___finder_1_1_analyze_results_ac3cd30780c90de34909ab164646ee3da}{\index{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results@{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results}!adjust\-Average@{adjust\-Average}}
+\index{adjust\-Average@{adjust\-Average}!Amazon_Price_Finder::AnalyzeResults@{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results}}
+\subsubsection[{adjust\-Average}]{\setlength{\rightskip}{0pt plus 5cm}static double Amazon\-\_\-\-Price\-\_\-\-Finder.\-Analyze\-Results.\-adjust\-Average (
+\begin{DoxyParamCaption}
+\item[{double}]{std\-Dev, }
+\item[{double}]{avg, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{totals, }
+\item[{int}]{num\-Dev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_amazon___price___finder_1_1_analyze_results_ac3cd30780c90de34909ab164646ee3da}
+
+
+This method calculates an adjusted average for the prices. 
+
+It takes the standard deviation calculated in the previous method and an integer representing the number of standard deviations to use and determines a range of acceptable values. Any values outside of that range are considered \char`\"{}outliers\char`\"{} and are ignored in the calculation of a new average.
+
+{\bfseries Note\-:} The \char`\"{}num\-Dev\char`\"{} parameter is included to allow for a smaller range of numbers to be determined acceptable. Standard practice says that outliers must be at least 3 standard deviations from the mean. 
+\begin{DoxyParams}{Parameters}
+{\em std\-Dev} & the standard deviation of the values \\
+\hline
+{\em avg} & the raw average of the values \\
+\hline
+{\em totals} & a list of prices \\
+\hline
+{\em num\-Dev} & the number of standard deviations to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_amazon___price___finder_1_1_analyze_results_a3849c1953175489f3291237f18709b41}{\index{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results@{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results}!calculate\-Standard\-Deviation@{calculate\-Standard\-Deviation}}
+\index{calculate\-Standard\-Deviation@{calculate\-Standard\-Deviation}!Amazon_Price_Finder::AnalyzeResults@{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results}}
+\subsubsection[{calculate\-Standard\-Deviation}]{\setlength{\rightskip}{0pt plus 5cm}static double Amazon\-\_\-\-Price\-\_\-\-Finder.\-Analyze\-Results.\-calculate\-Standard\-Deviation (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{totals}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_amazon___price___finder_1_1_analyze_results_a3849c1953175489f3291237f18709b41}
+
+
+This method calculates the standard deviation of the array. 
+
+It contains methods involved in calculating the average of the prices as well as an adjusted average by identifying outliers with the use of the standard deviation. 
+\begin{DoxyParams}{Parameters}
+{\em totals} & a list of prices \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_amazon___price___finder_1_1_analyze_results_a9f06eafd05cf665670bf6acc88e5a1ca}{\index{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results@{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results}!Start\-Analyze@{Start\-Analyze}}
+\index{Start\-Analyze@{Start\-Analyze}!Amazon_Price_Finder::AnalyzeResults@{Amazon\-\_\-\-Price\-\_\-\-Finder\-::\-Analyze\-Results}}
+\subsubsection[{Start\-Analyze}]{\setlength{\rightskip}{0pt plus 5cm}static void Amazon\-\_\-\-Price\-\_\-\-Finder.\-Analyze\-Results.\-Start\-Analyze (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_amazon___price___finder_1_1_analyze_results_a9f06eafd05cf665670bf6acc88e5a1ca}
+
+
+This is the first method invoked in the \hyperlink{class_amazon___price___finder_1_1_analyze_results}{Analyze\-Results} class. 
+
+It defines the array of prices and calls the other methods to calculate the standard deviation and adjusted average. $<$ average 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Los Haches/\-Documents/\-Git\-Hub/\-Capstone-\/\-L\-H-\/\-N\-N-\/\-D\-O-\/\-N\-R/\-Amazon\-\_\-\-Price\-\_\-\-Finder/\-Amazon\-\_\-\-Price\-\_\-\-Finder/Analyze\-Results.\-cs\end{DoxyCompactItemize}

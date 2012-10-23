@@ -4,19 +4,34 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 using System.Diagnostics;
-using WindowsFormsApplication1;
-using Amazon_Price_Finder;
+using AmazonPriceFinderForm;
 
-class Program
+// Doxygen
+// http://www.stack.nl/~dimitri/doxygen/docblocks.html
+//! This is the namespace for the application
+/**
+ * All of the classes and methods reside within this namespace.
+ */
+namespace Amazon_Price_Finder
 {
-
-    static void Main(String[] args)
+    //! The main class of the program
+    /**
+     * This is the class that is run on entry into the application.
+     */
+    class AmazonPriceFinder
     {
-        WindowsFormsApplication1.formAmazonPrice form = new WindowsFormsApplication1.formAmazonPrice();
-        
-        AmazonRequest.SendRequest();
-        AnalyzeResults.StartAnalyze();
-        
-        form.ShowDialog();
+        //! The main method of the program
+        /**
+         * This is the method that is run on entry into the application
+         */
+        static void Main()
+        {
+            AmazonPriceFinderForm.FormAmazonPrice form = new AmazonPriceFinderForm.FormAmazonPrice();
+
+            AmazonRequest.SendRequest();
+            AnalyzeResults.StartAnalyze();
+
+            form.ShowDialog();
+        }
     }
 }
