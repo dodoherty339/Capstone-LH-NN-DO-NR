@@ -15,5 +15,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void comboBoxSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
