@@ -1,0 +1,18 @@
+Meeting #8: Thursday, October 25
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+This week we did midterm presentations, so our meeting was short.
+
+We found out that the client sells used books and DVDs, and may start selling used video games.  We hope that barcodes will be sufficient for finding the correct item.
+
+- Nathan is going to continue doing work on the web scraper.
+- Lucy is going to try to set up the database that Dan got working.
+- Nick is going to look at the Amazon Web Services code to see what he can figure out.
+- Dan is going to do some research on Google and other possible shopping sites that could be used to obtain prices.
+
+Next Thursday (November 1) we are doing a practice exam for the assessment, so we plan to meet for a short time before the exam (around 1:15 or so).

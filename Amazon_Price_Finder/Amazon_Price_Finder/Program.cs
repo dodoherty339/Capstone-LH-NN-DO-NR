@@ -28,8 +28,10 @@ namespace Amazon_Price_Finder
         {
             AmazonPriceFinderForm.FormAmazonPrice form = new AmazonPriceFinderForm.FormAmazonPrice();
 
-            AmazonRequest.SendRequest();
-            AnalyzeResults.StartAnalyze();
+            //AmazonRequest.SendRequest();
+            double[] totals = new Double[] { 0.01, 100, 600, 700, 400, 500
+                                           , 200, 300, 800 , 900 };
+            AnalyzeResults.StartAnalyze(totals);
 
             form.ShowDialog();
         }
