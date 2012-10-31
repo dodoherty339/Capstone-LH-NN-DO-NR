@@ -67,6 +67,7 @@
       <DependentUpon>AmazonPriceFinderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AnalyzeResults.cs" />
+    <Compile Include="Database_Conn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AmazonPriceFinderForm.resx">
@@ -82,7 +83,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

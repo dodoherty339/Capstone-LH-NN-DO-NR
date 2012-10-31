@@ -28,12 +28,20 @@ namespace Amazon_Price_Finder
         {
             AmazonPriceFinderForm.FormAmazonPrice form = new AmazonPriceFinderForm.FormAmazonPrice();
 
+            
             //AmazonRequest.SendRequest();
             double[] totals = new Double[] { 0.01, 100, 600, 700, 400, 500
                                            , 200, 300, 800 , 900 };
             AnalyzeResults.StartAnalyze(totals);
-
+            
+            /*
+            //Create new string to get values returned by the database
+            //valid barcode for video game assassins creed revelations
+            string[] arr = new string[3];
+            arr = Database_Conn.getDBResults("008888526841");
+            */
             form.ShowDialog();
+             
         }
     }
 }

@@ -20,5 +20,10 @@ namespace AmazonPriceFinderForm
         {
 
         }
+
+        private void tblResults_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

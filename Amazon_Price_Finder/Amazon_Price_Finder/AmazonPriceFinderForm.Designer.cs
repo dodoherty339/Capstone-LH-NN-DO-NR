@@ -175,6 +175,7 @@ namespace AmazonPriceFinderForm
             this.tblResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tblResults.Size = new System.Drawing.Size(359, 164);
             this.tblResults.TabIndex = 0;
+            this.tblResults.Paint += new System.Windows.Forms.PaintEventHandler(this.tblResults_Paint);
             // 
             // lblAmazon
             // 
@@ -367,7 +368,7 @@ namespace AmazonPriceFinderForm
             this.radioButton3.Text = "25 per screen";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // formAmazonPrice
+            // FormAmazonPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -380,7 +381,7 @@ namespace AmazonPriceFinderForm
             this.Controls.Add(this.grpBoxFilter);
             this.Controls.Add(this.lblSort);
             this.Controls.Add(this.comboBoxSort);
-            this.Name = "formAmazonPrice";
+            this.Name = "FormAmazonPrice";
             this.Text = "Amazon Price Comparison";
             this.grpBoxFilter.ResumeLayout(false);
             this.grpBoxFilter.PerformLayout();
