@@ -1,0 +1,15 @@
+Meeting #9: Thursday, November 1
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+Dan discovered that Google API provides something like what we wanted for Amazon: it searches Google shops and returns records with pricing information.  He has written a small scraper program, which we will probably expand and use for our application.
+
+Nick and Nathan were getting help from Dan to set up their databases.
+
+Lucy is going to start working on the documentation we need to write for the end of the capstone.
+
+Next Thursday (November 8) we will be going over our practice assessment tests, so we will probably try to meet before or after class at least for a short time.
