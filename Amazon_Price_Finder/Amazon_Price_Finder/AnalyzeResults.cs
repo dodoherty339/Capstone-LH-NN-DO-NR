@@ -18,7 +18,7 @@ namespace Amazon_Price_Finder
          * It defines the array of prices and calls the other methods to 
          * calculate the standard deviation and adjusted average.
          */
-        public static void StartAnalyze(double[] totals)
+        public static double StartAnalyze(double[] totals)
         {
             // Possibly analyze difference between median and mean.
             double stdDev = 0;
@@ -55,6 +55,8 @@ namespace Amazon_Price_Finder
             Console.WriteLine("AdjMean3: $" + adjMean3);
             //Console.WriteLine("Press enter to close window.");
             //Console.ReadKey();
+
+            return median;
         }
 
         //! This method calculates the standard deviation of the array

@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="AnalyzeResults.cs" />
     <Compile Include="Database_Conn.cs" />
+    <Compile Include="GooglePrices.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AmazonPriceFinderForm.resx">

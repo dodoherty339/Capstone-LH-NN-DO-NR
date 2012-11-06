@@ -9,12 +9,10 @@ namespace Amazon_Price_Finder
 {
     class Database_Conn
     {
-        public static string[] getDBResults(string barcode)
+        public static DataSet getDBResults()
         {
-            //string barcode = "008888526841";
             //Create a new dataset object.
             DataSet set = new DataSet();
-            string[] arr = new string[3];
             //Create SqlConnection.
             using (SqlConnection conn = new SqlConnection())
             {
@@ -33,21 +31,7 @@ namespace Amazon_Price_Finder
                     }
                 }
             }
-            foreach (DataRow row in set.Tables[0].Rows)
-            {
-                //found in database
-                if (row["IDNumber"].ToString() == barcode)
-                {
-                    //assign each value to a spot in an array
-                    arr[0] = row["IDNumber"].ToString();
-                    arr[1] = row["ItemDesc"].ToString();
-                    arr[2] = row["Retail"].ToString();
-
-                    return arr;
-                }
-            }
-            // I dont know why I needed this here I kept getting a dumb error
-            return arr;
+            return set;
         }
     }
 }

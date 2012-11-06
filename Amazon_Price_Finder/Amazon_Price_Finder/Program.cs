@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 using System.ServiceModel;
 using System.Diagnostics;
 using AmazonPriceFinderForm;
@@ -26,20 +28,17 @@ namespace Amazon_Price_Finder
          */
         static void Main()
         {
+            double price;
             AmazonPriceFinderForm.FormAmazonPrice form = new AmazonPriceFinderForm.FormAmazonPrice();
-
-            
+            DataSet set = Database_Conn.getDBResults();
+            price = GooglePrices.getPrice();
+            /*
             //AmazonRequest.SendRequest();
             double[] totals = new Double[] { 0.01, 100, 600, 700, 400, 500
                                            , 200, 300, 800 , 900 };
             AnalyzeResults.StartAnalyze(totals);
-            
-            /*
-            //Create new string to get values returned by the database
-            //valid barcode for video game assassins creed revelations
-            string[] arr = new string[3];
-            arr = Database_Conn.getDBResults("008888526841");
             */
+            
             form.ShowDialog();
              
         }
