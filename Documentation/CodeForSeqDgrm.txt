@@ -1,0 +1,15 @@
+title Price Comparison Application
+
+participant Database
+Application->Database: Request items
+participant "Amazon.com/\nGoogleShops" as X
+Database->Application: Return list of items
+loop for each item in list
+    Application->X: Request prices
+    X->Application: Return list of prices
+end
+note over Application: 
+    Process Prices
+    Display on GUI
+end note
+Application->Database: Modify prices in inventory

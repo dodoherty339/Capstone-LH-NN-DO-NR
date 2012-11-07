@@ -13,14 +13,13 @@ Table of Contents	2
 1.	Introduction	#
 1.1	Client	#
 1.2	Application	#
-1.2.1	Original Proposal	#
-1.2.2	Modified Proposal	#
 2.	Functional and Nonfunctional Requirements	#
 2.1	Functional Requirements	#
 2.2	Nonfunctional Requirements	#
 3.	Architecture and Design	#
+3.1	High-Level Architecture	#
 4.	Implementation Issues	#
-5.	Testing (list the tests conducted)	#
+5.	Testing	#
 6.	Lessons Learned	#
 Index of Figures	# 
 1.	Introduction
@@ -51,18 +50,81 @@ Ultimately, we ran across a number of difficulties in designing this application
 
 
  
-2.	Functional and Nonfunctional Requirements
-
-[8-12 pages; this would be a much shortened counterpart to what you did in CSCI 4830; you can follow the outline for the requirements specification document in CSCI 4830; be sure to include use cases for the main services you will support]
+2.	Functional and Nonfunctional Requirements 
 
 2.1	Functional Requirements
 
+2.1.1	Database Communication
+
+The application will need to have a connection to the client’s database which contains the store’s inventory.
+
+2.1.1.1	Read from the database
+
+The application will need to be able to query the database using SQL to obtain a list of all used products in the client’s database.
+
+2.1.1.1.1	Use Case
+
+Name: Read from Database
+Actors: Initiated by user
+Entry Condition: User launches application
+Flow of Events:
+1.	The application will attempt to establish a connection with the database.
+2.	The application will pass a query to the database requesting a list of items.
+3.	The database will return the result of the query to the application.
+Exit Conditions: The application will have a list of items.
+Exceptions: 
+•	The database is not found or is inaccessible.
+•	The query returns no results.
+
+2.1.1.2	Write to the database
+
+The application will need to be able to write to the database by using SQL queries to modify prices of items.
+
+2.1.1.2.1	Use Case
+
+Name: Write to Database
+Actors: Initiated by user
+Entry Condition: User chooses to modify price(s)
+Flow of Events:
+1.	The application will attempt to establish a connection with the database.
+2.	The application will pass a query to the database containing the item(s) and the new price(s) based on entry in the interface.
+3.	The database will acknowledge the changes made by the application.
+Exit Conditions: The database will reflect the price change(s).
+Exceptions: 
+•	The database is not found or is inaccessible.
+•	The SQL query returns an error.
+
+2.1.2	Online Shop Communication
+2.1.3	Data Processing 
+
 2.2	Nonfunctional Requirements
 
- 
-3.	Architecture and Design
+2.2.1	Hardware and Software Requirements
 
-[8-12 pages; this is also a much shortened counterpart to what you did in CSCI 4830; you can follow the outline for the design document in CSCI 4830; the following should be described: architecture, modules and their interfaces, database (if applicable) - we may have to iterate to get the desired details; some screenshots]
+The application will need to be run on a PC that has a connection to the client’s database via MS SQL Server and an internet connection.  No other specific hardware or software is required.
+
+2.2.2	Reliability
+
+In order to execute all functionality, the application will rely upon a connection to the client’s database and a connection to the internet.  
+
+2.2.3	Availability
+
+Because the application is not safety-critical, its availability needs are less imperative.  However, that does not mean that the system should not be available as much as possible.  The application should be available particularly during the client’s business hours.  Also, the application requires access to the internet, but it should not rely on an internet connection to run, only to update its information.  In the event of a loss of internet connection, the application should still display previously obtained information, and it should continue to be connected to the database and able to modify the client’s inventory as desired.
+
+2.2.4	Security
+
+Because the application will have access to read from and write to the client’s database, it should be secured from use by unauthorized persons.  The pricing information obtained online is publicly available, so there is no security concern for that data.  The client’s PC will be the only system running the application, and the client’s own security measures should ensure the security of the application.
+
+2.2.5	Maintainability
+
+The application should be relatively autonomous once development is complete.  It should not need updates on a regular basis.  If updates need to be performed, the application could most likely be updated outside of the client’s normal business hours to prevent impeding the client’s business.
+
+2.2.6	Portability
+
+The application will be designed for this particular client and is not being distributed to anyone other than the client.  After development and deployment, there will be no need for the application to run on any system other than the client’s.
+
+ 
+3.	Architecture and Design 
 
 3.1	High-Level Architecture
 
@@ -73,21 +135,25 @@ Figure 1 shows how the price comparison application interacts with the existing 
 
 The price comparison application also must communicate with Amazon.com or Google shops in order to search for specific barcodes and retrieve the price at which the item is being sold by various merchants.
 
-First, the application will retrieve all used items from the client’s database.  When it has a list of barcodes, the application will send requests to Amazon.com or Google shops for each item.  Each request will return a list of offerings for the item, which will tell how much the item is being sold for at various locations online.  After retrieving this list, the application will perform statistical calculations to find an average price for each item.  These averages, as well as the current price in the client’s database, will be displayed on an interface that will allow the client’s database to be modified if the user chooses.
  
-4.	Implementation Issues
+Figure 2: Price Comparison Application Sequence Diagram
 
-[1-2 pages; various issues that cropped up in the process of writing the code]
+Figure 2 shows the specific communications necessary for the application.  First, the application will retrieve all used items from the client’s database.  When it has a list of barcodes, the application will send requests to Amazon.com or Google shops for each item.  Each request will return a list of offerings for the item, which will tell how much the item is being sold for at various locations online.  After retrieving this list, the application will perform statistical calculations to find an average price for each item.  These averages, as well as the current price in the client’s database, will be displayed on an interface that will allow the client’s database to be modified if the user chooses.
 
- 
-5.	Testing
-
-[2-3 pages; list the tests conducted] 
 
  
-6.	Lessons Learned
+4.	Implementation Issues 
 
-[3-5 pages; what you learned in this project; for example: how had the project help improve your understanding of CS principles? how had your CS background help with this project?; if you had the chance to do it over, what would you do differently; based on your experience, suggest some future extensions]
+
+
+ 
+5.	Testing 
+
+
+
+ 
+6.	Lessons Learned 
+
  
 X.	Section
 
@@ -101,4 +167,5 @@ X.1.1.1	Point
  
 
 Index of Figures
-fig. 1: Architecture	#
+fig. 1: Price Comparison Application Architecture	#
+fig. 2: Price Comparison Application Sequence Diagram	#
