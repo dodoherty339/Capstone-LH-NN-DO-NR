@@ -1,0 +1,13 @@
+Meeting #10: Thursday, November 8
+
+Present at the meeting were:
+    - Lucy
+    - Dan
+    - Nick
+    - Nathan
+
+Most of the meeting time was spent trying to get the database to work on Nick's computer.  Professor Siy tried to help us figure out what the errors meant.
+
+Nick and Nathan are going to try to get their databases working so that they, along with Dan, can start putting the entire program together.
+
+Lucy is going to work on the final paper that has to be written for the project.
