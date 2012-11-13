@@ -25,5 +25,10 @@ namespace AmazonPriceFinderForm
         {
 
         }
+
+        private void lblAmazon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,10 +9,10 @@ namespace Amazon_Price_Finder
 {
     class Database_Conn
     {
-        public static DataSet getDBResults()
+        public static DataTable getDBResults()
         {
             //Create a new dataset object.
-            DataSet set = new DataSet();
+            DataTable set = new DataTable();
             //Create SqlConnection.
             using (SqlConnection conn = new SqlConnection())
             {

@@ -56,7 +56,7 @@ namespace Amazon_Price_Finder
             //Console.WriteLine("Press enter to close window.");
             //Console.ReadKey();
 
-            return median;
+            return adjMean2;
         }
 
         //! This method calculates the standard deviation of the array

@@ -30,17 +30,16 @@ namespace Amazon_Price_Finder
         {
             double price;
             AmazonPriceFinderForm.FormAmazonPrice form = new AmazonPriceFinderForm.FormAmazonPrice();
-            DataSet set = Database_Conn.getDBResults();
-            price = GooglePrices.getPrice();
-            /*
-            //AmazonRequest.SendRequest();
-            double[] totals = new Double[] { 0.01, 100, 600, 700, 400, 500
-                                           , 200, 300, 800 , 900 };
-            AnalyzeResults.StartAnalyze(totals);
-            */
-            
-            form.ShowDialog();
-             
+            DataTable set = Database_Conn.getDBResults();
+            set.Columns.Add("GooglePrice", typeof(double));
+
+            foreach (DataRow row in set.Rows)
+            {
+                price = GooglePrices.getPrice(row["IDNumber"].ToString());
+                row["GooglePrice"] = Math.Round(price, 2);
+            }
+
+            form.ShowDialog();  
         }
     }
 }

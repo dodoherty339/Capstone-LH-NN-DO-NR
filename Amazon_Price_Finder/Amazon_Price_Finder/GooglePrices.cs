@@ -12,10 +12,10 @@ namespace Amazon_Price_Finder
 {
     class GooglePrices
     {
-        public static double getPrice()
+        public static double getPrice(string barcode)
         {
             string key = "AIzaSyAkuzeoL2MJz--Gk2WSGnotf2qGoCaZdL8";
-            string barcode = "008888526841";
+            //string barcode = "008888526841";
             string sourceCode = getSourceCode("https://www.googleapis.com/shopping/search/v1/public/products?key=" + key + "&country=US&q=" + barcode + "&alt=JSON");
             string subPrice;
             Regex name = new Regex("\"name\": \".*\"");

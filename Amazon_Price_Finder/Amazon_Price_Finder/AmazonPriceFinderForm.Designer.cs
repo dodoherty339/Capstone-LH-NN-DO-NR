@@ -187,6 +187,7 @@ namespace AmazonPriceFinderForm
             this.lblAmazon.TabIndex = 10;
             this.lblAmazon.Text = "Amazon\r\nPrice";
             this.lblAmazon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblAmazon.Click += new System.EventHandler(this.lblAmazon_Click);
             // 
             // lblPrice
             // 
