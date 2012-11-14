@@ -2,7 +2,7 @@ title Price Comparison Application
 
 participant Database
 Application->Database: Request items
-participant "Amazon.com/\nGoogleShops" as X
+participant "Google Shops" as X
 Database->Application: Return list of items
 loop for each item in list
     Application->X: Request prices
@@ -10,6 +10,8 @@ loop for each item in list
 end
 note over Application: 
     Process Prices
+end note
+note over Application: 
     Display on GUI
 end note
 Application->Database: Modify prices in inventory

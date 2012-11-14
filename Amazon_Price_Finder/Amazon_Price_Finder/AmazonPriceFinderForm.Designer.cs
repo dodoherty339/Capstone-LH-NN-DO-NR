@@ -100,7 +100,7 @@ namespace AmazonPriceFinderForm
             this.grpBoxFilter.Controls.Add(this.radBtnNone);
             this.grpBoxFilter.Location = new System.Drawing.Point(198, 21);
             this.grpBoxFilter.Name = "grpBoxFilter";
-            this.grpBoxFilter.Size = new System.Drawing.Size(200, 100);
+            this.grpBoxFilter.Size = new System.Drawing.Size(188, 100);
             this.grpBoxFilter.TabIndex = 5;
             this.grpBoxFilter.TabStop = false;
             this.grpBoxFilter.Text = "Filter results";
@@ -110,10 +110,10 @@ namespace AmazonPriceFinderForm
             this.radBtnMore.AutoSize = true;
             this.radBtnMore.Location = new System.Drawing.Point(16, 42);
             this.radBtnMore.Name = "radBtnMore";
-            this.radBtnMore.Size = new System.Drawing.Size(166, 17);
+            this.radBtnMore.Size = new System.Drawing.Size(158, 17);
             this.radBtnMore.TabIndex = 2;
             this.radBtnMore.TabStop = true;
-            this.radBtnMore.Text = "Items that are more expensive";
+            this.radBtnMore.Text = "Items more expensive online";
             this.radBtnMore.UseVisualStyleBackColor = true;
             // 
             // radBtnLess
@@ -121,10 +121,10 @@ namespace AmazonPriceFinderForm
             this.radBtnLess.AutoSize = true;
             this.radBtnLess.Location = new System.Drawing.Point(16, 65);
             this.radBtnLess.Name = "radBtnLess";
-            this.radBtnLess.Size = new System.Drawing.Size(161, 17);
+            this.radBtnLess.Size = new System.Drawing.Size(153, 17);
             this.radBtnLess.TabIndex = 1;
             this.radBtnLess.TabStop = true;
-            this.radBtnLess.Text = "Items that are less expensive";
+            this.radBtnLess.Text = "Items less expensive online";
             this.radBtnLess.UseVisualStyleBackColor = true;
             // 
             // radBtnNone
@@ -181,11 +181,11 @@ namespace AmazonPriceFinderForm
             // 
             this.lblAmazon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblAmazon.AutoSize = true;
-            this.lblAmazon.Location = new System.Drawing.Point(302, 6);
+            this.lblAmazon.Location = new System.Drawing.Point(306, 6);
             this.lblAmazon.Name = "lblAmazon";
-            this.lblAmazon.Size = new System.Drawing.Size(45, 26);
+            this.lblAmazon.Size = new System.Drawing.Size(37, 26);
             this.lblAmazon.TabIndex = 10;
-            this.lblAmazon.Text = "Amazon\r\nPrice";
+            this.lblAmazon.Text = "Online\r\nPrice";
             this.lblAmazon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblAmazon.Click += new System.EventHandler(this.lblAmazon_Click);
             // 
@@ -193,11 +193,11 @@ namespace AmazonPriceFinderForm
             // 
             this.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(243, 19);
+            this.lblPrice.Location = new System.Drawing.Point(232, 6);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(31, 13);
+            this.lblPrice.Size = new System.Drawing.Size(53, 26);
             this.lblPrice.TabIndex = 9;
-            this.lblPrice.Text = "Price";
+            this.lblPrice.Text = "Database\r\nPrice";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // lblItem
@@ -383,7 +383,7 @@ namespace AmazonPriceFinderForm
             this.Controls.Add(this.lblSort);
             this.Controls.Add(this.comboBoxSort);
             this.Name = "FormAmazonPrice";
-            this.Text = "Amazon Price Comparison";
+            this.Text = "Price Comparison";
             this.grpBoxFilter.ResumeLayout(false);
             this.grpBoxFilter.PerformLayout();
             this.panelResults.ResumeLayout(false);

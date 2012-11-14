@@ -10,61 +10,41 @@ Lucy Horpedahl, Nathan Noonan, Daniel O’Doherty, and Nick Richardson
  
 Table of Contents
 Table of Contents	2
-1.	Introduction	#
-1.1	Client	#
-1.2	Application	#
-2.	Functional and Nonfunctional Requirements	#
-2.1	Functional Requirements	#
-2.2	Nonfunctional Requirements	#
-3.	Architecture and Design	#
-3.1	High-Level Architecture	#
+1.	Introduction	3
+1.1	Client	3
+1.2	Application	3
+2.	Functional and Nonfunctional Requirements	5
+2.1	Functional Requirements	5
+2.2	Nonfunctional Requirements	13
+3.	Architecture and Design	16
+3.1	High-Level Architecture	16
 4.	Implementation Issues	#
 5.	Testing	#
 6.	Lessons Learned	#
 Index of Figures	# 
 1.	Introduction
-
 1.1	Client
-
 The client for the application we chose to design for this project is Justin Richardson, the owner of a small business, Digital Attitude.  The business, which is located in Crossroads Mall, sells Japanese animation collectibles, movies, books, video games, and more.
-
 We spent time at Mr. Richardson’s business, learning about how the store runs.  Most, if not all, of his products have barcodes which are scanned in order to read the UPC number of the item.  The items are entered into a database and organized by this number so that searching for this number will return the proper item.  These barcodes are central to both our original application idea and our updated application. 
-
 1.2	Application
-
 1.2.1	Original Proposal
-
 Our initial plan was to design a new point-of-sale system for Mr. Richardson’s store.  A point-of-sale system handles nearly all of the necessary operations of a retail business.  It allows inventory to be searched and updated, purchases to be made, and customer information to be stored.
-
 We believed that Mr. Richardson did not have a proper point-of-sale system, and we planned to create one that would fit his business’s unique needs.  For example, Mr. Richardson buys used items from customers and then sells them in his store.  He selects the pricing for these transactions by searching Amazon.com, which is one of the few places that sells most of the items that Mr. Richardson sells in his store.
 
-We planned to implement, as part of the point-of-sale system, a “price checker” that would search Amazon.com and display the current price for the items so that Mr. Richardson would not have to do these searches manually.  Upon meeting with Mr. Richardson further, we discovered that his point-of-sale system was adequate, but he told us that the “price checker” feature would be very helpful.
-
+We planned to implement, as part of the point-of-sale system, a “price checker” that would search Amazon.com and display the current price for the items so that Mr. Richardson would not have to do these searches manually.  Upon meeting with Mr. Richardson further, we discovered that his point-of-sale system was adequate, but he told us that the “price checker” feature would be very helpful. 
 1.2.2	Modified Proposal
-
 Because the point-of-sale system would have been a very large project, and the system currently used by the client was sufficient for his needs, we decided to narrow the scope of our project to just design an application that would search Amazon.com and retrieve prices for items in Mr. Richardson’s inventory.  We planned to include options for filtering and sorting the output as well as for making changes to the prices in the database through the application itself, rather than having to go back to the point-of-sale system to modify the prices.
-
 The application would need to communicate with Mr. Richardson’s existing database, process the data to retrieve the UPC numbers, communicate with Amazon.com to search for the UPC numbers and retrieve the prices, process the prices to display them on an interface, and ultimately communicate with the database again to write new prices back to the database.
-
 Ultimately, we ran across a number of difficulties in designing this application which caused us to modify certain features, but the basic architecture would remain the same.  The rest of this document describes in more detail the work that was done to design this application.
-
-
  
-2.	Functional and Nonfunctional Requirements 
-
+2.	Functional and Nonfunctional Requirements
 2.1	Functional Requirements
-
 2.1.1	Database Communication
-
 The application will need to have a connection to the client’s database which contains the store’s inventory.
-
 2.1.1.1	Read from the database
-
 The application will need to be able to query the database using SQL to obtain a list of all used products in the client’s database.
-
 2.1.1.1.1	Use Case
-
-Name: Read from Database
+Name: Read from database
 Actors: Initiated by user
 Entry Condition: User launches application
 Flow of Events:
@@ -77,12 +57,9 @@ Exceptions:
 •	The query returns no results.
 
 2.1.1.2	Write to the database
-
 The application will need to be able to write to the database by using SQL queries to modify prices of items.
-
 2.1.1.2.1	Use Case
-
-Name: Write to Database
+Name: Write to database
 Actors: Initiated by user
 Entry Condition: User chooses to modify price(s)
 Flow of Events:
@@ -93,53 +70,168 @@ Exit Conditions: The database will reflect the price change(s).
 Exceptions: 
 •	The database is not found or is inaccessible.
 •	The SQL query returns an error.
-
 2.1.2	Online Shop Communication
-2.1.3	Data Processing 
-
+2.1.2.1	Obtain information from online shop
+The application will require a connection to the internet in order to connect to an online shop, in this case Google shops.  Once the application has a list of items from the client’s database and the barcodes have been extracted, a request will be sent to the online shop for each item on the list.  A list of all the offerings found in the shop for the barcode sent in the request will be returned.
+2.1.2.1.1	Use Case
+Name: Obtain information from Google shops
+Actors: Initiated by application
+Entry Condition: Application has a list of barcodes from the database
+Flow of Events:
+1.	The application will attempt to establish a connection to the internet.
+2.	The application will send a request to Google shops with a specific barcode.
+3.	Google shops will return a list of all offerings for the item.
+4.	Steps 2 and 3 will be repeated until all items have been checked.
+Exit Conditions: The application will have a list of offerings for each item in the list obtained from the database.
+Exceptions: 
+•	There is no internet connection.
+•	A barcode is invalid.
+•	Nothing is returned.
+2.1.3	Data Processing
+2.1.3.1	Extract real barcodes from database results
+When the results are returned from the database, the barcodes will need to be extracted because the client adds digits to the beginning of the barcodes for used items, which are the items which will be handled.  If the barcode contains too many digits, the first two will be removed.
+2.1.3.1.1	Use Case
+Name: Extract real barcodes
+Actors: Initiated by application
+Entry Condition: A list of items has been returned from the database
+Flow of Events:
+1.	The barcode contained in a record from the database will be checked for length.
+2.	If the barcode is too long, the first two digits will be removed.
+3.	Steps 1 and 2 will be repeated until all records have been processed.
+Exit Conditions: All records contain real barcodes for the items.
+Exceptions: 
+•	A record does not contain a barcode.
+•	A barcode is of an unexpected length.
+2.1.3.2	Parse online shop results
+When a result is received from the online shop, the price and condition for each offer will need to be parsed from the data returned.  Because the results are formatted in a consistent way, regular expressions can be used.  The results will be parsed to find the price for all offers of an item listed as “used.”
+2.1.3.2.1	Use Case
+Name: Parse online shop results
+Actors: Initiated by application
+Entry Condition: The online shop has returned a result for a barcode.
+ 
+Flow of Events:
+1.	The result will be parsed to find the price and condition for each offer.
+2.	If the condition is “used” then the price will be saved into a list for later analysis.
+Exit Conditions: The result has been completely parsed, and a list of used prices has been obtained.
+Exceptions: 
+•	The result is empty.
+•	The result is not formatted correctly.
+•	The result contains no used items.
+2.1.3.3	Analyze prices
+The list of used prices obtained from the online shop will need to be analyzed in order for the data to be presented in a simple way on the interface.  Any outliers will be removed from the list so that the average is not skewed by extremely high or extremely low values.
+2.1.3.3.1	Use Case
+Name: Analyze prices
+Actors: Initiated by application
+Entry Condition: A list of used prices for an item has been obtained.
+Flow of Events:
+1.	The average and standard deviation of the list will be calculated.
+2.	If the list contains any outliers (which is defined as any value 3 or more standard deviations away from the average), these will be removed.
+3.	A new average will be calculated. 
+Exit Conditions: The item will have an average online price.
+Exceptions: 
+•	There are no prices in the list.
+•	The prices in the list are all $0.
+2.1.4	Graphical User Interface Functions 
+2.1.4.1	Change the number of results on screen 
+The user is able to change the number of items displayed on the screen at one time.
+2.1.4.1.1	Use Case
+Name: Change number of results on screen
+Actors: Initiated by user
+Entry Condition: Some results are displayed on the interface.
+Flow of Events:
+1.	The user selects one of the radio buttons in the “Num Results” area.
+2.	The displayed table will be modified to show the selected number of results.
+Exit Conditions: Some results are displayed on the interface.
+Exceptions: 
+•	 There are no results displayed.
+•	There are not enough results to display the number requested.
+2.1.4.2	Next/Previous
+If more results exist than are displayed on the interface, “Next” and “Previous” can be used to display more results.
+ 
+2.1.4.2.1	Use Case
+Name: Next/Previous
+Actors: Initiated by user
+Entry Condition: Some results are displayed on the interface.
+Flow of Events:
+1.	The user clicks the “Next” or “Previous” button.
+2.	The next x number of records or previous x number of records are displayed.
+Exit Conditions: Some results are displayed on the interface.
+Exceptions: 
+•	 There are no more results to be displayed.
+2.1.4.3	Sort results
+The user can choose to sort the data in a number of different ways: Price low-to-high, Price high-to-low, Difference low-to-high, Difference high-to-low.  Price low-to-high and high-to-low will sort the results by the database price.  Difference low-to-high and high-to-low will sort the results by the difference between the database price and the average online price. 
+2.1.4.3.1	Use Case
+Name: Sort results
+Actors: Initiated by user
+Entry Condition: Some results are displayed on the interface.
+Flow of Events:
+1.	The user selects one of the options from the “Sort by” drop-down box.
+2.	The results are sorted and displayed on the interface.
+ 
+Exit Conditions: The results are displayed in the new sorted order.
+Exceptions: none
+2.1.4.4	Filter results
+The user can choose to filter the results by showing only items that are more expensive online than in the database or only items that are less expensive.  The results can also be displayed without any filter.
+2.1.4.4.1	Use Case
+Name: Filter results
+Actors: Initiated by user
+Entry Condition: Some results are displayed on the interface.
+Flow of Events:
+1.	The user selects one of the radio buttons in the “Filter results” area.
+2.	The selected filter is applied to the results.
+3.	The filtered set is displayed on the interface.
+Exit Conditions: The results that fit into the selected filter are displayed.
+Exceptions: 
+•	There are no results that fit into the selected filter.
+2.1.4.5	Modify item prices in database
+The user can modify prices of items in the database from the interface itself.  The price of a single item can be modified or multiple items’ prices can be changed at one time.
+ 
+2.1.4.5.1	Use Case
+Name: Modify prices
+Actors: Initiated by user
+Entry Condition: Some results are displayed on the interface.
+Flow of Events:
+1.	The user selects the check boxes next to the items whose price is to be modified.
+2.	The user enters the new price into the “New price” textbox in the “Modify selected item(s)” area.
+3.	The user clicks the “Modify” button.
+4.	A connection is made with the database.
+5.	The new prices are written to the database for the selected items.
+Exit Conditions: The price(s) for the item(s) are modified in the database.
+Exceptions: 
+•	A connection cannot be made with the database.
+•	The user enters non-numeric characters.
+•	The user enters an invalid number (e.g., 0 or negative numbers). 
 2.2	Nonfunctional Requirements
-
 2.2.1	Hardware and Software Requirements
-
 The application will need to be run on a PC that has a connection to the client’s database via MS SQL Server and an internet connection.  No other specific hardware or software is required.
-
+ 
 2.2.2	Reliability
-
 In order to execute all functionality, the application will rely upon a connection to the client’s database and a connection to the internet.  
-
 2.2.3	Availability
-
 Because the application is not safety-critical, its availability needs are less imperative.  However, that does not mean that the system should not be available as much as possible.  The application should be available particularly during the client’s business hours.  Also, the application requires access to the internet, but it should not rely on an internet connection to run, only to update its information.  In the event of a loss of internet connection, the application should still display previously obtained information, and it should continue to be connected to the database and able to modify the client’s inventory as desired.
-
 2.2.4	Security
-
-Because the application will have access to read from and write to the client’s database, it should be secured from use by unauthorized persons.  The pricing information obtained online is publicly available, so there is no security concern for that data.  The client’s PC will be the only system running the application, and the client’s own security measures should ensure the security of the application.
-
+Because the application will have access to read from and write to the client’s database, it should be secured from use by unauthorized persons.  The pricing information obtained online is publicly available, so there is no security concern for that data.  The client’s PC will be the only system running the application, and the client’s own security measures should ensure the security of the application. 
 2.2.5	Maintainability
-
-The application should be relatively autonomous once development is complete.  It should not need updates on a regular basis.  If updates need to be performed, the application could most likely be updated outside of the client’s normal business hours to prevent impeding the client’s business.
-
+The application should be relatively autonomous once development is complete.  It should not need updates on a regular basis.  If updates need to be performed, the application could most likely be updated outside of the client’s normal business hours to prevent impeding the client’s business. 
 2.2.6	Portability
-
 The application will be designed for this particular client and is not being distributed to anyone other than the client.  After development and deployment, there will be no need for the application to run on any system other than the client’s.
 
  
 3.	Architecture and Design 
-
 3.1	High-Level Architecture
-
- 
-
-
+The Price Comparison Application had to be designed to be able to connect to existing applications including the client’s inventory database and online shops.
 Figure 1 shows how the price comparison application interacts with the existing modules.  The application must communicate with the existing database in order to read and modify records in the inventory.  The database also communicates with the point-of-sale system, and the changes made by the price comparison application must be reflected in the point-of-sale system.
 
-The price comparison application also must communicate with Amazon.com or Google shops in order to search for specific barcodes and retrieve the price at which the item is being sold by various merchants.
-
  
+
+The price comparison application must also communicate with Google shops in order to search for specific barcodes and retrieve the price at which the item is being sold by various merchants.
+Figure 2 shows more detail of the interactions between the price comparison application and the external applications.
+  
 Figure 2: Price Comparison Application Sequence Diagram
-
-Figure 2 shows the specific communications necessary for the application.  First, the application will retrieve all used items from the client’s database.  When it has a list of barcodes, the application will send requests to Amazon.com or Google shops for each item.  Each request will return a list of offerings for the item, which will tell how much the item is being sold for at various locations online.  After retrieving this list, the application will perform statistical calculations to find an average price for each item.  These averages, as well as the current price in the client’s database, will be displayed on an interface that will allow the client’s database to be modified if the user chooses.
-
+First, the application will retrieve all used items from the client’s database.  When it has a list of barcodes, the application will send requests to Google shops for each item.
+Each request will return a list of offerings for the item, which will tell how much the item is being sold for at various locations online.  After retrieving this list, the application will perform statistical calculations to find an average price for each item.
+The average online prices, as well as the current price in the client’s database, will be displayed on an interface that will allow the client’s database to be modified if the user chooses.
+ 
 
  
 4.	Implementation Issues 
@@ -156,11 +248,8 @@ Figure 2 shows the specific communications necessary for the application.  First
 
  
 X.	Section
-
 X.1	Heading
-
 X.1.1	Sub-heading
-
 X.1.1.1	Point
 
 
@@ -169,3 +258,4 @@ X.1.1.1	Point
 Index of Figures
 fig. 1: Price Comparison Application Architecture	#
 fig. 2: Price Comparison Application Sequence Diagram	#
+fig. 3: Price Comparison Application Screenshot	#
