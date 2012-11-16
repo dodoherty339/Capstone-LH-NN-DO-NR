@@ -334,7 +334,7 @@ namespace AmazonPriceFinderForm
             this.groupBox2.Size = new System.Drawing.Size(132, 90);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Num Results";
+            this.groupBox2.Text = "Number of results";
             // 
             // radioButton1
             // 
