@@ -63,11 +63,16 @@ namespace AmazonPriceFinderForm
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.grpBoxRecords = new System.Windows.Forms.GroupBox();
+            this.lblDisplayedRecords = new System.Windows.Forms.Label();
+            this.lblOf = new System.Windows.Forms.Label();
+            this.lblTotalRecords = new System.Windows.Forms.Label();
             this.grpBoxFilter.SuspendLayout();
             this.panelResults.SuspendLayout();
             this.tblResults.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.grpBoxRecords.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxSort
@@ -308,7 +313,7 @@ namespace AmazonPriceFinderForm
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(257, 326);
+            this.btnPrev.Location = new System.Drawing.Point(257, 364);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 9;
@@ -317,7 +322,7 @@ namespace AmazonPriceFinderForm
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(338, 326);
+            this.btnNext.Location = new System.Drawing.Point(338, 364);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 10;
@@ -369,11 +374,50 @@ namespace AmazonPriceFinderForm
             this.radioButton3.Text = "25 per screen";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // grpBoxRecords
+            // 
+            this.grpBoxRecords.Controls.Add(this.lblTotalRecords);
+            this.grpBoxRecords.Controls.Add(this.lblOf);
+            this.grpBoxRecords.Controls.Add(this.lblDisplayedRecords);
+            this.grpBoxRecords.Location = new System.Drawing.Point(284, 325);
+            this.grpBoxRecords.Name = "grpBoxRecords";
+            this.grpBoxRecords.Size = new System.Drawing.Size(129, 36);
+            this.grpBoxRecords.TabIndex = 11;
+            this.grpBoxRecords.TabStop = false;
+            // 
+            // lblDisplayedRecords
+            // 
+            this.lblDisplayedRecords.AutoSize = true;
+            this.lblDisplayedRecords.Location = new System.Drawing.Point(6, 16);
+            this.lblDisplayedRecords.Name = "lblDisplayedRecords";
+            this.lblDisplayedRecords.Size = new System.Drawing.Size(58, 13);
+            this.lblDisplayedRecords.TabIndex = 0;
+            this.lblDisplayedRecords.Text = "8888-8888";
+            // 
+            // lblOf
+            // 
+            this.lblOf.AutoSize = true;
+            this.lblOf.Location = new System.Drawing.Point(70, 16);
+            this.lblOf.Name = "lblOf";
+            this.lblOf.Size = new System.Drawing.Size(16, 13);
+            this.lblOf.TabIndex = 3;
+            this.lblOf.Text = "of";
+            // 
+            // lblTotalRecords
+            // 
+            this.lblTotalRecords.AutoSize = true;
+            this.lblTotalRecords.Location = new System.Drawing.Point(92, 16);
+            this.lblTotalRecords.Name = "lblTotalRecords";
+            this.lblTotalRecords.Size = new System.Drawing.Size(31, 13);
+            this.lblTotalRecords.TabIndex = 4;
+            this.lblTotalRecords.Text = "8888";
+            // 
             // FormAmazonPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 426);
+            this.Controls.Add(this.grpBoxRecords);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
@@ -393,6 +437,8 @@ namespace AmazonPriceFinderForm
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.grpBoxRecords.ResumeLayout(false);
+            this.grpBoxRecords.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,6 +473,10 @@ namespace AmazonPriceFinderForm
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label lblNewPrice;
+        private System.Windows.Forms.GroupBox grpBoxRecords;
+        private System.Windows.Forms.Label lblTotalRecords;
+        private System.Windows.Forms.Label lblOf;
+        private System.Windows.Forms.Label lblDisplayedRecords;
     }
 }
 
