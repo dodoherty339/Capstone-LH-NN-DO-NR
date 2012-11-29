@@ -26,15 +26,19 @@ namespace Amazon_Price_Finder
         /**
          * This is the method that is run on entry into the application
          */
+        public static DataTable set = new DataTable();
+
         static void Main()
         {
             double price;
+            int pageNum = 1;
+            int numResults = 25;
             AmazonPriceFinderForm.FormAmazonPrice form = new AmazonPriceFinderForm.FormAmazonPrice();
             //regular initialization
             //DataTable set = Database_Conn.getDBResults();
 
             //new initialization start
-            DataTable set = new DataTable();
+            
             DataRow setRow = set.NewRow();
             DataRow setRow1 = set.NewRow();
             DataRow setRow2 = set.NewRow();
@@ -63,13 +67,51 @@ namespace Amazon_Price_Finder
 
             set.Columns.Add("GooglePrice", typeof(double));
 
+            int totalRecords = 0;
             foreach (DataRow row in set.Rows)
             {
                 price = GooglePrices.getPrice(row["IDNumber"].ToString());
                 row["GooglePrice"] = Math.Round(price, 2);
+                totalRecords++;
             }
 
+            int count = 0;
+            foreach (DataRow row in set.Rows)
+            {
+                if (count > numResults)
+                {
+                    break;
+                }
+                form.tblResults.Rows.Add();
+                form.tblResults["Barcode", count].Value = row["IDNumber"].ToString();
+                form.tblResults["Description", count].Value = row["ItemDesc"].ToString();
+                form.tblResults["DatabasePrice", count].Value = "$" + row["Retail"].ToString();
+                form.tblResults["OnlinePrice", count].Value = "$" + row["GooglePrice"].ToString();
+                count++;
+            }
+
+            form.lblTotalRecords.Text = totalRecords.ToString();
+            form.lblDisplayedRecords.Text = (((pageNum - 1) * numResults) + 1).ToString() + "-" + count.ToString();
+            //totalPageNum = ceiling(totalRecords/numResults)
+            //((pageNum - 1)*numResults)+1
+            //page 3, 25 results per page
+            //((3 - 1) * 25 ) + 1 = (2 * 25) + 1 = 51
+            
             form.ShowDialog();  
+        }
+
+        public static void UpdateDatabase( String barcode, String newPrice )
+        {
+            //strip $ and all whitepsace from newPrice
+            foreach (DataRow row in set.Rows)
+            {
+                if (barcode.Equals(row["IDNumber"]) && (!newPrice.Equals(row["Retail"])))
+                {
+                    Console.WriteLine(row["IDNumber"] + ", " + row["ItemDesc"] + ", " + row["Retail"] + ", " + row["GooglePrice"]);
+                    row["Retail"] = newPrice;
+                    Console.WriteLine(row["IDNumber"] + ", " + row["ItemDesc"] + ", " + row["Retail"] + ", " + row["GooglePrice"]);
+                }
+            }
         }
     }
 }

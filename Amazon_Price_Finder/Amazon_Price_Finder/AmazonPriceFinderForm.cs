@@ -30,5 +30,17 @@ namespace AmazonPriceFinderForm
         {
 
         }
+
+        private void tblResults_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            String barcode = tblResults["Barcode", e.RowIndex].Value.ToString();
+            String newPrice = tblResults["DatabasePrice", e.RowIndex].Value.ToString();
+            Amazon_Price_Finder.AmazonPriceFinder.UpdateDatabase( barcode, newPrice );
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

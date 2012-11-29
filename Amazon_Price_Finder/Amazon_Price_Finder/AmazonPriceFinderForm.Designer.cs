@@ -42,21 +42,7 @@ namespace AmazonPriceFinderForm
             this.radBtnMore = new System.Windows.Forms.RadioButton();
             this.radBtnLess = new System.Windows.Forms.RadioButton();
             this.radBtnNone = new System.Windows.Forms.RadioButton();
-            this.panelResults = new System.Windows.Forms.Panel();
-            this.tblResults = new System.Windows.Forms.TableLayoutPanel();
-            this.lblAmazon = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblItem = new System.Windows.Forms.Label();
-            this.lblBarcode = new System.Windows.Forms.Label();
-            this.chkBoxMod1 = new System.Windows.Forms.CheckBox();
-            this.chkBoxMod2 = new System.Windows.Forms.CheckBox();
-            this.chkBoxMod3 = new System.Windows.Forms.CheckBox();
-            this.chkBoxMod4 = new System.Windows.Forms.CheckBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNewPrice = new System.Windows.Forms.Label();
-            this.btnMod = new System.Windows.Forms.Button();
-            this.txtBoxAdd = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -64,15 +50,18 @@ namespace AmazonPriceFinderForm
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.grpBoxRecords = new System.Windows.Forms.GroupBox();
-            this.lblDisplayedRecords = new System.Windows.Forms.Label();
-            this.lblOf = new System.Windows.Forms.Label();
             this.lblTotalRecords = new System.Windows.Forms.Label();
+            this.lblOf = new System.Windows.Forms.Label();
+            this.lblDisplayedRecords = new System.Windows.Forms.Label();
+            this.tblResults = new System.Windows.Forms.DataGridView();
+            this.Barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DatabasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OnlinePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBoxFilter.SuspendLayout();
-            this.panelResults.SuspendLayout();
-            this.tblResults.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grpBoxRecords.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblResults)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxSort
@@ -143,177 +132,19 @@ namespace AmazonPriceFinderForm
             this.radBtnNone.Text = "No filter";
             this.radBtnNone.UseVisualStyleBackColor = true;
             // 
-            // panelResults
+            // btnSave
             // 
-            this.panelResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelResults.Controls.Add(this.tblResults);
-            this.panelResults.Controls.Add(this.vScrollBar1);
-            this.panelResults.Location = new System.Drawing.Point(15, 149);
-            this.panelResults.Name = "panelResults";
-            this.panelResults.Size = new System.Drawing.Size(398, 170);
-            this.panelResults.TabIndex = 6;
-            // 
-            // tblResults
-            // 
-            this.tblResults.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tblResults.ColumnCount = 5;
-            this.tblResults.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblResults.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tblResults.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36F));
-            this.tblResults.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tblResults.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tblResults.Controls.Add(this.lblAmazon, 4, 0);
-            this.tblResults.Controls.Add(this.lblPrice, 3, 0);
-            this.tblResults.Controls.Add(this.lblItem, 2, 0);
-            this.tblResults.Controls.Add(this.lblBarcode, 1, 0);
-            this.tblResults.Controls.Add(this.chkBoxMod1, 0, 1);
-            this.tblResults.Controls.Add(this.chkBoxMod2, 0, 2);
-            this.tblResults.Controls.Add(this.chkBoxMod3, 0, 3);
-            this.tblResults.Controls.Add(this.chkBoxMod4, 0, 4);
-            this.tblResults.Location = new System.Drawing.Point(2, 2);
-            this.tblResults.Name = "tblResults";
-            this.tblResults.RowCount = 5;
-            this.tblResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblResults.Size = new System.Drawing.Size(359, 164);
-            this.tblResults.TabIndex = 0;
-            this.tblResults.Paint += new System.Windows.Forms.PaintEventHandler(this.tblResults_Paint);
-            // 
-            // lblAmazon
-            // 
-            this.lblAmazon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblAmazon.AutoSize = true;
-            this.lblAmazon.Location = new System.Drawing.Point(306, 6);
-            this.lblAmazon.Name = "lblAmazon";
-            this.lblAmazon.Size = new System.Drawing.Size(37, 26);
-            this.lblAmazon.TabIndex = 10;
-            this.lblAmazon.Text = "Online\r\nPrice";
-            this.lblAmazon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblAmazon.Click += new System.EventHandler(this.lblAmazon_Click);
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(232, 6);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(53, 26);
-            this.lblPrice.TabIndex = 9;
-            this.lblPrice.Text = "Database\r\nPrice";
-            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // lblItem
-            // 
-            this.lblItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblItem.AutoSize = true;
-            this.lblItem.Location = new System.Drawing.Point(150, 19);
-            this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(27, 13);
-            this.lblItem.TabIndex = 8;
-            this.lblItem.Text = "Item";
-            this.lblItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // lblBarcode
-            // 
-            this.lblBarcode.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblBarcode.AutoSize = true;
-            this.lblBarcode.Location = new System.Drawing.Point(45, 19);
-            this.lblBarcode.Name = "lblBarcode";
-            this.lblBarcode.Size = new System.Drawing.Size(47, 13);
-            this.lblBarcode.TabIndex = 7;
-            this.lblBarcode.Text = "Barcode";
-            this.lblBarcode.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // chkBoxMod1
-            // 
-            this.chkBoxMod1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkBoxMod1.AutoSize = true;
-            this.chkBoxMod1.Location = new System.Drawing.Point(11, 42);
-            this.chkBoxMod1.Name = "chkBoxMod1";
-            this.chkBoxMod1.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxMod1.TabIndex = 11;
-            this.chkBoxMod1.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxMod2
-            // 
-            this.chkBoxMod2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkBoxMod2.AutoSize = true;
-            this.chkBoxMod2.Location = new System.Drawing.Point(11, 74);
-            this.chkBoxMod2.Name = "chkBoxMod2";
-            this.chkBoxMod2.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxMod2.TabIndex = 12;
-            this.chkBoxMod2.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxMod3
-            // 
-            this.chkBoxMod3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkBoxMod3.AutoSize = true;
-            this.chkBoxMod3.Location = new System.Drawing.Point(11, 106);
-            this.chkBoxMod3.Name = "chkBoxMod3";
-            this.chkBoxMod3.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxMod3.TabIndex = 13;
-            this.chkBoxMod3.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxMod4
-            // 
-            this.chkBoxMod4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkBoxMod4.AutoSize = true;
-            this.chkBoxMod4.Location = new System.Drawing.Point(11, 139);
-            this.chkBoxMod4.Name = "chkBoxMod4";
-            this.chkBoxMod4.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxMod4.TabIndex = 14;
-            this.chkBoxMod4.UseVisualStyleBackColor = true;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(364, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(30, 167);
-            this.vScrollBar1.TabIndex = 7;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblNewPrice);
-            this.groupBox1.Controls.Add(this.btnMod);
-            this.groupBox1.Controls.Add(this.txtBoxAdd);
-            this.groupBox1.Location = new System.Drawing.Point(15, 325);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(148, 76);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modify selected item(s)";
-            // 
-            // lblNewPrice
-            // 
-            this.lblNewPrice.AutoSize = true;
-            this.lblNewPrice.Location = new System.Drawing.Point(13, 21);
-            this.lblNewPrice.Name = "lblNewPrice";
-            this.lblNewPrice.Size = new System.Drawing.Size(55, 13);
-            this.lblNewPrice.TabIndex = 11;
-            this.lblNewPrice.Text = "New price";
-            // 
-            // btnMod
-            // 
-            this.btnMod.Location = new System.Drawing.Point(63, 44);
-            this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(75, 23);
-            this.btnMod.TabIndex = 7;
-            this.btnMod.Text = "Modify";
-            this.btnMod.UseVisualStyleBackColor = true;
-            // 
-            // txtBoxAdd
-            // 
-            this.txtBoxAdd.Location = new System.Drawing.Point(77, 18);
-            this.txtBoxAdd.Name = "txtBoxAdd";
-            this.txtBoxAdd.Size = new System.Drawing.Size(61, 20);
-            this.txtBoxAdd.TabIndex = 6;
+            this.btnSave.Location = new System.Drawing.Point(15, 329);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(106, 23);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "Save Changes";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(257, 364);
+            this.btnPrev.Location = new System.Drawing.Point(320, 334);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 9;
@@ -322,7 +153,7 @@ namespace AmazonPriceFinderForm
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(338, 364);
+            this.btnNext.Location = new System.Drawing.Point(401, 334);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 10;
@@ -379,50 +210,94 @@ namespace AmazonPriceFinderForm
             this.grpBoxRecords.Controls.Add(this.lblTotalRecords);
             this.grpBoxRecords.Controls.Add(this.lblOf);
             this.grpBoxRecords.Controls.Add(this.lblDisplayedRecords);
-            this.grpBoxRecords.Location = new System.Drawing.Point(284, 325);
+            this.grpBoxRecords.Location = new System.Drawing.Point(482, 323);
             this.grpBoxRecords.Name = "grpBoxRecords";
-            this.grpBoxRecords.Size = new System.Drawing.Size(129, 36);
+            this.grpBoxRecords.Size = new System.Drawing.Size(102, 36);
             this.grpBoxRecords.TabIndex = 11;
             this.grpBoxRecords.TabStop = false;
+            // 
+            // lblTotalRecords
+            // 
+            this.lblTotalRecords.AutoSize = true;
+            this.lblTotalRecords.Location = new System.Drawing.Point(69, 16);
+            this.lblTotalRecords.Name = "lblTotalRecords";
+            this.lblTotalRecords.Size = new System.Drawing.Size(25, 13);
+            this.lblTotalRecords.TabIndex = 4;
+            this.lblTotalRecords.Text = "888";
+            // 
+            // lblOf
+            // 
+            this.lblOf.AutoSize = true;
+            this.lblOf.Location = new System.Drawing.Point(51, 16);
+            this.lblOf.Name = "lblOf";
+            this.lblOf.Size = new System.Drawing.Size(16, 13);
+            this.lblOf.TabIndex = 3;
+            this.lblOf.Text = "of";
             // 
             // lblDisplayedRecords
             // 
             this.lblDisplayedRecords.AutoSize = true;
             this.lblDisplayedRecords.Location = new System.Drawing.Point(6, 16);
             this.lblDisplayedRecords.Name = "lblDisplayedRecords";
-            this.lblDisplayedRecords.Size = new System.Drawing.Size(58, 13);
+            this.lblDisplayedRecords.Size = new System.Drawing.Size(46, 13);
             this.lblDisplayedRecords.TabIndex = 0;
-            this.lblDisplayedRecords.Text = "8888-8888";
+            this.lblDisplayedRecords.Text = "888-888";
             // 
-            // lblOf
+            // tblResults
             // 
-            this.lblOf.AutoSize = true;
-            this.lblOf.Location = new System.Drawing.Point(70, 16);
-            this.lblOf.Name = "lblOf";
-            this.lblOf.Size = new System.Drawing.Size(16, 13);
-            this.lblOf.TabIndex = 3;
-            this.lblOf.Text = "of";
+            this.tblResults.AllowUserToAddRows = false;
+            this.tblResults.AllowUserToDeleteRows = false;
+            this.tblResults.AllowUserToResizeColumns = false;
+            this.tblResults.AllowUserToResizeRows = false;
+            this.tblResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Barcode,
+            this.Description,
+            this.DatabasePrice,
+            this.OnlinePrice});
+            this.tblResults.Location = new System.Drawing.Point(15, 149);
+            this.tblResults.Name = "tblResults";
+            this.tblResults.Size = new System.Drawing.Size(569, 170);
+            this.tblResults.TabIndex = 13;
+            this.tblResults.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblResults_CellEndEdit);
             // 
-            // lblTotalRecords
+            // Barcode
             // 
-            this.lblTotalRecords.AutoSize = true;
-            this.lblTotalRecords.Location = new System.Drawing.Point(92, 16);
-            this.lblTotalRecords.Name = "lblTotalRecords";
-            this.lblTotalRecords.Size = new System.Drawing.Size(31, 13);
-            this.lblTotalRecords.TabIndex = 4;
-            this.lblTotalRecords.Text = "8888";
+            this.Barcode.HeaderText = "Barcode";
+            this.Barcode.Name = "Barcode";
+            this.Barcode.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 200;
+            // 
+            // DatabasePrice
+            // 
+            this.DatabasePrice.HeaderText = "Database Price";
+            this.DatabasePrice.Name = "DatabasePrice";
+            this.DatabasePrice.Width = 75;
+            // 
+            // OnlinePrice
+            // 
+            this.OnlinePrice.HeaderText = "Online Price";
+            this.OnlinePrice.Name = "OnlinePrice";
+            this.OnlinePrice.ReadOnly = true;
+            this.OnlinePrice.Width = 75;
             // 
             // FormAmazonPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 426);
+            this.ClientSize = new System.Drawing.Size(596, 426);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.tblResults);
             this.Controls.Add(this.grpBoxRecords);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panelResults);
             this.Controls.Add(this.grpBoxFilter);
             this.Controls.Add(this.lblSort);
             this.Controls.Add(this.comboBoxSort);
@@ -430,15 +305,11 @@ namespace AmazonPriceFinderForm
             this.Text = "Price Comparison";
             this.grpBoxFilter.ResumeLayout(false);
             this.grpBoxFilter.PerformLayout();
-            this.panelResults.ResumeLayout(false);
-            this.tblResults.ResumeLayout(false);
-            this.tblResults.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grpBoxRecords.ResumeLayout(false);
             this.grpBoxRecords.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,31 +323,22 @@ namespace AmazonPriceFinderForm
         private System.Windows.Forms.RadioButton radBtnMore;
         private System.Windows.Forms.RadioButton radBtnLess;
         private System.Windows.Forms.RadioButton radBtnNone;
-        private System.Windows.Forms.Panel panelResults;
-        private System.Windows.Forms.TableLayoutPanel tblResults;
-        private System.Windows.Forms.Label lblBarcode;
-        private System.Windows.Forms.Label lblAmazon;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblItem;
-        private System.Windows.Forms.CheckBox chkBoxMod1;
-        private System.Windows.Forms.CheckBox chkBoxMod2;
-        private System.Windows.Forms.CheckBox chkBoxMod3;
-        private System.Windows.Forms.CheckBox chkBoxMod4;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnMod;
-        private System.Windows.Forms.TextBox txtBoxAdd;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Label lblNewPrice;
         private System.Windows.Forms.GroupBox grpBoxRecords;
-        private System.Windows.Forms.Label lblTotalRecords;
         private System.Windows.Forms.Label lblOf;
-        private System.Windows.Forms.Label lblDisplayedRecords;
+        public System.Windows.Forms.DataGridView tblResults;
+        public System.Windows.Forms.Label lblTotalRecords;
+        public System.Windows.Forms.Label lblDisplayedRecords;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DatabasePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OnlinePrice;
     }
 }
 
