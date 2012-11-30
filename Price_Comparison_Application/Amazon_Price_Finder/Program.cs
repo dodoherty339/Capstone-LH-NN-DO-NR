@@ -27,7 +27,7 @@ namespace Price_Comparison
         public static int currPage = 0;
         public static int numResultsPerPage = 25;
         public static int totalRecords = 0;
-        public static PriceComparisonForm.FormAmazonPrice form;
+        public static PriceComparisonForm.FormPriceCompare form;
         public static DataRow[] sortedRows;
         public static String sortCol = "dbPrice";
         public static String filter = "1 = 1";
@@ -41,7 +41,7 @@ namespace Price_Comparison
         static void Main()
         {
             double price;
-            form = new PriceComparisonForm.FormAmazonPrice();
+            form = new PriceComparisonForm.FormPriceCompare();
             //obtain data from database
             //DataTable set = Database_Conn.getDBResults();
 

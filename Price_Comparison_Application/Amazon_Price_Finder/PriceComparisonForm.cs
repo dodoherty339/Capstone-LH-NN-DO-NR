@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace PriceComparisonForm
 {
-    public partial class FormAmazonPrice : Form
+    public partial class FormPriceCompare : Form
     {
-        public FormAmazonPrice()
+        public FormPriceCompare()
         {
             InitializeComponent();
         }
