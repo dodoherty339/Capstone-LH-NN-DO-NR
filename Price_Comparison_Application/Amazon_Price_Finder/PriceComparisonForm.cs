@@ -31,60 +31,70 @@ namespace PriceComparisonForm
         private void radBtnPriceLow_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.sortCol = "dbPrice";
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtnPriceHigh_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.sortCol = "dbPrice DESC";
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtnDiffNeg_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.sortCol = "diff";
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtnDiffPos_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.sortCol = "diff DESC";
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtnMore_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.filter = "onlinePrice > dbPrice";
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtnLess_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.filter = "onlinePrice < dbPrice";
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtnNone_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.filter = "1 = 1";
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtn25_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.numResultsPerPage = 25;
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtn50_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.numResultsPerPage = 50;
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         private void radBtn100_CheckedChanged(object sender, EventArgs e)
         {
             Price_Comparison.PriceComparison.numResultsPerPage = 100;
+            Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
@@ -99,7 +109,7 @@ namespace PriceComparisonForm
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (Price_Comparison.PriceComparison.currPage < (Price_Comparison.PriceComparison.totalPages - 1))
+            if (Price_Comparison.PriceComparison.currPage < Price_Comparison.PriceComparison.totalPages)
             {
                 Price_Comparison.PriceComparison.currPage++;
             }

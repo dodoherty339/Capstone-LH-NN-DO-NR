@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.ServiceModel;
 using System.Diagnostics;
-using PriceComparisonForm;
+using System.ComponentModel;
 
 // Doxygen
 // http://www.stack.nl/~dimitri/doxygen/docblocks.html
@@ -28,6 +28,8 @@ namespace Price_Comparison
         public static int numResultsPerPage = 25;
         public static int totalRecords = 0;
         public static PriceComparisonForm.FormPriceCompare form;
+        public static SplashScreen splash;
+        //public static SplashSc
         public static DataRow[] sortedRows;
         public static String sortCol = "dbPrice";
         public static String filter = "1 = 1";
@@ -42,6 +44,10 @@ namespace Price_Comparison
         {
             double price;
             form = new PriceComparisonForm.FormPriceCompare();
+            //splash = new SplashScreen();
+            //splash.Show();
+            //form.Show();
+            
             //obtain data from database
             //DataTable set = Database_Conn.getDBResults();
 
@@ -57,9 +63,8 @@ namespace Price_Comparison
             }
 
             DisplayResultsTable.displayTable();
-            totalPages = (int)(Math.Ceiling((Double)(totalRecords / numResultsPerPage)));
-            form.lblDisplayedRecords.Text = (firstRecord + 1).ToString() + "-" + (lastRecord + 1).ToString() + " of " + totalRecords.ToString();
 
+            splash.Close();
             form.ShowDialog();
         }
     }

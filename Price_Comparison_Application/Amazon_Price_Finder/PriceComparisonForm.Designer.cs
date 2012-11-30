@@ -69,7 +69,7 @@ namespace PriceComparisonForm
             this.grpBoxFilter.Controls.Add(this.radBtnMore);
             this.grpBoxFilter.Controls.Add(this.radBtnLess);
             this.grpBoxFilter.Controls.Add(this.radBtnNone);
-            this.grpBoxFilter.Location = new System.Drawing.Point(396, 21);
+            this.grpBoxFilter.Location = new System.Drawing.Point(424, 21);
             this.grpBoxFilter.Name = "grpBoxFilter";
             this.grpBoxFilter.Size = new System.Drawing.Size(188, 100);
             this.grpBoxFilter.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace PriceComparisonForm
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(342, 566);
+            this.btnPrev.Location = new System.Drawing.Point(654, 98);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 9;
@@ -125,7 +125,7 @@ namespace PriceComparisonForm
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(423, 566);
+            this.btnNext.Location = new System.Drawing.Point(735, 98);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 10;
@@ -138,7 +138,7 @@ namespace PriceComparisonForm
             this.grpBoxNumResults.Controls.Add(this.radBtn50);
             this.grpBoxNumResults.Controls.Add(this.radBtn100);
             this.grpBoxNumResults.Controls.Add(this.radBtn25);
-            this.grpBoxNumResults.Location = new System.Drawing.Point(235, 21);
+            this.grpBoxNumResults.Location = new System.Drawing.Point(250, 21);
             this.grpBoxNumResults.Name = "grpBoxNumResults";
             this.grpBoxNumResults.Size = new System.Drawing.Size(132, 100);
             this.grpBoxNumResults.TabIndex = 6;
@@ -195,9 +195,10 @@ namespace PriceComparisonForm
             this.DatabasePrice,
             this.OnlinePrice,
             this.Difference});
-            this.tblResults.Location = new System.Drawing.Point(15, 149);
+            this.tblResults.Location = new System.Drawing.Point(10, 149);
             this.tblResults.Name = "tblResults";
-            this.tblResults.Size = new System.Drawing.Size(569, 400);
+            this.tblResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.tblResults.Size = new System.Drawing.Size(800, 450);
             this.tblResults.TabIndex = 13;
             this.tblResults.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblResults_CellEndEdit);
             // 
@@ -206,18 +207,24 @@ namespace PriceComparisonForm
             this.Barcode.HeaderText = "Barcode";
             this.Barcode.Name = "Barcode";
             this.Barcode.ReadOnly = true;
+            this.Barcode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Barcode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Description
             // 
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
-            this.Description.Width = 200;
+            this.Description.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Description.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Description.Width = 400;
             // 
             // DatabasePrice
             // 
             this.DatabasePrice.HeaderText = "Database Price";
             this.DatabasePrice.Name = "DatabasePrice";
+            this.DatabasePrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DatabasePrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.DatabasePrice.Width = 75;
             // 
             // OnlinePrice
@@ -225,6 +232,8 @@ namespace PriceComparisonForm
             this.OnlinePrice.HeaderText = "Online Price";
             this.OnlinePrice.Name = "OnlinePrice";
             this.OnlinePrice.ReadOnly = true;
+            this.OnlinePrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.OnlinePrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.OnlinePrice.Width = 75;
             // 
             // Difference
@@ -232,6 +241,8 @@ namespace PriceComparisonForm
             this.Difference.HeaderText = "Difference (Online - DB)";
             this.Difference.Name = "Difference";
             this.Difference.ReadOnly = true;
+            this.Difference.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Difference.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Difference.Width = 75;
             // 
             // grpBoxSort
@@ -240,7 +251,7 @@ namespace PriceComparisonForm
             this.grpBoxSort.Controls.Add(this.radBtnDiffNeg);
             this.grpBoxSort.Controls.Add(this.radBtnPriceLow);
             this.grpBoxSort.Controls.Add(this.radBtnPriceHigh);
-            this.grpBoxSort.Location = new System.Drawing.Point(15, 21);
+            this.grpBoxSort.Location = new System.Drawing.Point(10, 21);
             this.grpBoxSort.Name = "grpBoxSort";
             this.grpBoxSort.Size = new System.Drawing.Size(198, 115);
             this.grpBoxSort.TabIndex = 14;
@@ -302,7 +313,7 @@ namespace PriceComparisonForm
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDisplayedRecords.AutoSize = true;
-            this.lblDisplayedRecords.Location = new System.Drawing.Point(504, 570);
+            this.lblDisplayedRecords.Location = new System.Drawing.Point(732, 124);
             this.lblDisplayedRecords.MaximumSize = new System.Drawing.Size(80, 15);
             this.lblDisplayedRecords.MinimumSize = new System.Drawing.Size(80, 15);
             this.lblDisplayedRecords.Name = "lblDisplayedRecords";
@@ -315,7 +326,7 @@ namespace PriceComparisonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 603);
+            this.ClientSize = new System.Drawing.Size(824, 613);
             this.Controls.Add(this.lblDisplayedRecords);
             this.Controls.Add(this.grpBoxSort);
             this.Controls.Add(this.tblResults);
@@ -323,9 +334,11 @@ namespace PriceComparisonForm
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.grpBoxFilter);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "FormPriceCompare";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Price Comparison";
             this.grpBoxFilter.ResumeLayout(false);
             this.grpBoxFilter.PerformLayout();
@@ -357,12 +370,12 @@ namespace PriceComparisonForm
         private System.Windows.Forms.RadioButton radBtnDiffNeg;
         private System.Windows.Forms.RadioButton radBtnPriceLow;
         private System.Windows.Forms.RadioButton radBtnPriceHigh;
+        public System.Windows.Forms.Label lblDisplayedRecords;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn DatabasePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn OnlinePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Difference;
-        public System.Windows.Forms.Label lblDisplayedRecords;
     }
 }
 
