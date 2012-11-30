@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Amazon_Price_Finder.Properties {
+namespace Price_Comparison.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Amazon_Price_Finder
+namespace Price_Comparison
 {
     //! This is the class for analyzing the results obtained from Amazon
     /**
@@ -24,39 +24,30 @@ namespace Amazon_Price_Finder
             double stdDev = 0;
             double sum = 0;
             double mean = 0;
-            double adjMean1 = 0;
-            double adjMean2 = 0;
-            double adjMean3 = 0;
-            double median = 0;
-
+            double adjMean = 0;
+            
             Array.Sort(totals);
             for (int i = 0; i < totals.Length; i++)
             {
                 sum += totals[i];
-                Console.WriteLine("Offer" + i + " : $" + totals[i]);
+                //Console.WriteLine("Offer" + i + " : $" + totals[i]);
             }
 
-            Console.WriteLine("Sum     : $" + sum);
+            //Console.WriteLine("Sum     : $" + sum);
             if (totals.Length != 0)
             {
                 mean = sum / totals.Length;
-                Console.WriteLine("Mean    : $" + mean);
+                //Console.WriteLine("Mean    : $" + mean);
             }
-            median = findMedian(totals);
             stdDev = calculateStandardDeviation(totals);
-            adjMean1 = adjustMean(stdDev, mean, totals, 1);
-            adjMean2 = adjustMean(stdDev, mean, totals, 2);
-            adjMean3 = adjustMean(stdDev, mean, totals, 3);
+            adjMean = adjustMean(stdDev, mean, totals);
 
-            Console.WriteLine("Median  : $" + median);
-            Console.WriteLine("StdDev  : $" + stdDev);
-            Console.WriteLine("AdjMean1: $" + adjMean1);
-            Console.WriteLine("AdjMean2: $" + adjMean2);
-            Console.WriteLine("AdjMean3: $" + adjMean3);
+            //Console.WriteLine("StdDev  : $" + stdDev);
+            //Console.WriteLine("AdjMean : $" + adjMean);
             //Console.WriteLine("Press enter to close window.");
             //Console.ReadKey();
 
-            return adjMean2;
+            return adjMean;
         }
 
         //! This method calculates the standard deviation of the array
@@ -89,7 +80,7 @@ namespace Amazon_Price_Finder
                 double variance = sumDiffs / (totals.Length - 1);
                 stdDev = Math.Sqrt(variance);
             }
-            
+
             return stdDev;
         }
 
@@ -110,19 +101,18 @@ namespace Amazon_Price_Finder
           double stdDev     /*!< the standard deviation of the values */
         , double mean        /*!< the raw average of the values */
         , double[] totals   /*!< a list of prices */
-        , int numDev        /*!< the number of standard deviations to use */
         )
         {
             double adjAvg = 0;
-            double highOut = mean + numDev * stdDev;
-            double lowOut = mean - numDev * stdDev;
+            double highOut = mean + 2 * stdDev;
+            double lowOut = mean - 2 * stdDev;
             double sum = 0;
             double count = 0;
             if (totals.Length != 0)
             {
                 for (int i = 0; i < totals.Length; i++)
                 {
-                    if ( totals[i] >= lowOut && totals[i] <= highOut)
+                    if (totals[i] >= lowOut && totals[i] <= highOut)
                     {
                         count++;
                         sum += totals[i];
@@ -136,23 +126,6 @@ namespace Amazon_Price_Finder
             }
 
             return adjAvg;
-        }
-
-        public static double findMedian(double[] totals)
-        {
-            double median;
-            int mid = totals.Length / 2;
-            
-            if (totals.Length % 2 == 0)
-            {
-                median = (totals[mid] + totals[mid - 1]) / 2;
-            }
-            else
-            {
-                median = totals[mid];
-            }
-
-            return median;
         }
     }
 }

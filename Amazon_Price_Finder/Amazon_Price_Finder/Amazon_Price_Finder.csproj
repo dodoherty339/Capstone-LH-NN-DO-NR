@@ -8,7 +8,7 @@
     <ProjectGuid>{4EA38B17-2093-4D1D-9E5B-17B9FC3FC464}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Amazon_Price_Finder</RootNamespace>
+    <RootNamespace>Price_Comparison</RootNamespace>
     <AssemblyName>Amazon_Price_Finder</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="AnalyzeResults.cs" />
     <Compile Include="Database_Conn.cs" />
+    <Compile Include="DisplayResultsTable.cs" />
     <Compile Include="GooglePrices.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,31 +117,31 @@
     <None Include="Service References\amazon.ecs\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.BrowseNodeLookupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.CartAddResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.CartAddResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.CartClearResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.CartClearResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.CartCreateResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.CartCreateResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.CartGetResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.CartGetResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.CartModifyResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.CartModifyResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.ItemLookupResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.ItemLookupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.ItemSearchResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.ItemSearchResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\amazon.ecs\Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse.datasource">
+    <None Include="Service References\amazon.ecs\Price_Comparison.amazon.ecs.SimilarityLookupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\amazon.ecs\Reference.svcmap">

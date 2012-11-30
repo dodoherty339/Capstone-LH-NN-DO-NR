@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 using System.Diagnostics;
-using Amazon_Price_Finder.amazon.ecs;
+using Price_Comparison.amazon.ecs;
 
-namespace Amazon_Price_Finder
+namespace Price_Comparison
 {
     //! This is the class representing the request sent to Amazon
     /**

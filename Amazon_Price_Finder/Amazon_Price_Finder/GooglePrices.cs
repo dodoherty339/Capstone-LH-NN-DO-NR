@@ -8,7 +8,7 @@ using System.Data;
 using System.Net;
 using System.Collections;
 
-namespace Amazon_Price_Finder
+namespace Price_Comparison
 {
     class GooglePrices
     {

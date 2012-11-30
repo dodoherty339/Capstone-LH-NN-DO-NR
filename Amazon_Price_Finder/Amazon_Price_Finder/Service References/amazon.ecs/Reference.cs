@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Amazon_Price_Finder.amazon.ecs {
+namespace Price_Comparison.amazon.ecs {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -21,7 +21,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.ItemSearchResponse1 ItemSearch(Amazon_Price_Finder.amazon.ecs.ItemSearchRequest1 request);
+        Price_Comparison.amazon.ecs.ItemSearchResponse1 ItemSearch(Price_Comparison.amazon.ecs.ItemSearchRequest1 request);
         
         // CODEGEN: Generating message contract since the operation ItemLookup is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/ItemLookup", ReplyAction="*")]
@@ -29,7 +29,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.ItemLookupResponse1 ItemLookup(Amazon_Price_Finder.amazon.ecs.ItemLookupRequest1 request);
+        Price_Comparison.amazon.ecs.ItemLookupResponse1 ItemLookup(Price_Comparison.amazon.ecs.ItemLookupRequest1 request);
         
         // CODEGEN: Generating message contract since the operation BrowseNodeLookup is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/BrowseNodeLookup", ReplyAction="*")]
@@ -37,7 +37,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse1 BrowseNodeLookup(Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupRequest1 request);
+        Price_Comparison.amazon.ecs.BrowseNodeLookupResponse1 BrowseNodeLookup(Price_Comparison.amazon.ecs.BrowseNodeLookupRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SimilarityLookup is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/SimilarityLookup", ReplyAction="*")]
@@ -45,7 +45,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse1 SimilarityLookup(Amazon_Price_Finder.amazon.ecs.SimilarityLookupRequest1 request);
+        Price_Comparison.amazon.ecs.SimilarityLookupResponse1 SimilarityLookup(Price_Comparison.amazon.ecs.SimilarityLookupRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CartGet is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/CartGet", ReplyAction="*")]
@@ -53,7 +53,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.CartGetResponse1 CartGet(Amazon_Price_Finder.amazon.ecs.CartGetRequest1 request);
+        Price_Comparison.amazon.ecs.CartGetResponse1 CartGet(Price_Comparison.amazon.ecs.CartGetRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CartAdd is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/CartAdd", ReplyAction="*")]
@@ -61,7 +61,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.CartAddResponse1 CartAdd(Amazon_Price_Finder.amazon.ecs.CartAddRequest1 request);
+        Price_Comparison.amazon.ecs.CartAddResponse1 CartAdd(Price_Comparison.amazon.ecs.CartAddRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CartCreate is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/CartCreate", ReplyAction="*")]
@@ -69,7 +69,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.CartCreateResponse1 CartCreate(Amazon_Price_Finder.amazon.ecs.CartCreateRequest1 request);
+        Price_Comparison.amazon.ecs.CartCreateResponse1 CartCreate(Price_Comparison.amazon.ecs.CartCreateRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CartModify is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/CartModify", ReplyAction="*")]
@@ -77,7 +77,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.CartModifyResponse1 CartModify(Amazon_Price_Finder.amazon.ecs.CartModifyRequest1 request);
+        Price_Comparison.amazon.ecs.CartModifyResponse1 CartModify(Price_Comparison.amazon.ecs.CartModifyRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CartClear is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://soap.amazon.com/CartClear", ReplyAction="*")]
@@ -85,7 +85,7 @@ namespace Amazon_Price_Finder.amazon.ecs {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ImageSet[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(VariationAttribute[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Property[]))]
-        Amazon_Price_Finder.amazon.ecs.CartClearResponse1 CartClear(Amazon_Price_Finder.amazon.ecs.CartClearRequest1 request);
+        Price_Comparison.amazon.ecs.CartClearResponse1 CartClear(Price_Comparison.amazon.ecs.CartClearRequest1 request);
     }
     
     /// <remarks/>
@@ -7491,12 +7491,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class ItemSearchRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.ItemSearch ItemSearch;
+        public Price_Comparison.amazon.ecs.ItemSearch ItemSearch;
         
         public ItemSearchRequest1() {
         }
         
-        public ItemSearchRequest1(Amazon_Price_Finder.amazon.ecs.ItemSearch ItemSearch) {
+        public ItemSearchRequest1(Price_Comparison.amazon.ecs.ItemSearch ItemSearch) {
             this.ItemSearch = ItemSearch;
         }
     }
@@ -7508,12 +7508,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class ItemSearchResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.ItemSearchResponse ItemSearchResponse;
+        public Price_Comparison.amazon.ecs.ItemSearchResponse ItemSearchResponse;
         
         public ItemSearchResponse1() {
         }
         
-        public ItemSearchResponse1(Amazon_Price_Finder.amazon.ecs.ItemSearchResponse ItemSearchResponse) {
+        public ItemSearchResponse1(Price_Comparison.amazon.ecs.ItemSearchResponse ItemSearchResponse) {
             this.ItemSearchResponse = ItemSearchResponse;
         }
     }
@@ -7687,12 +7687,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class ItemLookupRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.ItemLookup ItemLookup;
+        public Price_Comparison.amazon.ecs.ItemLookup ItemLookup;
         
         public ItemLookupRequest1() {
         }
         
-        public ItemLookupRequest1(Amazon_Price_Finder.amazon.ecs.ItemLookup ItemLookup) {
+        public ItemLookupRequest1(Price_Comparison.amazon.ecs.ItemLookup ItemLookup) {
             this.ItemLookup = ItemLookup;
         }
     }
@@ -7704,12 +7704,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class ItemLookupResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.ItemLookupResponse ItemLookupResponse;
+        public Price_Comparison.amazon.ecs.ItemLookupResponse ItemLookupResponse;
         
         public ItemLookupResponse1() {
         }
         
-        public ItemLookupResponse1(Amazon_Price_Finder.amazon.ecs.ItemLookupResponse ItemLookupResponse) {
+        public ItemLookupResponse1(Price_Comparison.amazon.ecs.ItemLookupResponse ItemLookupResponse) {
             this.ItemLookupResponse = ItemLookupResponse;
         }
     }
@@ -7883,12 +7883,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class BrowseNodeLookupRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.BrowseNodeLookup BrowseNodeLookup;
+        public Price_Comparison.amazon.ecs.BrowseNodeLookup BrowseNodeLookup;
         
         public BrowseNodeLookupRequest1() {
         }
         
-        public BrowseNodeLookupRequest1(Amazon_Price_Finder.amazon.ecs.BrowseNodeLookup BrowseNodeLookup) {
+        public BrowseNodeLookupRequest1(Price_Comparison.amazon.ecs.BrowseNodeLookup BrowseNodeLookup) {
             this.BrowseNodeLookup = BrowseNodeLookup;
         }
     }
@@ -7900,12 +7900,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class BrowseNodeLookupResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse BrowseNodeLookupResponse;
+        public Price_Comparison.amazon.ecs.BrowseNodeLookupResponse BrowseNodeLookupResponse;
         
         public BrowseNodeLookupResponse1() {
         }
         
-        public BrowseNodeLookupResponse1(Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse BrowseNodeLookupResponse) {
+        public BrowseNodeLookupResponse1(Price_Comparison.amazon.ecs.BrowseNodeLookupResponse BrowseNodeLookupResponse) {
             this.BrowseNodeLookupResponse = BrowseNodeLookupResponse;
         }
     }
@@ -8079,12 +8079,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class SimilarityLookupRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.SimilarityLookup SimilarityLookup;
+        public Price_Comparison.amazon.ecs.SimilarityLookup SimilarityLookup;
         
         public SimilarityLookupRequest1() {
         }
         
-        public SimilarityLookupRequest1(Amazon_Price_Finder.amazon.ecs.SimilarityLookup SimilarityLookup) {
+        public SimilarityLookupRequest1(Price_Comparison.amazon.ecs.SimilarityLookup SimilarityLookup) {
             this.SimilarityLookup = SimilarityLookup;
         }
     }
@@ -8096,12 +8096,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class SimilarityLookupResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse SimilarityLookupResponse;
+        public Price_Comparison.amazon.ecs.SimilarityLookupResponse SimilarityLookupResponse;
         
         public SimilarityLookupResponse1() {
         }
         
-        public SimilarityLookupResponse1(Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse SimilarityLookupResponse) {
+        public SimilarityLookupResponse1(Price_Comparison.amazon.ecs.SimilarityLookupResponse SimilarityLookupResponse) {
             this.SimilarityLookupResponse = SimilarityLookupResponse;
         }
     }
@@ -8678,12 +8678,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartGetRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartGet CartGet;
+        public Price_Comparison.amazon.ecs.CartGet CartGet;
         
         public CartGetRequest1() {
         }
         
-        public CartGetRequest1(Amazon_Price_Finder.amazon.ecs.CartGet CartGet) {
+        public CartGetRequest1(Price_Comparison.amazon.ecs.CartGet CartGet) {
             this.CartGet = CartGet;
         }
     }
@@ -8695,12 +8695,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartGetResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartGetResponse CartGetResponse;
+        public Price_Comparison.amazon.ecs.CartGetResponse CartGetResponse;
         
         public CartGetResponse1() {
         }
         
-        public CartGetResponse1(Amazon_Price_Finder.amazon.ecs.CartGetResponse CartGetResponse) {
+        public CartGetResponse1(Price_Comparison.amazon.ecs.CartGetResponse CartGetResponse) {
             this.CartGetResponse = CartGetResponse;
         }
     }
@@ -8874,12 +8874,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartAddRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartAdd CartAdd;
+        public Price_Comparison.amazon.ecs.CartAdd CartAdd;
         
         public CartAddRequest1() {
         }
         
-        public CartAddRequest1(Amazon_Price_Finder.amazon.ecs.CartAdd CartAdd) {
+        public CartAddRequest1(Price_Comparison.amazon.ecs.CartAdd CartAdd) {
             this.CartAdd = CartAdd;
         }
     }
@@ -8891,12 +8891,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartAddResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartAddResponse CartAddResponse;
+        public Price_Comparison.amazon.ecs.CartAddResponse CartAddResponse;
         
         public CartAddResponse1() {
         }
         
-        public CartAddResponse1(Amazon_Price_Finder.amazon.ecs.CartAddResponse CartAddResponse) {
+        public CartAddResponse1(Price_Comparison.amazon.ecs.CartAddResponse CartAddResponse) {
             this.CartAddResponse = CartAddResponse;
         }
     }
@@ -9070,12 +9070,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartCreateRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartCreate CartCreate;
+        public Price_Comparison.amazon.ecs.CartCreate CartCreate;
         
         public CartCreateRequest1() {
         }
         
-        public CartCreateRequest1(Amazon_Price_Finder.amazon.ecs.CartCreate CartCreate) {
+        public CartCreateRequest1(Price_Comparison.amazon.ecs.CartCreate CartCreate) {
             this.CartCreate = CartCreate;
         }
     }
@@ -9087,12 +9087,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartCreateResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartCreateResponse CartCreateResponse;
+        public Price_Comparison.amazon.ecs.CartCreateResponse CartCreateResponse;
         
         public CartCreateResponse1() {
         }
         
-        public CartCreateResponse1(Amazon_Price_Finder.amazon.ecs.CartCreateResponse CartCreateResponse) {
+        public CartCreateResponse1(Price_Comparison.amazon.ecs.CartCreateResponse CartCreateResponse) {
             this.CartCreateResponse = CartCreateResponse;
         }
     }
@@ -9266,12 +9266,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartModifyRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartModify CartModify;
+        public Price_Comparison.amazon.ecs.CartModify CartModify;
         
         public CartModifyRequest1() {
         }
         
-        public CartModifyRequest1(Amazon_Price_Finder.amazon.ecs.CartModify CartModify) {
+        public CartModifyRequest1(Price_Comparison.amazon.ecs.CartModify CartModify) {
             this.CartModify = CartModify;
         }
     }
@@ -9283,12 +9283,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartModifyResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartModifyResponse CartModifyResponse;
+        public Price_Comparison.amazon.ecs.CartModifyResponse CartModifyResponse;
         
         public CartModifyResponse1() {
         }
         
-        public CartModifyResponse1(Amazon_Price_Finder.amazon.ecs.CartModifyResponse CartModifyResponse) {
+        public CartModifyResponse1(Price_Comparison.amazon.ecs.CartModifyResponse CartModifyResponse) {
             this.CartModifyResponse = CartModifyResponse;
         }
     }
@@ -9462,12 +9462,12 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartClearRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartClear CartClear;
+        public Price_Comparison.amazon.ecs.CartClear CartClear;
         
         public CartClearRequest1() {
         }
         
-        public CartClearRequest1(Amazon_Price_Finder.amazon.ecs.CartClear CartClear) {
+        public CartClearRequest1(Price_Comparison.amazon.ecs.CartClear CartClear) {
             this.CartClear = CartClear;
         }
     }
@@ -9479,23 +9479,23 @@ namespace Amazon_Price_Finder.amazon.ecs {
     public partial class CartClearResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.amazon.com/AWSECommerceService/2011-08-01", Order=0)]
-        public Amazon_Price_Finder.amazon.ecs.CartClearResponse CartClearResponse;
+        public Price_Comparison.amazon.ecs.CartClearResponse CartClearResponse;
         
         public CartClearResponse1() {
         }
         
-        public CartClearResponse1(Amazon_Price_Finder.amazon.ecs.CartClearResponse CartClearResponse) {
+        public CartClearResponse1(Price_Comparison.amazon.ecs.CartClearResponse CartClearResponse) {
             this.CartClearResponse = CartClearResponse;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface AWSECommerceServicePortTypeChannel : Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType, System.ServiceModel.IClientChannel {
+    public interface AWSECommerceServicePortTypeChannel : Price_Comparison.amazon.ecs.AWSECommerceServicePortType, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AWSECommerceServicePortTypeClient : System.ServiceModel.ClientBase<Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType>, Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType {
+    public partial class AWSECommerceServicePortTypeClient : System.ServiceModel.ClientBase<Price_Comparison.amazon.ecs.AWSECommerceServicePortType>, Price_Comparison.amazon.ecs.AWSECommerceServicePortType {
         
         public AWSECommerceServicePortTypeClient() {
         }
@@ -9517,110 +9517,110 @@ namespace Amazon_Price_Finder.amazon.ecs {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.ItemSearchResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.ItemSearch(Amazon_Price_Finder.amazon.ecs.ItemSearchRequest1 request) {
+        Price_Comparison.amazon.ecs.ItemSearchResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.ItemSearch(Price_Comparison.amazon.ecs.ItemSearchRequest1 request) {
             return base.Channel.ItemSearch(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.ItemSearchResponse ItemSearch(Amazon_Price_Finder.amazon.ecs.ItemSearch ItemSearch1) {
-            Amazon_Price_Finder.amazon.ecs.ItemSearchRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.ItemSearchRequest1();
+        public Price_Comparison.amazon.ecs.ItemSearchResponse ItemSearch(Price_Comparison.amazon.ecs.ItemSearch ItemSearch1) {
+            Price_Comparison.amazon.ecs.ItemSearchRequest1 inValue = new Price_Comparison.amazon.ecs.ItemSearchRequest1();
             inValue.ItemSearch = ItemSearch1;
-            Amazon_Price_Finder.amazon.ecs.ItemSearchResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).ItemSearch(inValue);
+            Price_Comparison.amazon.ecs.ItemSearchResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).ItemSearch(inValue);
             return retVal.ItemSearchResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.ItemLookupResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.ItemLookup(Amazon_Price_Finder.amazon.ecs.ItemLookupRequest1 request) {
+        Price_Comparison.amazon.ecs.ItemLookupResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.ItemLookup(Price_Comparison.amazon.ecs.ItemLookupRequest1 request) {
             return base.Channel.ItemLookup(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.ItemLookupResponse ItemLookup(Amazon_Price_Finder.amazon.ecs.ItemLookup ItemLookup1) {
-            Amazon_Price_Finder.amazon.ecs.ItemLookupRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.ItemLookupRequest1();
+        public Price_Comparison.amazon.ecs.ItemLookupResponse ItemLookup(Price_Comparison.amazon.ecs.ItemLookup ItemLookup1) {
+            Price_Comparison.amazon.ecs.ItemLookupRequest1 inValue = new Price_Comparison.amazon.ecs.ItemLookupRequest1();
             inValue.ItemLookup = ItemLookup1;
-            Amazon_Price_Finder.amazon.ecs.ItemLookupResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).ItemLookup(inValue);
+            Price_Comparison.amazon.ecs.ItemLookupResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).ItemLookup(inValue);
             return retVal.ItemLookupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.BrowseNodeLookup(Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupRequest1 request) {
+        Price_Comparison.amazon.ecs.BrowseNodeLookupResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.BrowseNodeLookup(Price_Comparison.amazon.ecs.BrowseNodeLookupRequest1 request) {
             return base.Channel.BrowseNodeLookup(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse BrowseNodeLookup(Amazon_Price_Finder.amazon.ecs.BrowseNodeLookup BrowseNodeLookup1) {
-            Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupRequest1();
+        public Price_Comparison.amazon.ecs.BrowseNodeLookupResponse BrowseNodeLookup(Price_Comparison.amazon.ecs.BrowseNodeLookup BrowseNodeLookup1) {
+            Price_Comparison.amazon.ecs.BrowseNodeLookupRequest1 inValue = new Price_Comparison.amazon.ecs.BrowseNodeLookupRequest1();
             inValue.BrowseNodeLookup = BrowseNodeLookup1;
-            Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).BrowseNodeLookup(inValue);
+            Price_Comparison.amazon.ecs.BrowseNodeLookupResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).BrowseNodeLookup(inValue);
             return retVal.BrowseNodeLookupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.SimilarityLookup(Amazon_Price_Finder.amazon.ecs.SimilarityLookupRequest1 request) {
+        Price_Comparison.amazon.ecs.SimilarityLookupResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.SimilarityLookup(Price_Comparison.amazon.ecs.SimilarityLookupRequest1 request) {
             return base.Channel.SimilarityLookup(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse SimilarityLookup(Amazon_Price_Finder.amazon.ecs.SimilarityLookup SimilarityLookup1) {
-            Amazon_Price_Finder.amazon.ecs.SimilarityLookupRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.SimilarityLookupRequest1();
+        public Price_Comparison.amazon.ecs.SimilarityLookupResponse SimilarityLookup(Price_Comparison.amazon.ecs.SimilarityLookup SimilarityLookup1) {
+            Price_Comparison.amazon.ecs.SimilarityLookupRequest1 inValue = new Price_Comparison.amazon.ecs.SimilarityLookupRequest1();
             inValue.SimilarityLookup = SimilarityLookup1;
-            Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).SimilarityLookup(inValue);
+            Price_Comparison.amazon.ecs.SimilarityLookupResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).SimilarityLookup(inValue);
             return retVal.SimilarityLookupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.CartGetResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.CartGet(Amazon_Price_Finder.amazon.ecs.CartGetRequest1 request) {
+        Price_Comparison.amazon.ecs.CartGetResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.CartGet(Price_Comparison.amazon.ecs.CartGetRequest1 request) {
             return base.Channel.CartGet(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.CartGetResponse CartGet(Amazon_Price_Finder.amazon.ecs.CartGet CartGet1) {
-            Amazon_Price_Finder.amazon.ecs.CartGetRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.CartGetRequest1();
+        public Price_Comparison.amazon.ecs.CartGetResponse CartGet(Price_Comparison.amazon.ecs.CartGet CartGet1) {
+            Price_Comparison.amazon.ecs.CartGetRequest1 inValue = new Price_Comparison.amazon.ecs.CartGetRequest1();
             inValue.CartGet = CartGet1;
-            Amazon_Price_Finder.amazon.ecs.CartGetResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).CartGet(inValue);
+            Price_Comparison.amazon.ecs.CartGetResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).CartGet(inValue);
             return retVal.CartGetResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.CartAddResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.CartAdd(Amazon_Price_Finder.amazon.ecs.CartAddRequest1 request) {
+        Price_Comparison.amazon.ecs.CartAddResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.CartAdd(Price_Comparison.amazon.ecs.CartAddRequest1 request) {
             return base.Channel.CartAdd(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.CartAddResponse CartAdd(Amazon_Price_Finder.amazon.ecs.CartAdd CartAdd1) {
-            Amazon_Price_Finder.amazon.ecs.CartAddRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.CartAddRequest1();
+        public Price_Comparison.amazon.ecs.CartAddResponse CartAdd(Price_Comparison.amazon.ecs.CartAdd CartAdd1) {
+            Price_Comparison.amazon.ecs.CartAddRequest1 inValue = new Price_Comparison.amazon.ecs.CartAddRequest1();
             inValue.CartAdd = CartAdd1;
-            Amazon_Price_Finder.amazon.ecs.CartAddResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).CartAdd(inValue);
+            Price_Comparison.amazon.ecs.CartAddResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).CartAdd(inValue);
             return retVal.CartAddResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.CartCreateResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.CartCreate(Amazon_Price_Finder.amazon.ecs.CartCreateRequest1 request) {
+        Price_Comparison.amazon.ecs.CartCreateResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.CartCreate(Price_Comparison.amazon.ecs.CartCreateRequest1 request) {
             return base.Channel.CartCreate(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.CartCreateResponse CartCreate(Amazon_Price_Finder.amazon.ecs.CartCreate CartCreate1) {
-            Amazon_Price_Finder.amazon.ecs.CartCreateRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.CartCreateRequest1();
+        public Price_Comparison.amazon.ecs.CartCreateResponse CartCreate(Price_Comparison.amazon.ecs.CartCreate CartCreate1) {
+            Price_Comparison.amazon.ecs.CartCreateRequest1 inValue = new Price_Comparison.amazon.ecs.CartCreateRequest1();
             inValue.CartCreate = CartCreate1;
-            Amazon_Price_Finder.amazon.ecs.CartCreateResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).CartCreate(inValue);
+            Price_Comparison.amazon.ecs.CartCreateResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).CartCreate(inValue);
             return retVal.CartCreateResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.CartModifyResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.CartModify(Amazon_Price_Finder.amazon.ecs.CartModifyRequest1 request) {
+        Price_Comparison.amazon.ecs.CartModifyResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.CartModify(Price_Comparison.amazon.ecs.CartModifyRequest1 request) {
             return base.Channel.CartModify(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.CartModifyResponse CartModify(Amazon_Price_Finder.amazon.ecs.CartModify CartModify1) {
-            Amazon_Price_Finder.amazon.ecs.CartModifyRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.CartModifyRequest1();
+        public Price_Comparison.amazon.ecs.CartModifyResponse CartModify(Price_Comparison.amazon.ecs.CartModify CartModify1) {
+            Price_Comparison.amazon.ecs.CartModifyRequest1 inValue = new Price_Comparison.amazon.ecs.CartModifyRequest1();
             inValue.CartModify = CartModify1;
-            Amazon_Price_Finder.amazon.ecs.CartModifyResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).CartModify(inValue);
+            Price_Comparison.amazon.ecs.CartModifyResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).CartModify(inValue);
             return retVal.CartModifyResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Amazon_Price_Finder.amazon.ecs.CartClearResponse1 Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType.CartClear(Amazon_Price_Finder.amazon.ecs.CartClearRequest1 request) {
+        Price_Comparison.amazon.ecs.CartClearResponse1 Price_Comparison.amazon.ecs.AWSECommerceServicePortType.CartClear(Price_Comparison.amazon.ecs.CartClearRequest1 request) {
             return base.Channel.CartClear(request);
         }
         
-        public Amazon_Price_Finder.amazon.ecs.CartClearResponse CartClear(Amazon_Price_Finder.amazon.ecs.CartClear CartClear1) {
-            Amazon_Price_Finder.amazon.ecs.CartClearRequest1 inValue = new Amazon_Price_Finder.amazon.ecs.CartClearRequest1();
+        public Price_Comparison.amazon.ecs.CartClearResponse CartClear(Price_Comparison.amazon.ecs.CartClear CartClear1) {
+            Price_Comparison.amazon.ecs.CartClearRequest1 inValue = new Price_Comparison.amazon.ecs.CartClearRequest1();
             inValue.CartClear = CartClear1;
-            Amazon_Price_Finder.amazon.ecs.CartClearResponse1 retVal = ((Amazon_Price_Finder.amazon.ecs.AWSECommerceServicePortType)(this)).CartClear(inValue);
+            Price_Comparison.amazon.ecs.CartClearResponse1 retVal = ((Price_Comparison.amazon.ecs.AWSECommerceServicePortType)(this)).CartClear(inValue);
             return retVal.CartClearResponse;
         }
     }

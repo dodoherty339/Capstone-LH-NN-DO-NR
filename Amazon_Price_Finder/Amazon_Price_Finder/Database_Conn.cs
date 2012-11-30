@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Amazon_Price_Finder
+namespace Price_Comparison
 {
     class Database_Conn
     {
