@@ -58,6 +58,7 @@ namespace PriceComparisonForm
             this.radBtnPriceLow = new System.Windows.Forms.RadioButton();
             this.radBtnPriceHigh = new System.Windows.Forms.RadioButton();
             this.lblDisplayedRecords = new System.Windows.Forms.Label();
+            this.radBtnOnlinePrices = new System.Windows.Forms.RadioButton();
             this.grpBoxFilter.SuspendLayout();
             this.grpBoxNumResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblResults)).BeginInit();
@@ -66,12 +67,13 @@ namespace PriceComparisonForm
             // 
             // grpBoxFilter
             // 
+            this.grpBoxFilter.Controls.Add(this.radBtnOnlinePrices);
             this.grpBoxFilter.Controls.Add(this.radBtnMore);
             this.grpBoxFilter.Controls.Add(this.radBtnLess);
             this.grpBoxFilter.Controls.Add(this.radBtnNone);
             this.grpBoxFilter.Location = new System.Drawing.Point(424, 21);
             this.grpBoxFilter.Name = "grpBoxFilter";
-            this.grpBoxFilter.Size = new System.Drawing.Size(188, 100);
+            this.grpBoxFilter.Size = new System.Drawing.Size(188, 115);
             this.grpBoxFilter.TabIndex = 5;
             this.grpBoxFilter.TabStop = false;
             this.grpBoxFilter.Text = "Filter results";
@@ -79,7 +81,7 @@ namespace PriceComparisonForm
             // radBtnMore
             // 
             this.radBtnMore.AutoSize = true;
-            this.radBtnMore.Location = new System.Drawing.Point(16, 42);
+            this.radBtnMore.Location = new System.Drawing.Point(16, 65);
             this.radBtnMore.Name = "radBtnMore";
             this.radBtnMore.Size = new System.Drawing.Size(158, 17);
             this.radBtnMore.TabIndex = 2;
@@ -91,7 +93,7 @@ namespace PriceComparisonForm
             // radBtnLess
             // 
             this.radBtnLess.AutoSize = true;
-            this.radBtnLess.Location = new System.Drawing.Point(16, 65);
+            this.radBtnLess.Location = new System.Drawing.Point(16, 88);
             this.radBtnLess.Name = "radBtnLess";
             this.radBtnLess.Size = new System.Drawing.Size(153, 17);
             this.radBtnLess.TabIndex = 1;
@@ -322,6 +324,18 @@ namespace PriceComparisonForm
             this.lblDisplayedRecords.Text = "888-888 of 888";
             this.lblDisplayedRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // radBtnOnlinePrices
+            // 
+            this.radBtnOnlinePrices.AutoSize = true;
+            this.radBtnOnlinePrices.Location = new System.Drawing.Point(16, 42);
+            this.radBtnOnlinePrices.Name = "radBtnOnlinePrices";
+            this.radBtnOnlinePrices.Size = new System.Drawing.Size(134, 17);
+            this.radBtnOnlinePrices.TabIndex = 3;
+            this.radBtnOnlinePrices.TabStop = true;
+            this.radBtnOnlinePrices.Text = "Items with online prices";
+            this.radBtnOnlinePrices.UseVisualStyleBackColor = true;
+            this.radBtnOnlinePrices.CheckedChanged += new System.EventHandler(this.radBtnOnlinePrices_CheckedChanged);
+            // 
             // FormPriceCompare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +390,7 @@ namespace PriceComparisonForm
         private System.Windows.Forms.DataGridViewTextBoxColumn DatabasePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn OnlinePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Difference;
+        private System.Windows.Forms.RadioButton radBtnOnlinePrices;
     }
 }
 

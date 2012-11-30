@@ -65,7 +65,14 @@ namespace PriceComparisonForm
 
         private void radBtnLess_CheckedChanged(object sender, EventArgs e)
         {
-            Price_Comparison.PriceComparison.filter = "onlinePrice < dbPrice";
+            Price_Comparison.PriceComparison.filter = "onlinePrice < dbPrice and onlinePrice <> 0";
+            Price_Comparison.PriceComparison.currPage = 0;
+            Price_Comparison.DisplayResultsTable.displayTable();
+        }
+
+        private void radBtnOnlinePrices_CheckedChanged(object sender, EventArgs e)
+        {
+            Price_Comparison.PriceComparison.filter = "onlinePrice <> 0";
             Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }

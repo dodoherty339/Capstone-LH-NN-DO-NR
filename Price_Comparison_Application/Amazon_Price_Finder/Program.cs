@@ -44,9 +44,8 @@ namespace Price_Comparison
         {
             double price;
             form = new PriceComparisonForm.FormPriceCompare();
-            //splash = new SplashScreen();
-            //splash.Show();
-            //form.Show();
+            splash = new SplashScreen();
+            splash.Show();
             
             //obtain data from database
             //DataTable set = Database_Conn.getDBResults();
