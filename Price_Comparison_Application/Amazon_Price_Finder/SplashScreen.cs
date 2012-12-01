@@ -9,18 +9,11 @@ using System.Windows.Forms;
 
 namespace Price_Comparison
 {
-    public partial class SplashScreen : Form
+    public partial class SplashForm : Form
     {
-        public SplashScreen()
+        public SplashForm()
         {
             InitializeComponent();
-        }
-
-        private void bgWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            lblDesigned.Show();
-            lblLoading.Show();
-            lblWelcome.Show();
         }
     }
 

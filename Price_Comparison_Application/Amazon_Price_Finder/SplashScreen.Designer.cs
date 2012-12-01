@@ -1,6 +1,6 @@
 ﻿namespace Price_Comparison
 {
-    partial class SplashScreen
+    partial class SplashForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,52 +29,59 @@
         private void InitializeComponent()
         {
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.lblLoading = new System.Windows.Forms.Label();
             this.lblDesigned = new System.Windows.Forms.Label();
-            this.bgWorker = new System.ComponentModel.BackgroundWorker();
+            this.lblProgress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(31, 54);
+            this.lblWelcome.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(38, 9);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(222, 13);
+            this.lblWelcome.Size = new System.Drawing.Size(214, 84);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome to the Price Comparison Application";
-            // 
-            // lblLoading
-            // 
-            this.lblLoading.AutoSize = true;
-            this.lblLoading.Location = new System.Drawing.Point(83, 79);
-            this.lblLoading.Name = "lblLoading";
-            this.lblLoading.Size = new System.Drawing.Size(119, 13);
-            this.lblLoading.TabIndex = 1;
-            this.lblLoading.Text = "Loading Online Prices...";
+            this.lblWelcome.Text = "Welcome to the \r\nPrice Comparison \r\nApplication";
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDesigned
             // 
             this.lblDesigned.AutoSize = true;
-            this.lblDesigned.Location = new System.Drawing.Point(165, 179);
+            this.lblDesigned.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesigned.Location = new System.Drawing.Point(63, 199);
             this.lblDesigned.Name = "lblDesigned";
-            this.lblDesigned.Size = new System.Drawing.Size(107, 65);
+            this.lblDesigned.Size = new System.Drawing.Size(209, 45);
             this.lblDesigned.TabIndex = 2;
-            this.lblDesigned.Text = "Designed by \r\nLucy Horpedahl, \r\nNathan Noonan, \r\nDan O\'Doherty, \r\nand Nick Richar" +
-                "dson";
+            this.lblDesigned.Text = "Designed by \r\nLucy Horpedahl, Nathan Noonan, \r\nDan O\'Doherty, and Nick Richardson" +
+                "";
+            this.lblDesigned.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // SplashScreen
+            // lblProgress
+            // 
+            this.lblProgress.AutoSize = true;
+            this.lblProgress.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgress.Location = new System.Drawing.Point(17, 133);
+            this.lblProgress.MaximumSize = new System.Drawing.Size(250, 20);
+            this.lblProgress.MinimumSize = new System.Drawing.Size(250, 20);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(250, 20);
+            this.lblProgress.TabIndex = 3;
+            this.lblProgress.Text = "Loading online prices... 105 of 105";
+            this.lblProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SplashForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 253);
             this.ControlBox = false;
+            this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.lblDesigned);
-            this.Controls.Add(this.lblLoading);
             this.Controls.Add(this.lblWelcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SplashScreen";
+            this.Name = "SplashForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -84,9 +91,8 @@
         #endregion
 
         public System.Windows.Forms.Label lblWelcome;
-        public System.Windows.Forms.Label lblLoading;
         public System.Windows.Forms.Label lblDesigned;
-        private System.ComponentModel.BackgroundWorker bgWorker;
+        public System.Windows.Forms.Label lblProgress;
 
     }
 }
