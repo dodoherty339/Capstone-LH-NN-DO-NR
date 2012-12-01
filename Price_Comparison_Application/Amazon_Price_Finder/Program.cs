@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.ServiceModel;
 using System.Diagnostics;
 using System.ComponentModel;
+using System.Windows;
 
 // Doxygen
 // http://www.stack.nl/~dimitri/doxygen/docblocks.html
@@ -26,10 +27,10 @@ namespace Price_Comparison
         public static int totalPages;
         public static int currPage = 0;
         public static int numResultsPerPage = 25;
-        public static int totalRecords = 0;
+        public static int totalRecordsToDisplay = 0;
+        public static int totalItemsInSet = 0;
         public static PriceComparisonForm.FormPriceCompare form;
-        public static SplashScreen splash;
-        //public static SplashSc
+        public static SplashForm splash;
         public static DataRow[] sortedRows;
         public static String sortCol = "dbPrice";
         public static String filter = "1 = 1";
@@ -44,25 +45,34 @@ namespace Price_Comparison
         {
             double price;
             form = new PriceComparisonForm.FormPriceCompare();
-            splash = new SplashScreen();
+            splash = new SplashForm();
             splash.Show();
-            
-            //obtain data from database
-            //DataTable set = Database_Conn.getDBResults();
+            splash.lblProgress.Text = "Loading online prices...";
+            splash.Update();
 
             //obtain hardcoded data
             DisplayResultsTable.createSet();
 
+            //obtain data from database
+            //DataTable set = Database_Conn.getDBResults();
+
+            totalItemsInSet = set.Rows.Count;
+
             foreach (DataRow row in set.Rows)
             {
+                // if row contains an item that is not used 
+                // or does not have the correct barcode format, 
+                // do not search
                 price = GooglePrices.getPrice(row["Barcode"].ToString());
                 row["onlinePrice"] = Math.Round(price, 2);
                 row["diff"] = Math.Round(price - (Double)row["dbPrice"], 2);
-                totalRecords++;
+                totalRecordsToDisplay++;
+                splash.lblProgress.Text = "Loading online prices... " + totalRecordsToDisplay.ToString() + " of " + totalItemsInSet.ToString();
+                splash.Update();
             }
 
             DisplayResultsTable.displayTable();
-
+            
             splash.Close();
             form.ShowDialog();
         }

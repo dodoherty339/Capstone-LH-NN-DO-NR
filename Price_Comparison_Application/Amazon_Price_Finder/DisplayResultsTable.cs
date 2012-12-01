@@ -141,13 +141,13 @@ namespace Price_Comparison
         public static void displayTable()
         {
             Price_Comparison.PriceComparison.sortedRows = sortFilterRows();
-            Price_Comparison.PriceComparison.totalRecords = Price_Comparison.PriceComparison.sortedRows.Length;
+            Price_Comparison.PriceComparison.totalRecordsToDisplay = Price_Comparison.PriceComparison.sortedRows.Length;
             setFirstLastRecord();
             int count = 0;
             Price_Comparison.PriceComparison.form.tblResults.Rows.Clear();
             if (Price_Comparison.PriceComparison.sortedRows.Length > 0)
             {
-                for (int i = Price_Comparison.PriceComparison.firstRecord; i <= Price_Comparison.PriceComparison.lastRecord && i < Price_Comparison.PriceComparison.totalRecords; i++)
+                for (int i = Price_Comparison.PriceComparison.firstRecord; i <= Price_Comparison.PriceComparison.lastRecord && i < Price_Comparison.PriceComparison.totalRecordsToDisplay; i++)
                 {
                     Price_Comparison.PriceComparison.form.tblResults.Rows.Add();
                     displayRow(count, Price_Comparison.PriceComparison.sortedRows[i]);
@@ -202,14 +202,14 @@ namespace Price_Comparison
                 = Price_Comparison.PriceComparison.currPage * Price_Comparison.PriceComparison.numResultsPerPage;
             Price_Comparison.PriceComparison.lastRecord 
                 = Price_Comparison.PriceComparison.firstRecord + Price_Comparison.PriceComparison.numResultsPerPage - 1;
-            if (Price_Comparison.PriceComparison.lastRecord >= Price_Comparison.PriceComparison.totalRecords)
+            if (Price_Comparison.PriceComparison.lastRecord >= Price_Comparison.PriceComparison.totalRecordsToDisplay)
             {
-                Price_Comparison.PriceComparison.lastRecord = Price_Comparison.PriceComparison.totalRecords - 1;
+                Price_Comparison.PriceComparison.lastRecord = Price_Comparison.PriceComparison.totalRecordsToDisplay - 1;
             }
             Price_Comparison.PriceComparison.totalPages 
-                = (int)(Math.Ceiling((Double)(Price_Comparison.PriceComparison.totalRecords / Price_Comparison.PriceComparison.numResultsPerPage)));
+                = (int)(Math.Ceiling((Double)(Price_Comparison.PriceComparison.totalRecordsToDisplay / Price_Comparison.PriceComparison.numResultsPerPage)));
             Price_Comparison.PriceComparison.form.lblDisplayedRecords.Text 
-                = (Price_Comparison.PriceComparison.firstRecord + 1).ToString() + "-" + (Price_Comparison.PriceComparison.lastRecord + 1).ToString() + " of " + Price_Comparison.PriceComparison.totalRecords.ToString();
+                = (Price_Comparison.PriceComparison.firstRecord + 1).ToString() + "-" + (Price_Comparison.PriceComparison.lastRecord + 1).ToString() + " of " + Price_Comparison.PriceComparison.totalRecordsToDisplay.ToString();
         }
     }
 }
