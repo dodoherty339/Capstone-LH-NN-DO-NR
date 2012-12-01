@@ -72,7 +72,10 @@ namespace Price_Comparison
                 // do not search
                 price = GooglePrices.getPrice(row["Barcode"].ToString());
                 row["onlinePrice"] = Math.Round(price, 2);
-                row["diff"] = Math.Round(price - (Double)row["dbPrice"], 2);
+                if (price != 0)
+                {
+                    row["diff"] = Math.Round(price - (Double)row["dbPrice"], 2);
+                }
                 totalRecordsToDisplay++;
                 splash.lblProgress.Text = "Loading online prices... " + totalRecordsToDisplay.ToString() + " of " + totalItemsInSet.ToString();
                 splash.Update();
