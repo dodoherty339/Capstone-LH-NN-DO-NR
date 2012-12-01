@@ -1,0 +1,7 @@
+Doxygen Instructions
+
+use doxywizard
+file->open Doxyfile (in this directory)
+go to run tab
+"Run doxygen"
+"Show HTML output" after run to see generated documentation
