@@ -32,7 +32,7 @@ namespace Price_Comparison
         public static PriceComparisonForm.FormPriceCompare form; /*!< this is the form for the application */
         public static SplashForm splash; /*!< this is the form used as a splash screen */
         public static DataRow[] sortedRows; /*!< this is an array of the records in sorted order */
-        public static String sortCol = "dbPrice"; /*!< this is the parameter for the sort function */
+        public static String sortCol = "dbPrice, barcode"; /*!< this is the parameter for the sort function */
         public static String filter = "1 = 1"; /*!< this is the parameter for the filter function */
         public static int firstRecord; /*!< this is the number of the first record on the screen */
         public static int lastRecord; /*!< this is the number of the last record on the screen */

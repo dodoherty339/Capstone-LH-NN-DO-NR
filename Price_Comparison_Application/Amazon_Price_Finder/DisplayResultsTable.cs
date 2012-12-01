@@ -26,10 +26,17 @@ namespace Price_Comparison
         )
         {
             PriceComparison.form.tblResults["DatabasePrice", index].Value 
-                = Regex.Replace(PriceComparison.form.tblResults["DatabasePrice", index].Value.ToString(), @"[^\d\.]", "");
+                = Regex.Replace(PriceComparison.form.tblResults["DatabasePrice", index].Value.ToString(), @"[^\d\.-]", "");
             DataRow row = PriceComparison.set.Select("Barcode = '" + PriceComparison.form.tblResults["Barcode", index].Value.ToString() + "'")[0];
-            row["dbPrice"] = PriceComparison.form.tblResults["DatabasePrice", index].Value;
-            row["diff"] = (Double)row["onlinePrice"] - (Double)row["dbPrice"];
+            double newPrice;
+            if ( double.TryParse(PriceComparison.form.tblResults["DatabasePrice", index].Value.ToString(), out newPrice))
+            {
+                if ( newPrice > 0)
+                {
+                    row["dbPrice"] = PriceComparison.form.tblResults["DatabasePrice", index].Value;
+                    row["diff"] = (Double)row["onlinePrice"] - (Double)row["dbPrice"];
+                }
+            }
             displayTable();
         }
 
@@ -100,18 +107,22 @@ namespace Price_Comparison
             else
             {
                 PriceComparison.form.tblResults["OnlinePrice", rowNum].Value = String.Format("{0:$0.00}", (Double)row["onlinePrice"]);
-            }
-                
-            if ((Double)row["diff"] < 0)
-            {
-                PriceComparison.form.tblResults["Difference", rowNum].Style.BackColor = System.Drawing.Color.Tomato;
-                PriceComparison.form.tblResults["Difference", rowNum].Value = String.Format("{0:0.00}", (Double)row["diff"]);
-            }
-            if ((Double)row["diff"] > 0)
-            {
-                PriceComparison.form.tblResults["Difference", rowNum].Style.BackColor = System.Drawing.Color.GreenYellow;
-                PriceComparison.form.tblResults["Difference", rowNum].Value = String.Format("+{0:0.00}", (Double)row["diff"]);
-            }
+                if ((Double)row["diff"] < 0)
+                {
+                    PriceComparison.form.tblResults["Difference", rowNum].Style.BackColor = System.Drawing.Color.Tomato;
+                    PriceComparison.form.tblResults["Difference", rowNum].Value = String.Format("{0:0.00}", (Double)row["diff"]);
+                }
+                if ((Double)row["diff"] > 0)
+                {
+                    PriceComparison.form.tblResults["Difference", rowNum].Style.BackColor = System.Drawing.Color.GreenYellow;
+                    PriceComparison.form.tblResults["Difference", rowNum].Value = String.Format("+{0:0.00}", (Double)row["diff"]);
+                }
+                if ((Double)row["diff"] == 0)
+                {
+                    PriceComparison.form.tblResults["Difference", rowNum].Style.BackColor = System.Drawing.Color.White;
+                    PriceComparison.form.tblResults["Difference", rowNum].Value = "0.00";
+                }
+            }            
         }
 
         //! This is the method that sorts and filters the set.

@@ -48,54 +48,57 @@ namespace PriceComparisonForm
 
         //! This is the method called when the "Price (low to high)" radio button is selected.
         /**
-         * This method changes the sort parameter to "dbPrice" indicating sorting 
-         * by the database price ascending.  It returns to the first page of the 
-         * list and displays the table.
-         */ 
+         * This method changes the sort parameter to "dbPrice, barcode" 
+         * indicating sorting by the database price, ascending, and then by 
+         * barcode.  It returns to the first page of the list and displays the 
+         * table.
+         */
         private void radBtnPriceLow_CheckedChanged(object sender, EventArgs e)
         {
-            Price_Comparison.PriceComparison.sortCol = "dbPrice";
+            Price_Comparison.PriceComparison.sortCol = "dbPrice, barcode";
             Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         //! This is the method called when the "Price (high to low)" radio button is selected.
         /**
-         * This method changes the sort parameter to "dbPrice DESC" indicating sorting 
-         * by the database price descending.  It returns to the first page of the 
-         * list and displays the table.
-         */ 
+         * This method changes the sort parameter to "dbPrice DESC, barcode" 
+         * indicating sorting by the database price, descending, and then by 
+         * barcode.  It returns to the first page of the list and displays the 
+         * table.
+         */
         private void radBtnPriceHigh_CheckedChanged(object sender, EventArgs e)
         {
-            Price_Comparison.PriceComparison.sortCol = "dbPrice DESC";
+            Price_Comparison.PriceComparison.sortCol = "dbPrice DESC, barcode";
             Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         //! This is the method called when the "Difference (negative to positive)" radio button is selected.
         /**
-         * This method changes the sort parameter to "diff" indicating sorting 
-         * by the difference and displaying the most negative numbers first and
-         * the most positive numbers last.  It returns to the first page of the 
-         * list and displays the table.
-         */ 
+         * This method changes the sort parameter to "diff, barcode" indicating
+         * sorting by the difference and displaying the most negative numbers 
+         * first and the most positive numbers last, and then by barcode.  It 
+         * returns to the first page of the list and displays the table.
+         */
         private void radBtnDiffNeg_CheckedChanged(object sender, EventArgs e)
         {
-            Price_Comparison.PriceComparison.sortCol = "diff";
+            Price_Comparison.PriceComparison.sortCol = "diff, barcode";
             Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
 
         //! This is the method called when the "Difference (positive to negative)" radio button is selected.
         /**
-         * This method changes the sort parameter to "diff DESC" indicating sorting 
-         * by the difference and displaying the most positive numbers first and
-         * the most negative numbers last.  It returns to the first page of the 
-         * list and displays the table.
-         */ 
+         * This method changes the sort parameter to "diff DESC, barcode" 
+         * indicating sorting by the difference and displaying the most 
+         * positive numbers first and the most negative numbers last, and then 
+         * by barcode.  It returns to the first page of the list and displays 
+         * the table.
+         */
         private void radBtnDiffPos_CheckedChanged(object sender, EventArgs e)
         {
-            Price_Comparison.PriceComparison.sortCol = "diff DESC";
+            Price_Comparison.PriceComparison.sortCol = "diff DESC, barcode";
             Price_Comparison.PriceComparison.currPage = 0;
             Price_Comparison.DisplayResultsTable.displayTable();
         }
