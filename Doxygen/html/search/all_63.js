@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['calculatestandarddeviation',['calculateStandardDeviation',['../class_amazon___price___finder_1_1_analyze_results.html#a3849c1953175489f3291237f18709b41',1,'Amazon_Price_Finder::AnalyzeResults']]]
+  ['calculatestandarddeviation',['calculateStandardDeviation',['../class_price___comparison_1_1_analyze_results.html#a673440bc5fa5ea7557c04094bd1762ea',1,'Price_Comparison::AnalyzeResults']]],
+  ['components',['components',['../class_price_comparison_form_1_1_form_price_compare.html#aae6e78edce142e17ecf15f769bd2ba21',1,'PriceComparisonForm.FormPriceCompare.components()'],['../class_price___comparison_1_1_splash_form.html#af8c58b502a7449b8e1f3daa9bd15de41',1,'Price_Comparison.SplashForm.components()']]],
+  ['createset',['createSet',['../class_price___comparison_1_1_display_results_table.html#afd2cc1c3ee70b82ebfa585dedc23a983',1,'Price_Comparison::DisplayResultsTable']]],
+  ['currpage',['currPage',['../class_price___comparison_1_1_price_comparison.html#a36b71cb32784ebb0101e4281f0cb211f',1,'Price_Comparison::PriceComparison']]]
 ];

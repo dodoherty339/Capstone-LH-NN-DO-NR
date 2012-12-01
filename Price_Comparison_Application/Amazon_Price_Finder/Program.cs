@@ -23,19 +23,19 @@ namespace Price_Comparison
      */
     class PriceComparison
     {
-        public static DataTable set = new DataTable();
-        public static int totalPages;
-        public static int currPage = 0;
-        public static int numResultsPerPage = 25;
-        public static int totalRecordsToDisplay = 0;
-        public static int totalItemsInSet = 0;
-        public static PriceComparisonForm.FormPriceCompare form;
-        public static SplashForm splash;
-        public static DataRow[] sortedRows;
-        public static String sortCol = "dbPrice";
-        public static String filter = "1 = 1";
-        public static int firstRecord;
-        public static int lastRecord;
+        public static DataTable set = new DataTable(); /*!< this is the set of all records read from the database */
+        public static int totalPages; /*!< this is the total number of pages the list takes up based on the number of records per page */
+        public static int currPage = 0; /*!< this is the currently displayed page of the list */
+        public static int numResultsPerPage = 25; /*!< this is how many results to display per page */
+        public static int totalItemsInSet = 0; /*!< this is the total number of records in the set */
+        public static int totalRecordsToDisplay = 0; /*!< this is the number of records to display based on barcode verification */
+        public static PriceComparisonForm.FormPriceCompare form; /*!< this is the form for the application */
+        public static SplashForm splash; /*!< this is the form used as a splash screen */
+        public static DataRow[] sortedRows; /*!< this is an array of the records in sorted order */
+        public static String sortCol = "dbPrice"; /*!< this is the parameter for the sort function */
+        public static String filter = "1 = 1"; /*!< this is the parameter for the filter function */
+        public static int firstRecord; /*!< this is the number of the first record on the screen */
+        public static int lastRecord; /*!< this is the number of the last record on the screen */
 
         //! The main method of the program
         /**
@@ -49,6 +49,13 @@ namespace Price_Comparison
             splash.Show();
             splash.lblProgress.Text = "Loading online prices...";
             splash.Update();
+
+            // Define the format of the set.
+            PriceComparison.set.Columns.Add("Barcode", typeof(String));
+            PriceComparison.set.Columns.Add("Dscr", typeof(String));
+            PriceComparison.set.Columns.Add("dbPrice", typeof(double));
+            PriceComparison.set.Columns.Add("onlinePrice", typeof(double));
+            PriceComparison.set.Columns.Add("diff", typeof(double));
 
             //obtain hardcoded data
             DisplayResultsTable.createSet();

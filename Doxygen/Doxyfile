@@ -26,7 +26,7 @@ DOXYFILE_ENCODING      = UTF-8
 # identify the project. Note that if you do not use Doxywizard you need 
 # to put quotes around the project name if it contains spaces.
 
-PROJECT_NAME           = "Amazon Price Finder"
+PROJECT_NAME           = "Price Comparison Application"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. 
 # This could be handy for archiving the generated documentation or 
@@ -52,7 +52,7 @@ PROJECT_LOGO           =
 # If a relative path is entered, it will be relative to the location 
 # where doxygen was started. If left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = "C:\Users\Los Haches\Documents\GitHub\Capstone-LH-NN-DO-NR\Doxygen"
+OUTPUT_DIRECTORY       = .
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create 
 # 4096 sub-directories (in 2 levels) under the output directory of each output 
@@ -380,7 +380,7 @@ EXTRACT_ALL            = NO
 # If the EXTRACT_PRIVATE tag is set to YES all private members of a class 
 # will be included in the documentation.
 
-EXTRACT_PRIVATE        = NO
+EXTRACT_PRIVATE        = YES
 
 # If the EXTRACT_PACKAGE tag is set to YES all members with package or internal 
 # scope will be included in the documentation.
@@ -390,7 +390,7 @@ EXTRACT_PACKAGE        = NO
 # If the EXTRACT_STATIC tag is set to YES all static members of a file 
 # will be included in the documentation.
 
-EXTRACT_STATIC         = NO
+EXTRACT_STATIC         = YES
 
 # If the EXTRACT_LOCAL_CLASSES tag is set to YES classes (and structs) 
 # defined locally in source files will be included in the documentation. 
@@ -675,7 +675,7 @@ WARN_LOGFILE           =
 # directories like "/usr/src/myproject". Separate the files or directories 
 # with spaces.
 
-INPUT                  = "C:\Users\Los Haches\Documents\GitHub\Capstone-LH-NN-DO-NR\Amazon_Price_Finder"
+INPUT                  = "C:\Users\Los Haches\Documents\GitHub\Capstone-LH-NN-DO-NR\Price_Comparison_Application"
 
 # This tag can be used to specify the character encoding of the source files 
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is 
@@ -740,20 +740,20 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is 
 # run.
 
-EXCLUDE                = "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.BrowseNodeLookupResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.CartAddResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.CartClearResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.CartCreateResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.CartGetResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.CartModifyResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.ItemLookupResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.ItemSearchResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Amazon_Price_Finder.amazon.ecs.SimilarityLookupResponse.datasource" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/AWSECommerceService.wsdl" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/configuration.svcinfo" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/configuration91.svcinfo" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Reference.cs" \
-                         "../Amazon_Price_Finder/Amazon_Price_Finder/Service References/amazon.ecs/Reference.svcmap"
+EXCLUDE                = "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/AWSECommerceService.wsdl" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/configuration.svcinfo" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/configuration91.svcinfo" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.BrowseNodeLookupResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.CartAddResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.CartClearResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.CartCreateResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.CartGetResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.CartModifyResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.ItemLookupResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.ItemSearchResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Price_Comparison.amazon.ecs.SimilarityLookupResponse.datasource" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Reference.cs" \
+                         "C:/Users/Los Haches/Documents/GitHub/Capstone-LH-NN-DO-NR/Price_Comparison_Application/Amazon_Price_Finder/Service References/amazon.ecs/Reference.svcmap"
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or 
 # directories that are symbolic links (a Unix file system feature) are excluded 
@@ -1644,7 +1644,7 @@ PERL_PATH              = /usr/bin/perl
 # this option also works with HAVE_DOT disabled, but it is recommended to 
 # install and use dot, since it yields more powerful graphs.
 
-CLASS_DIAGRAMS         = NO
+CLASS_DIAGRAMS         = YES
 
 # You can define message sequence charts within doxygen comments using the \msc 
 # command. Doxygen will then run the mscgen tool (see 

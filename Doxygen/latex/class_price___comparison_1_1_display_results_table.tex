@@ -1,0 +1,121 @@
+\hypertarget{class_price___comparison_1_1_display_results_table}{\section{Price\-\_\-\-Comparison.\-Display\-Results\-Table Class Reference}
+\label{class_price___comparison_1_1_display_results_table}\index{Price\-\_\-\-Comparison.\-Display\-Results\-Table@{Price\-\_\-\-Comparison.\-Display\-Results\-Table}}
+}
+
+
+The class for displaying the results table.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_price___comparison_1_1_display_results_table_a59a0ea811b7981d8fd7fd7e569d7dc25}{Update\-Database} (int index)
+\begin{DoxyCompactList}\small\item\em This is the method that updates the database (using the hardcoded set of records). \end{DoxyCompactList}\item 
+static void \hyperlink{class_price___comparison_1_1_display_results_table_a80b6c08a37fffa730d08808f8a6add30}{display\-Table} ()
+\begin{DoxyCompactList}\small\item\em This is the method that displays the table on the form. \end{DoxyCompactList}\item 
+static void \hyperlink{class_price___comparison_1_1_display_results_table_ad7ae949acd95974340b752b664f6b59e}{display\-Row} (int row\-Num, Data\-Row row)
+\begin{DoxyCompactList}\small\item\em This is the method that displays a row on the form. \end{DoxyCompactList}\item 
+static Data\-Row\mbox{[}$\,$\mbox{]} \hyperlink{class_price___comparison_1_1_display_results_table_aa70ac8b10e811245544396730c2293da}{sort\-Filter\-Rows} ()
+\begin{DoxyCompactList}\small\item\em This is the method that sorts and filters the set. \end{DoxyCompactList}\item 
+static void \hyperlink{class_price___comparison_1_1_display_results_table_a39a0df4f69ece66a7692ae5cf8f5f126}{set\-First\-Last\-Record} ()
+\begin{DoxyCompactList}\small\item\em This is the method that sets the first and last record. \end{DoxyCompactList}\item 
+static void \hyperlink{class_price___comparison_1_1_display_results_table_afd2cc1c3ee70b82ebfa585dedc23a983}{create\-Set} ()
+\begin{DoxyCompactList}\small\item\em This is the method that creates the hardcoded set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class for displaying the results table. 
+
+This class contains methods that display the records on the form. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_price___comparison_1_1_display_results_table_afd2cc1c3ee70b82ebfa585dedc23a983}{\index{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}!create\-Set@{create\-Set}}
+\index{create\-Set@{create\-Set}!Price_Comparison::DisplayResultsTable@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}}
+\subsubsection[{create\-Set}]{\setlength{\rightskip}{0pt plus 5cm}static void Price\-\_\-\-Comparison.\-Display\-Results\-Table.\-create\-Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_display_results_table_afd2cc1c3ee70b82ebfa585dedc23a983}
+
+
+This is the method that creates the hardcoded set. 
+
+This method contains the hardcoded data for the set. \hypertarget{class_price___comparison_1_1_display_results_table_ad7ae949acd95974340b752b664f6b59e}{\index{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}!display\-Row@{display\-Row}}
+\index{display\-Row@{display\-Row}!Price_Comparison::DisplayResultsTable@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}}
+\subsubsection[{display\-Row}]{\setlength{\rightskip}{0pt plus 5cm}static void Price\-\_\-\-Comparison.\-Display\-Results\-Table.\-display\-Row (
+\begin{DoxyParamCaption}
+\item[{int}]{row\-Num, }
+\item[{Data\-Row}]{row}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_display_results_table_ad7ae949acd95974340b752b664f6b59e}
+
+
+This is the method that displays a row on the form. 
+
+This method takes two parameters\-: the row number into the table on the form and the row data itself. First the barcode and description are copied directly from the row data to the table. The database price and online price are formatted as \char`\"{}\$x.\-xx\char`\"{}. The online price, however, is tested for whether it is equal to 0, and if it is \char`\"{}\-N/\-A\char`\"{} is displayed instead of \char`\"{}\$0.\-00\char`\"{} and the difference is displayed as \char`\"{}-\/\char`\"{} and set to 0. If the difference is negative, it is displayed as \char`\"{}-\/x.\-xx\char`\"{}, and the cell is colored red. If the difference is positive, it is displayed as \char`\"{}+x.\-xx\char`\"{}, and the cell is colored green. 
+\begin{DoxyParams}{Parameters}
+{\em row\-Num} & the row number of the record to be displayed \\
+\hline
+{\em row} & the data for the row to be displayed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_price___comparison_1_1_display_results_table_a80b6c08a37fffa730d08808f8a6add30}{\index{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}!display\-Table@{display\-Table}}
+\index{display\-Table@{display\-Table}!Price_Comparison::DisplayResultsTable@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}}
+\subsubsection[{display\-Table}]{\setlength{\rightskip}{0pt plus 5cm}static void Price\-\_\-\-Comparison.\-Display\-Results\-Table.\-display\-Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_display_results_table_a80b6c08a37fffa730d08808f8a6add30}
+
+
+This is the method that displays the table on the form. 
+
+This method sorts the rows based on the current sort and filter parameters. Then it sets the total records to display to the length of the sorted array. Then it calculates the first and last record on the current page. It clears the previous results table, then iterates through the table starting with the first record through the last record, adding a new row and displaying it for each record.
+
+If there are no rows in the array, generally indicating that there are no results in the current filter, a message is displayed indicating the set is empty. \hypertarget{class_price___comparison_1_1_display_results_table_a39a0df4f69ece66a7692ae5cf8f5f126}{\index{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}!set\-First\-Last\-Record@{set\-First\-Last\-Record}}
+\index{set\-First\-Last\-Record@{set\-First\-Last\-Record}!Price_Comparison::DisplayResultsTable@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}}
+\subsubsection[{set\-First\-Last\-Record}]{\setlength{\rightskip}{0pt plus 5cm}static void Price\-\_\-\-Comparison.\-Display\-Results\-Table.\-set\-First\-Last\-Record (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_display_results_table_a39a0df4f69ece66a7692ae5cf8f5f126}
+
+
+This is the method that sets the first and last record. 
+
+This method sets the number of the first and last records on the current page. The first record is the current page times the number of results per page; the last record is the first record plus the number of results per page minus 1. If the number of the last record is higher than the total number of records, the last record is set to the total number of records minus 1 (this is done because the values act as indices into the sorted array).
+
+Next the total number of pages is set to the ceiling of total records divided by the number of results per page.
+
+Finally, text is displayed on screen indicating the records currently displayed. It displays the first record plus 1 and the last record plus 1 because they are actually stored starting at 0 instead of 1. \hypertarget{class_price___comparison_1_1_display_results_table_aa70ac8b10e811245544396730c2293da}{\index{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}!sort\-Filter\-Rows@{sort\-Filter\-Rows}}
+\index{sort\-Filter\-Rows@{sort\-Filter\-Rows}!Price_Comparison::DisplayResultsTable@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}}
+\subsubsection[{sort\-Filter\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}static Data\-Row \mbox{[}$\,$\mbox{]} Price\-\_\-\-Comparison.\-Display\-Results\-Table.\-sort\-Filter\-Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_display_results_table_aa70ac8b10e811245544396730c2293da}
+
+
+This is the method that sorts and filters the set. 
+
+This method selects and returns all rows that fit into the currently assigned filter sorted by the currently assigned sort parameters. \hypertarget{class_price___comparison_1_1_display_results_table_a59a0ea811b7981d8fd7fd7e569d7dc25}{\index{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}!Update\-Database@{Update\-Database}}
+\index{Update\-Database@{Update\-Database}!Price_Comparison::DisplayResultsTable@{Price\-\_\-\-Comparison\-::\-Display\-Results\-Table}}
+\subsubsection[{Update\-Database}]{\setlength{\rightskip}{0pt plus 5cm}static void Price\-\_\-\-Comparison.\-Display\-Results\-Table.\-Update\-Database (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_display_results_table_a59a0ea811b7981d8fd7fd7e569d7dc25}
+
+
+This is the method that updates the database (using the hardcoded set of records). 
+
+This method is passed the index of the record on the form that has been updated. First it strips out all characters except digits and the decimal point. Next it finds the record in the set and modifies its database price and the difference between the online price and the database price. Finally, it displays the table. 
+\begin{DoxyParams}{Parameters}
+{\em index} & the index into the results table on the form for the record to be updated \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Los Haches/\-Documents/\-Git\-Hub/\-Capstone-\/\-L\-H-\/\-N\-N-\/\-D\-O-\/\-N\-R/\-Price\-\_\-\-Comparison\-\_\-\-Application/\-Amazon\-\_\-\-Price\-\_\-\-Finder/Display\-Results\-Table.\-cs\end{DoxyCompactItemize}

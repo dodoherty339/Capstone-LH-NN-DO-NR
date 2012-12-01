@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['packagedimensions',['PackageDimensions',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#a2a502bf6d756cc9fe436f441602f2d9c',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['packagequantity',['PackageQuantity',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#aea47164c105015cc5d9e7ba54cfea36b',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['pages',['Pages',['../class_price___comparison_1_1amazon_1_1ecs_1_1_search_results_map_search_index.html#ac1a2222af595b75487b942876d7aa1df',1,'Price_Comparison::amazon::ecs::SearchResultsMapSearchIndex']]],
+  ['parentasin',['ParentASIN',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item.html#ab3ffd2f43592f24d72abec70e501b598',1,'Price_Comparison::amazon::ecs::Item']]],
+  ['partnumber',['PartNumber',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#afb187212ded6862dba6bd59e0bddd171',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['percentagesaved',['PercentageSaved',['../class_price___comparison_1_1amazon_1_1ecs_1_1_offer_listing.html#a31d4052b0ce96850b98ad5ca0fa48ef7',1,'Price_Comparison::amazon::ecs::OfferListing']]],
+  ['pictureformat',['PictureFormat',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#ac4d9b1ca5938c24519586e6944218eb9',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['platform',['Platform',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#a6497797e547cde48d27c5dad71b7e6cb',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['points',['Points',['../class_price___comparison_1_1amazon_1_1ecs_1_1_loyalty_points.html#ad319a0bb303e0bd8ded6b37e578ff470',1,'Price_Comparison::amazon::ecs::LoyaltyPoints']]],
+  ['power',['Power',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_search_request.html#aab823ad0975d5be4d0abb315b9c3ca94',1,'Price_Comparison::amazon::ecs::ItemSearchRequest']]],
+  ['price',['Price',['../class_price___comparison_1_1amazon_1_1ecs_1_1_cart_item.html#a1530d7a69997a814880d054a28bd0a0b',1,'Price_Comparison.amazon.ecs.CartItem.Price()'],['../class_price___comparison_1_1amazon_1_1ecs_1_1_offer_listing.html#ac76193d4282e6febfd4052178fa89113',1,'Price_Comparison.amazon.ecs.OfferListing.Price()']]],
+  ['productgroup',['ProductGroup',['../class_price___comparison_1_1amazon_1_1ecs_1_1_cart_item.html#a1581aec9165ce7d4f6f282c9727fbbb9',1,'Price_Comparison.amazon.ecs.CartItem.ProductGroup()'],['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#ab9633ae86da407fbc1fa97d2584ba860',1,'Price_Comparison.amazon.ecs.ItemAttributes.ProductGroup()'],['../class_price___comparison_1_1amazon_1_1ecs_1_1_top_item_set_top_item.html#a2e97f0b3198056b3c8d37aabf66a0f29',1,'Price_Comparison.amazon.ecs.TopItemSetTopItem.ProductGroup()']]],
+  ['producttypename',['ProductTypeName',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#a04bee4495a426f32b21f016faffc30c8',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['producttypesubcategory',['ProductTypeSubcategory',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#a72c60fea16a33779c1c969b763fa90b7',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['promotionid',['PromotionId',['../class_price___comparison_1_1amazon_1_1ecs_1_1_promotion_summary.html#aa0138752e9c5b05ad453bec33dd238a8',1,'Price_Comparison::amazon::ecs::PromotionSummary']]],
+  ['promotions',['Promotions',['../class_price___comparison_1_1amazon_1_1ecs_1_1_offer.html#ae65a4c57eb55f5f0f1a8bee5e27394cc',1,'Price_Comparison::amazon::ecs::Offer']]],
+  ['properties',['Properties',['../class_price___comparison_1_1amazon_1_1ecs_1_1_browse_node.html#aa0afe26905354d6a717ed7bc564b1dd8',1,'Price_Comparison::amazon::ecs::BrowseNode']]],
+  ['publicationdate',['PublicationDate',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#aa8e3e1567d27d98b2fa6fcec92a2ba9c',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
+  ['publisher',['Publisher',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_search_request.html#aafebab74d31da06d8d5d1c88500e0fc4',1,'Price_Comparison.amazon.ecs.ItemSearchRequest.Publisher()'],['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#a1040d3997639cdcdd2eb03f3e0235615',1,'Price_Comparison.amazon.ecs.ItemAttributes.Publisher()']]],
+  ['purchaseurl',['PurchaseURL',['../class_price___comparison_1_1amazon_1_1ecs_1_1_cart.html#afe014be52ecfe0d83fda18c56dcf9562',1,'Price_Comparison::amazon::ecs::Cart']]]
+];

@@ -1,0 +1,81 @@
+\hypertarget{class_price___comparison_1_1_analyze_results}{\section{Price\-\_\-\-Comparison.\-Analyze\-Results Class Reference}
+\label{class_price___comparison_1_1_analyze_results}\index{Price\-\_\-\-Comparison.\-Analyze\-Results@{Price\-\_\-\-Comparison.\-Analyze\-Results}}
+}
+
+
+This is the class for analyzing the results obtained from Amazon.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{class_price___comparison_1_1_analyze_results_a2c41cccbb35581114ec69ab39dc04e11}{Start\-Analyze} (double\mbox{[}$\,$\mbox{]} totals)
+\begin{DoxyCompactList}\small\item\em This is the first method invoked in the \hyperlink{class_price___comparison_1_1_analyze_results}{Analyze\-Results} class. \end{DoxyCompactList}\item 
+static double \hyperlink{class_price___comparison_1_1_analyze_results_a673440bc5fa5ea7557c04094bd1762ea}{calculate\-Standard\-Deviation} (double\mbox{[}$\,$\mbox{]} totals)
+\begin{DoxyCompactList}\small\item\em This method calculates the standard deviation of the array. \end{DoxyCompactList}\item 
+static double \hyperlink{class_price___comparison_1_1_analyze_results_a2f11d210150bea635ec1866e3bad4bb0}{adjust\-Mean} (double std\-Dev, double mean, double\mbox{[}$\,$\mbox{]} totals)
+\begin{DoxyCompactList}\small\item\em This method calculates an adjusted average for the prices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the class for analyzing the results obtained from Amazon. 
+
+It contains methods involved in calculating the average of the prices as well as an adjusted average by identifying outliers with the use of the standard deviation. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_price___comparison_1_1_analyze_results_a2f11d210150bea635ec1866e3bad4bb0}{\index{Price\-\_\-\-Comparison\-::\-Analyze\-Results@{Price\-\_\-\-Comparison\-::\-Analyze\-Results}!adjust\-Mean@{adjust\-Mean}}
+\index{adjust\-Mean@{adjust\-Mean}!Price_Comparison::AnalyzeResults@{Price\-\_\-\-Comparison\-::\-Analyze\-Results}}
+\subsubsection[{adjust\-Mean}]{\setlength{\rightskip}{0pt plus 5cm}static double Price\-\_\-\-Comparison.\-Analyze\-Results.\-adjust\-Mean (
+\begin{DoxyParamCaption}
+\item[{double}]{std\-Dev, }
+\item[{double}]{mean, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{totals}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_analyze_results_a2f11d210150bea635ec1866e3bad4bb0}
+
+
+This method calculates an adjusted average for the prices. 
+
+It takes the standard deviation calculated in the previous method and determines a range of acceptable values based on two standard deviations. Any values outside of that range are considered \char`\"{}outliers\char`\"{} and are ignored in the calculation of a new average.
+
+{\bfseries Note\-:} Standard practice says that outliers must be at least 3 standard deviations from the mean, but for our application, 2 is more useful. 
+\begin{DoxyParams}{Parameters}
+{\em std\-Dev} & the standard deviation of the values \\
+\hline
+{\em mean} & the raw average of the values \\
+\hline
+{\em totals} & a list of prices \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_price___comparison_1_1_analyze_results_a673440bc5fa5ea7557c04094bd1762ea}{\index{Price\-\_\-\-Comparison\-::\-Analyze\-Results@{Price\-\_\-\-Comparison\-::\-Analyze\-Results}!calculate\-Standard\-Deviation@{calculate\-Standard\-Deviation}}
+\index{calculate\-Standard\-Deviation@{calculate\-Standard\-Deviation}!Price_Comparison::AnalyzeResults@{Price\-\_\-\-Comparison\-::\-Analyze\-Results}}
+\subsubsection[{calculate\-Standard\-Deviation}]{\setlength{\rightskip}{0pt plus 5cm}static double Price\-\_\-\-Comparison.\-Analyze\-Results.\-calculate\-Standard\-Deviation (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{totals}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_analyze_results_a673440bc5fa5ea7557c04094bd1762ea}
+
+
+This method calculates the standard deviation of the array. 
+
+It contains methods involved in calculating the average of the prices as well as an adjusted average by identifying outliers with the use of the standard deviation. 
+\begin{DoxyParams}{Parameters}
+{\em totals} & a list of prices \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_price___comparison_1_1_analyze_results_a2c41cccbb35581114ec69ab39dc04e11}{\index{Price\-\_\-\-Comparison\-::\-Analyze\-Results@{Price\-\_\-\-Comparison\-::\-Analyze\-Results}!Start\-Analyze@{Start\-Analyze}}
+\index{Start\-Analyze@{Start\-Analyze}!Price_Comparison::AnalyzeResults@{Price\-\_\-\-Comparison\-::\-Analyze\-Results}}
+\subsubsection[{Start\-Analyze}]{\setlength{\rightskip}{0pt plus 5cm}static double Price\-\_\-\-Comparison.\-Analyze\-Results.\-Start\-Analyze (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{totals}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_price___comparison_1_1_analyze_results_a2c41cccbb35581114ec69ab39dc04e11}
+
+
+This is the first method invoked in the \hyperlink{class_price___comparison_1_1_analyze_results}{Analyze\-Results} class. 
+
+It defines the array of prices and calls the other methods to calculate the standard deviation and adjusted average. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Los Haches/\-Documents/\-Git\-Hub/\-Capstone-\/\-L\-H-\/\-N\-N-\/\-D\-O-\/\-N\-R/\-Price\-\_\-\-Comparison\-\_\-\-Application/\-Amazon\-\_\-\-Price\-\_\-\-Finder/Analyze\-Results.\-cs\end{DoxyCompactItemize}

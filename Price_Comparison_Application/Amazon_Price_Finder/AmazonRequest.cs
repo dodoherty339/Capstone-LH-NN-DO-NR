@@ -13,12 +13,14 @@ namespace Price_Comparison
      * It contains code obtained from the "Product Advertising API Getting 
      * Started Guide API Version 2011-08-01" found at 
      * http://aws.amazon.com/archives/Product-Advertising-API/.
+     * 
+     * <b>Note:<b/> This is class is not being used in the current implementation.
      */
     public class AmazonRequest
     {
-        private const string accessKeyId = "AKIAIZFYONMON7O5DRNA";
-        private const string secret = "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";
-        private const string assocTag = "";
+        private const string accessKeyId = "AKIAIZFYONMON7O5DRNA"; /*!< This is the access key needed for the connection */
+        private const string secret = "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"; /*!< This is the secret key for the connection */
+        private const string assocTag = ""; /*!< This is the associate tag for the connection */
 
         //! This is the method that defines a search and sends a request to Amazon
         /**

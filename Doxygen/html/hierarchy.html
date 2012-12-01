@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Amazon Price Finder: Class Hierarchy</title>
+<title>Price Comparison Application: Class Hierarchy</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Amazon Price Finder
+   <div id="projectname">Price Comparison Application
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,17 +86,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock">This inheritance list is sorted roughly, but not completely, alphabetically:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_amazon___price___finder_1_1_amazon_price_finder.html" target="_self">Amazon_Price_Finder.AmazonPriceFinder</a></td><td class="desc">The main class of the program</td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_amazon___price___finder_1_1_amazon_request.html" target="_self">Amazon_Price_Finder.AmazonRequest</a></td><td class="desc">This is the class representing the request sent to Amazon</td></tr>
-<tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_amazon___price___finder_1_1_analyze_results.html" target="_self">Amazon_Price_Finder.AnalyzeResults</a></td><td class="desc">This is the class for analyzing the results obtained from Amazon</td></tr>
-<tr id="row_3_"><td class="entry"><img id="arr_3_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('3_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><b>Form</b></td><td class="desc"></td></tr>
-<tr id="row_3_0_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_amazon_price_finder_form_1_1_form_amazon_price.html" target="_self">AmazonPriceFinderForm.FormAmazonPrice</a></td><td class="desc">This is the form used in the application</td></tr>
+<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price___comparison_1_1_amazon_request.html" target="_self">Price_Comparison.AmazonRequest</a></td><td class="desc">This is the class representing the request sent to Amazon</td></tr>
+<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price___comparison_1_1_analyze_results.html" target="_self">Price_Comparison.AnalyzeResults</a></td><td class="desc">This is the class for analyzing the results obtained from Amazon</td></tr>
+<tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price___comparison_1_1_database___conn.html" target="_self">Price_Comparison.Database_Conn</a></td><td class="desc">The class for connecting to the database</td></tr>
+<tr id="row_3_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price___comparison_1_1_display_results_table.html" target="_self">Price_Comparison.DisplayResultsTable</a></td><td class="desc">The class for displaying the results table</td></tr>
+<tr id="row_4_" class="even"><td class="entry"><img id="arr_4_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('4_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><b>Form</b></td><td class="desc"></td></tr>
+<tr id="row_4_0_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price___comparison_1_1_splash_form.html" target="_self">Price_Comparison.SplashForm</a></td><td class="desc">The splash screen class</td></tr>
+<tr id="row_4_1_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price_comparison_form_1_1_form_price_compare.html" target="_self">PriceComparisonForm.FormPriceCompare</a></td><td class="desc">The form class</td></tr>
+<tr id="row_5_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price___comparison_1_1_google_prices.html" target="_self">Price_Comparison.GooglePrices</a></td><td class="desc">The class for connecting to the Google Shops</td></tr>
+<tr id="row_6_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_price___comparison_1_1_price_comparison.html" target="_self">Price_Comparison.PriceComparison</a></td><td class="desc">The main class of the program</td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 23 2012 07:45:05 for Amazon Price Finder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 1 2012 03:59:57 for Price Comparison Application by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

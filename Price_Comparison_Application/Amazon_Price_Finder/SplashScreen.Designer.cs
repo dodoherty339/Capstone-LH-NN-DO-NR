@@ -52,8 +52,7 @@
             this.lblDesigned.Name = "lblDesigned";
             this.lblDesigned.Size = new System.Drawing.Size(209, 45);
             this.lblDesigned.TabIndex = 2;
-            this.lblDesigned.Text = "Designed by \r\nLucy Horpedahl, Nathan Noonan, \r\nDan O\'Doherty, and Nick Richardson" +
-                "";
+            this.lblDesigned.Text = "Designed by\r\nLucy Horpedahl, Nathan Noonan,\r\nDan O\'Doherty, and Nick Richardson";
             this.lblDesigned.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblProgress

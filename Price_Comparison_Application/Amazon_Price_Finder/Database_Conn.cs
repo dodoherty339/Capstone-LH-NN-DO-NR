@@ -7,8 +7,17 @@ using System.Data.SqlClient;
 
 namespace Price_Comparison
 {
+    //! The class for connecting to the database.
+    /**
+     * This class contains methods that connect to and communicate with the
+     * database.
+     */
     class Database_Conn
     {
+        //! This is the method that calls and reads from the database.
+        /**
+        * <i>To be documented</i>
+        */
         public static DataTable getDBResults()
         {
             //Create a new dataset object.

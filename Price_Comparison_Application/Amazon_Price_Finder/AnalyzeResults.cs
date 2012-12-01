@@ -87,15 +87,13 @@ namespace Price_Comparison
         //! This method calculates an adjusted average for the prices
         /**
          * It takes the standard deviation calculated in the previous method
-         * and an integer representing the number of standard deviations to use
-         * and determines a range of acceptable values.  Any values outside of
-         * that range are considered "outliers" and are ignored in the 
-         * calculation of a new average.
+         * and determines a range of acceptable values based on two standard
+         * deviations.  Any values outside of that range are considered 
+         * "outliers" and are ignored in the calculation of a new average.
          * 
-         * <b>Note:</b> The "numDev" parameter is included to allow for a
-         * smaller range of numbers to be determined acceptable.  Standard
-         * practice says that outliers must be at least 3 standard deviations
-         * from the mean.
+         * <b>Note:</b> Standard practice says that outliers must be at least 
+         * 3 standard deviations from the mean, but for our application, 2 is
+         * more useful.
          */
         public static double adjustMean(
           double stdDev     /*!< the standard deviation of the values */
