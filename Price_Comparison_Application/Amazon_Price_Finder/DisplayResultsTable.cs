@@ -27,7 +27,7 @@ namespace Price_Comparison
         {
             PriceComparison.form.tblResults["DatabasePrice", index].Value 
                 = Regex.Replace(PriceComparison.form.tblResults["DatabasePrice", index].Value.ToString(), @"[^\d\.]", "");
-            DataRow row = PriceComparison.set.Select("Barcode = " + PriceComparison.form.tblResults["Barcode", index].Value.ToString())[0];
+            DataRow row = PriceComparison.set.Select("Barcode = '" + PriceComparison.form.tblResults["Barcode", index].Value.ToString() + "'")[0];
             row["dbPrice"] = PriceComparison.form.tblResults["DatabasePrice", index].Value;
             row["diff"] = (Double)row["onlinePrice"] - (Double)row["dbPrice"];
             displayTable();
