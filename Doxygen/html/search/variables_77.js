@@ -1,7 +1,0 @@
-var searchData=
-[
-  ['warrantyfield',['warrantyField',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#a99276e29de576a658ba4ecbac746b7ba',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
-  ['weeetaxvaluefield',['wEEETaxValueField',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes.html#a85820fb1f9a3140f5fb57af7c6abfaa0',1,'Price_Comparison::amazon::ecs::ItemAttributes']]],
-  ['weightfield',['weightField',['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes_item_dimensions.html#a0958f7690bf63453541de3fa0dc953a0',1,'Price_Comparison.amazon.ecs.ItemAttributesItemDimensions.weightField()'],['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes_package_dimensions.html#ad650510be956ce064abe0c7a4d86d70a',1,'Price_Comparison.amazon.ecs.ItemAttributesPackageDimensions.weightField()']]],
-  ['widthfield',['widthField',['../class_price___comparison_1_1amazon_1_1ecs_1_1_image.html#a422b73963f34face884d4312a75dddc8',1,'Price_Comparison.amazon.ecs.Image.widthField()'],['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes_item_dimensions.html#adc76c71d1974bdfda5bd990c191a594e',1,'Price_Comparison.amazon.ecs.ItemAttributesItemDimensions.widthField()'],['../class_price___comparison_1_1amazon_1_1ecs_1_1_item_attributes_package_dimensions.html#a61d5aa1ec53471d110c3741a3bce9ff5',1,'Price_Comparison.amazon.ecs.ItemAttributesPackageDimensions.widthField()']]]
-];
