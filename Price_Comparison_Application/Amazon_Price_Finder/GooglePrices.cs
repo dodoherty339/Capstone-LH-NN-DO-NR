@@ -19,8 +19,17 @@ namespace Price_Comparison
     {
         //! This is the method that gets the Google price.
         /**
-        * <i>To be documented</i>
-        */
+         * When the getPrice method is called a string is sent to it (the 
+         * barcode). We use the google api to gather the information we need 
+         * from the internet on different items. We create a string called 
+         * sourceCode that is set to what getSourceCode method returns in JSON 
+         * format. We then create 4 regex’s for the Name, Condition, Price, and 
+         * shipping. With those regex commands we scrape the entire sourceCode 
+         * string.  After all the prices are gathered we need to convert them 
+         * to doubles since they are in string format.  We convert and store 
+         * them in an array called totals. Totals is sent to AnalyzeResults in 
+         * which we get a double in return. getPrice then returns that double.
+         */
         public static double getPrice(string barcode)
         {
             // There is a 2500 per day limit on the searches, so for testing, we will probably need more than one key
@@ -51,8 +60,12 @@ namespace Price_Comparison
 
         //! This is the method that gets the source code from the request.
         /**
-        * <i>To be documented</i>
-        */
+         * When the method is called we create an httpwebrequest with a string 
+         * address that is passed to it when we call it. We create a string 
+         * called sourceCode that is just the entire string read until the end 
+         * of the page. When it is all read in we close the connection and 
+         * return the sourceCode.
+         */
         public static string getSourceCode(string address)
         {
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(address);

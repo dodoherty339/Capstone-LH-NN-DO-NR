@@ -16,8 +16,16 @@ namespace Price_Comparison
     {
         //! This is the method that calls and reads from the database.
         /**
-        * <i>To be documented</i>
-        */
+         * When the method is called it initially creates a new datatable called 
+         * set and a sql connection string called conn. The connection string 
+         * is used to gain access to the database in which we want to use. Next
+         * we create a new Sqlcommand object called cmd. We then set the 
+         * connection on the sql command object and then create the command 
+         * text, or select command for the sql database. We apply the command 
+         * to our table and fill our datatable object (set) with all of the 
+         * info from the table. After all of it is in our object we return the 
+         * datatable.
+         */
         public static DataTable getDBResults()
         {
             //Create a new dataset object.

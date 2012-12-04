@@ -147,7 +147,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This is the method that gets the Google price. </p>
-<p><em>To be documented</em> </p>
+<p>When the getPrice method is called a string is sent to it (the barcode). We use the google api to gather the information we need from the internet on different items. We create a string called sourceCode that is set to what getSourceCode method returns in JSON format. We then create 4 regex’s for the Name, Condition, Price, and shipping. With those regex commands we scrape the entire sourceCode string. After all the prices are gathered we need to convert them to doubles since they are in string format. We convert and store them in an array called totals. Totals is sent to <a class="el" href="class_price___comparison_1_1_analyze_results.html" title="This is the class for analyzing the results obtained from Amazon.">AnalyzeResults</a> in which we get a double in return. getPrice then returns that double. </p>
 
 </div>
 </div>
@@ -174,7 +174,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This is the method that gets the source code from the request. </p>
-<p><em>To be documented</em> </p>
+<p>When the method is called we create an httpwebrequest with a string address that is passed to it when we call it. We create a string called sourceCode that is just the entire string read until the end of the page. When it is all read in we close the connection and return the sourceCode. </p>
 
 </div>
 </div>
@@ -187,7 +187,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_price___comparison.html">Price_Comparison</a></li><li class="navelem"><a class="el" href="class_price___comparison_1_1_google_prices.html">GooglePrices</a></li>
-    <li class="footer">Generated on Sat Dec 1 2012 13:23:07 for Price Comparison Application by
+    <li class="footer">Generated on Tue Dec 4 2012 07:40:16 for Price Comparison Application by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

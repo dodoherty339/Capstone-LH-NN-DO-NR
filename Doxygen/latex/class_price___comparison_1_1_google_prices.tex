@@ -32,7 +32,7 @@ This class contains methods that connect to and communicate with Google Shops.
 
 This is the method that gets the Google price. 
 
-{\itshape To be documented} \hypertarget{class_price___comparison_1_1_google_prices_addaecb2d51b5876c63c5854cfd83a584}{\index{Price\-\_\-\-Comparison\-::\-Google\-Prices@{Price\-\_\-\-Comparison\-::\-Google\-Prices}!get\-Source\-Code@{get\-Source\-Code}}
+When the get\-Price method is called a string is sent to it (the barcode). We use the google api to gather the information we need from the internet on different items. We create a string called source\-Code that is set to what get\-Source\-Code method returns in J\-S\-O\-N format. We then create 4 regex’s for the Name, Condition, Price, and shipping. With those regex commands we scrape the entire source\-Code string. After all the prices are gathered we need to convert them to doubles since they are in string format. We convert and store them in an array called totals. Totals is sent to \hyperlink{class_price___comparison_1_1_analyze_results}{Analyze\-Results} in which we get a double in return. get\-Price then returns that double. \hypertarget{class_price___comparison_1_1_google_prices_addaecb2d51b5876c63c5854cfd83a584}{\index{Price\-\_\-\-Comparison\-::\-Google\-Prices@{Price\-\_\-\-Comparison\-::\-Google\-Prices}!get\-Source\-Code@{get\-Source\-Code}}
 \index{get\-Source\-Code@{get\-Source\-Code}!Price_Comparison::GooglePrices@{Price\-\_\-\-Comparison\-::\-Google\-Prices}}
 \subsubsection[{get\-Source\-Code}]{\setlength{\rightskip}{0pt plus 5cm}static string Price\-\_\-\-Comparison.\-Google\-Prices.\-get\-Source\-Code (
 \begin{DoxyParamCaption}
@@ -43,7 +43,7 @@ This is the method that gets the Google price.
 
 This is the method that gets the source code from the request. 
 
-{\itshape To be documented} 
+When the method is called we create an httpwebrequest with a string address that is passed to it when we call it. We create a string called source\-Code that is just the entire string read until the end of the page. When it is all read in we close the connection and return the source\-Code. 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
