@@ -70,7 +70,7 @@ namespace Price_Comparison
                 // if row contains an item that is not used 
                 // or does not have the correct barcode format, 
                 // do not search
-                price = GooglePrices.getPrice(row["Barcode"].ToString());
+                price = GooglePrices.getPrice(row["Barcode"].ToString(), row["Dscr"].ToString());
                 row["onlinePrice"] = Math.Round(price, 2);
                 if (price != 0)
                 {

@@ -114,7 +114,8 @@ namespace Price_Comparison
                 }
                 if ((Double)row["diff"] > 0)
                 {
-                    PriceComparison.form.tblResults["Difference", rowNum].Style.BackColor = System.Drawing.Color.GreenYellow;
+                    PriceComparison.form.tblResults["Difference", rowNum].Style.BackColor = System.Drawing.Color.LimeGreen;
+;
                     PriceComparison.form.tblResults["Difference", rowNum].Value = String.Format("+{0:0.00}", (Double)row["diff"]);
                 }
                 if ((Double)row["diff"] == 0)
