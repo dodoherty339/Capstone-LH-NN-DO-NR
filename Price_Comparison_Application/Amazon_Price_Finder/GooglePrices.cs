@@ -37,7 +37,8 @@ namespace Price_Comparison
             string key = "AIzaSyDCT6BVSo8d8zpW8cZJ65LodutNTs_00Lo"; //Lucy's gmail
             //string key = "AIzaSyBsYY7PHtb-EH0VO2S_f9QalhfyXq8K4X8"; //Lucy's gmav
             //string barcode = "008888526841";
-            string sourceCode = getSourceCode("https://www.googleapis.com/shopping/search/v1/public/products?key=" + key + "&country=US&q=" + barcode + "|" + dscr + "&alt=JSON");
+            string sourceCode = getSourceCode("https://www.googleapis.com/shopping/search/v1/public/products?key=" + key + "&country=US&q=" + barcode + "&alt=JSON");
+            //string sourceCode = getSourceCode("https://www.googleapis.com/shopping/search/v1/public/products?key=" + key + "&country=US&q=" + barcode + "|" + dscr + "&alt=JSON");
             string subPrice;
             //Regex name = new Regex("\"name\": \".*\"");
             //Regex condition = new Regex("\"condition\": \".*\"");
