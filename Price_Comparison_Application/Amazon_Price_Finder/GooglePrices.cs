@@ -36,6 +36,7 @@ namespace Price_Comparison
             //string key = "AIzaSyAkuzeoL2MJz--Gk2WSGnotf2qGoCaZdL8"; //Dan's gmail
             string key = "AIzaSyDCT6BVSo8d8zpW8cZJ65LodutNTs_00Lo"; //Lucy's gmail
             //string key = "AIzaSyBsYY7PHtb-EH0VO2S_f9QalhfyXq8K4X8"; //Lucy's gmav
+            //string key = "AIzaSyAVsFc9Sv94UMMQFAtk-uA8Bp0AogfiJ1A"; //Nick's GMav
             //string barcode = "008888526841";
             string sourceCode = getSourceCode("https://www.googleapis.com/shopping/search/v1/public/products?key=" + key + "&country=US&q=" + barcode + "&alt=JSON");
             //string sourceCode = getSourceCode("https://www.googleapis.com/shopping/search/v1/public/products?key=" + key + "&country=US&q=" + barcode + "|" + dscr + "&alt=JSON");
